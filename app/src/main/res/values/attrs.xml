@@ -1,7 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="StartseiteItemFragment">
-        <attr name="android:src" format="reference|color" />
-        <attr name="text" format="string" />
-    </declare-styleable>
 </resources>

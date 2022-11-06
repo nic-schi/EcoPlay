@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">EcoPlay</string>
+
+    <!-- Startseite -->
+    <string name="Startseite.startseite">Startseite</string>
+    <string name="Startseite.read">Inhalte</string>
+    <string name="Startseite.quiz">Quiz</string>
+    <string name="Startseite.toothbrushing_assistant">Zahnputzassistent</string>
+    <string name="Startseite.money_manager">Taschengeldmanager</string>
+    <string name="Startseite.sticker">Sticker</string>
+    <string name="Startseite.settings">Einstellungen</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hallo Welt!</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startseiteFragment">
+    <fragment
+        android:id="@+id/startseiteFragment"
+        android:name="com.jadehs.ma.ecoplay.StartseiteFragment"
+        android:label="fragment_startseite"
+        tools:layout="@layout/fragment_startseite" >
+        <action
+            android:id="@+id/action_startseiteFragment_to_quizFragment"
+            app:destination="@id/quizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.jadehs.ma.ecoplay.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" />
+</navigation>

@@ -1,6 +1,13 @@
 # EcoPlay
 An Android app where kids can playfully learn about sustainability. This app was developed as part of the Mobile Applications elective module at Jade University of Applied Sciences in Wilhelmshaven.
 
+# Requirements
+| <!-- -->        | <!-- -->                            |
+| ---             | ---:                                |
+| Android SDK     | min. API level 24 (Nougat 7.0)      |
+| Android Studio  | 2021.3.1 Patch 1                    |
+
+
 # Prototype
 As part of the development, a prototype of the app was created. This represents the app in its basic form.
 

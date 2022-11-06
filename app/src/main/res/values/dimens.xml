@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="action_bar_height">55dp</dimen>
+
+    <!-- Apptitel -->
+    <dimen name="apptitel_text_size">25sp</dimen>
+</resources>

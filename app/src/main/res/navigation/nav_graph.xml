@@ -6,16 +6,48 @@
     app:startDestination="@id/startseiteFragment">
     <fragment
         android:id="@+id/startseiteFragment"
-        android:name="com.jadehs.ma.ecoplay.StartseiteFragment"
+        android:name="com.jadehs.ma.ecoplay.startseite.StartseiteFragment"
         android:label="fragment_startseite"
-        tools:layout="@layout/fragment_startseite" >
+        tools:layout="@layout/fragment_startseite">
         <action
-            android:id="@+id/action_startseiteFragment_to_quizFragment"
-            app:destination="@id/quizFragment" />
+            android:id="@+id/action_startseiteFragment_to_quizActivity"
+            app:destination="@id/quizActivity" />
+        <action
+            android:id="@+id/action_startseiteFragment_to_inhalteActivity"
+            app:destination="@id/inhalteActivity" />
+        <action
+            android:id="@+id/action_startseiteFragment_to_stickerActivity"
+            app:destination="@id/stickerActivity" />
+        <action
+            android:id="@+id/action_startseiteFragment_to_taschengeldmanagerActivity"
+            app:destination="@id/taschengeldmanagerActivity" />
+        <action
+            android:id="@+id/action_startseiteFragment_to_zahnputzassistentActivity"
+            app:destination="@id/zahnputzassistentActivity" />
     </fragment>
-    <fragment
-        android:id="@+id/quizFragment"
-        android:name="com.jadehs.ma.ecoplay.QuizFragment"
-        android:label="fragment_quiz"
-        tools:layout="@layout/fragment_quiz" />
+    <activity
+        android:id="@+id/quizActivity"
+        android:name="com.jadehs.ma.ecoplay.QuizActivity"
+        android:label="activity_quiz"
+        tools:layout="@layout/activity_quiz" />
+    <activity
+        android:id="@+id/inhalteActivity"
+        android:name="com.jadehs.ma.ecoplay.InhalteActivity"
+        android:label="activity_inhalte"
+        tools:layout="@layout/activity_inhalte" />
+    <activity
+        android:id="@+id/stickerActivity"
+        android:name="com.jadehs.ma.ecoplay.StickerActivity"
+        android:label="activity_sticker"
+        tools:layout="@layout/activity_sticker" />
+    <activity
+        android:id="@+id/taschengeldmanagerActivity"
+        android:name="com.jadehs.ma.ecoplay.TaschengeldmanagerActivity"
+        android:label="activity_taschengeldmanager"
+        tools:layout="@layout/activity_taschengeldmanager" />
+    <activity
+        android:id="@+id/zahnputzassistentActivity"
+        android:name="com.jadehs.ma.ecoplay.ZahnputzassistentActivity"
+        android:label="activity_zahnputzassistent"
+        tools:layout="@layout/activity_zahnputzassistent" />
 </navigation>

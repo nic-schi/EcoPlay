@@ -5,29 +5,91 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartseiteFragment">
+    tools:context=".startseite.StartseiteFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-    <Button
-        android:id="@+id/button2"
+    <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="227dp"
-        android:text="@string/Startseite.quiz"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="358dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="422dp"
-        android:text="@string/Startseite.startseite"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_startseite_item"
+                app:text="@string/Startseite.read"
+                app:image="@drawable/ic_launcher_foreground"
+                app:redirect="@id/action_startseiteFragment_to_inhalteActivity"
+                />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView2"
+                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_startseite_item"
+                app:text="@string/Startseite.quiz"
+                app:image="@drawable/action_bar_bg"
+                app:redirect="@id/action_startseiteFragment_to_quizActivity" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView3"
+                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_startseite_item"
+                app:text="@string/Startseite.toothbrushing_assistant"
+                app:image="@drawable/action_bar_bg"
+                app:redirect="@id/action_startseiteFragment_to_zahnputzassistentActivity" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView4"
+                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_startseite_item"
+                app:text="@string/Startseite.money_manager"
+                app:image="@drawable/action_bar_bg"
+                app:redirect="@id/action_startseiteFragment_to_taschengeldmanagerActivity" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView5"
+                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_startseite_item"
+                app:text="@string/Startseite.sticker"
+                app:image="@drawable/action_bar_bg"
+                app:redirect="@id/action_startseiteFragment_to_stickerActivity" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView6"
+                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_startseite_item"
+                app:text="@string/Startseite.settings"
+                app:image="@drawable/settings"
+                app:redirect="@id/action_startseiteFragment_to_quizActivity" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

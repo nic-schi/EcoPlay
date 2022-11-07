@@ -3,5 +3,5 @@
     <dimen name="action_bar_height">55dp</dimen>
 
     <!-- Apptitel -->
-    <dimen name="apptitel_text_size">25sp</dimen>
+    <dimen name="apptitel_text_size">20sp</dimen>
 </resources>

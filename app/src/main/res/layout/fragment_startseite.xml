@@ -24,21 +24,20 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_startseite_item"
-                app:text="@string/Startseite.read"
-                app:image="@drawable/ic_launcher_foreground"
+                app:image="@drawable/logo"
                 app:redirect="@id/action_startseiteFragment_to_inhalteActivity"
-                />
+                app:text="@string/Startseite.read"
+                tools:layout="@layout/fragment_startseite_item" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView2"
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_startseite_item"
-                app:text="@string/Startseite.quiz"
                 app:image="@drawable/action_bar_bg"
-                app:redirect="@id/action_startseiteFragment_to_quizActivity" />
+                app:redirect="@id/action_startseiteFragment_to_quizActivity"
+                app:text="@string/Startseite.quiz"
+                tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
 
         <TableRow
@@ -50,20 +49,20 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_startseite_item"
-                app:text="@string/Startseite.toothbrushing_assistant"
                 app:image="@drawable/action_bar_bg"
-                app:redirect="@id/action_startseiteFragment_to_zahnputzassistentActivity" />
+                app:redirect="@id/action_startseiteFragment_to_zahnputzassistentActivity"
+                app:text="@string/Startseite.toothbrushing_assistant"
+                tools:layout="@layout/fragment_startseite_item" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView4"
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_startseite_item"
-                app:text="@string/Startseite.money_manager"
                 app:image="@drawable/action_bar_bg"
-                app:redirect="@id/action_startseiteFragment_to_taschengeldmanagerActivity" />
+                app:redirect="@id/action_startseiteFragment_to_taschengeldmanagerActivity"
+                app:text="@string/Startseite.money_manager"
+                tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
 
         <TableRow
@@ -75,20 +74,20 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_startseite_item"
-                app:text="@string/Startseite.sticker"
                 app:image="@drawable/action_bar_bg"
-                app:redirect="@id/action_startseiteFragment_to_stickerActivity" />
+                app:redirect="@id/action_startseiteFragment_to_stickerActivity"
+                app:text="@string/Startseite.sticker"
+                tools:layout="@layout/fragment_startseite_item" />
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView6"
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:layout="@layout/fragment_startseite_item"
-                app:text="@string/Startseite.settings"
                 app:image="@drawable/settings"
-                app:redirect="@id/action_startseiteFragment_to_quizActivity" />
+                app:redirect="@id/action_startseiteFragment_to_einstellungsActivity"
+                app:text="@string/Startseite.settings"
+                tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
     </TableLayout>
 

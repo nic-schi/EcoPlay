@@ -8,23 +8,26 @@
     </style>
 
     <!-- ActionBar -->
-    <style name="Theme.EcoPlay.ActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+    <style name="Theme.EcoPlay.ActionBar" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="titleTextStyle">@style/TextAppearance.Apptitel</item>
         <item name="android:titleTextStyle">@style/TextAppearance.Apptitel</item>
 
         <item name="android:background">@drawable/action_bar_bg</item>
         <item name="background">@drawable/action_bar_bg</item>
 
-        <item name="android:logo">@drawable/ic_launcher_foreground</item>
-        <item name="logo">@drawable/ic_launcher_foreground</item>
+        <item name="android:logo">@drawable/logo</item>
+        <item name="logo">@drawable/logo</item>
 
         <item name="android:height">@dimen/action_bar_height</item>
         <item name="height">@dimen/action_bar_height</item>
 
+        <item name="android:homeAsUpIndicator">@drawable/go_back_btn</item>
+        <item name="homeAsUpIndicator">@drawable/go_back_btn</item>
+
         <item name="android:elevation">10dp</item>
 
-        <item name="android:displayOptions">showHome|useLogo|showTitle|showCustom</item>
-        <item name="displayOptions">showHome|useLogo|showTitle|showCustom</item>
+        <item name="android:displayOptions">showHome|useLogo|showTitle</item>
+        <item name="displayOptions">showHome|useLogo|showTitle</item>
     </style>
 
     <!-- AppTitel -->

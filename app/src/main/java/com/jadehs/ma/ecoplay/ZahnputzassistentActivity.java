@@ -1,10 +1,12 @@
 package com.jadehs.ma.ecoplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class ZahnputzassistentActivity extends AppCompatActivity {
+public class ZahnputzassistentActivity extends EcoPlayActivity {
+
+    public ZahnputzassistentActivity() {
+        super(R.string.Startseite_toothbrushing_assistant, true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

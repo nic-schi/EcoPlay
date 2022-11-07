@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_startseiteFragment_to_zahnputzassistentActivity"
             app:destination="@id/zahnputzassistentActivity" />
+        <action
+            android:id="@+id/action_startseiteFragment_to_einstellungsActivity"
+            app:destination="@id/einstellungsActivity" />
     </fragment>
     <activity
         android:id="@+id/quizActivity"
@@ -50,4 +53,8 @@
         android:name="com.jadehs.ma.ecoplay.ZahnputzassistentActivity"
         android:label="activity_zahnputzassistent"
         tools:layout="@layout/activity_zahnputzassistent" />
+    <activity
+        android:id="@+id/einstellungsActivity"
+        android:name="com.jadehs.ma.ecoplay.EinstellungsActivity"
+        android:label="EinstellungsActivity" />
 </navigation>

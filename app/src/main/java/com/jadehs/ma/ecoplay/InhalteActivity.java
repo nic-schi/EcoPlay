@@ -1,10 +1,12 @@
 package com.jadehs.ma.ecoplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class InhalteActivity extends AppCompatActivity {
+public class InhalteActivity extends EcoPlayActivity {
+
+    public InhalteActivity() {
+        super(R.string.Startseite_read, true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

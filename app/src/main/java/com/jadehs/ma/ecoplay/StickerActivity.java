@@ -1,10 +1,12 @@
 package com.jadehs.ma.ecoplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class StickerActivity extends AppCompatActivity {
+public class StickerActivity extends EcoPlayActivity {
+
+    public StickerActivity() {
+        super(R.string.Startseite_sticker, true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -2,9 +2,11 @@ package com.jadehs.ma.ecoplay;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
+public class MainActivity extends EcoPlayActivity {
 
-public class MainActivity extends AppCompatActivity {
+    public MainActivity() {
+        super(R.string.app_name, true, false);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

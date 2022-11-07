@@ -1,10 +1,12 @@
 package com.jadehs.ma.ecoplay;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class TaschengeldmanagerActivity extends AppCompatActivity {
+public class TaschengeldmanagerActivity extends EcoPlayActivity {
+
+    public TaschengeldmanagerActivity() {
+        super(R.string.Startseite_money_manager, true);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

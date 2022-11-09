@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">EcoPlay</string>
+
+    <!-- Menüeinträge -->
     <string name="actionbar_menu.action_settings">Einstellungen</string>
+    <string name="actionbar_menu.action_about">Über uns</string>
 
     <!-- Startseite -->
     <string name="Startseite.startseite">Startseite</string>

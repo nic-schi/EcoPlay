@@ -5,7 +5,7 @@ import android.os.Bundle;
 public class TaschengeldmanagerActivity extends EcoPlayActivity {
 
     public TaschengeldmanagerActivity() {
-        super(R.string.Startseite_money_manager, true);
+        super(R.string.Startseite_money_manager, R.drawable.wallet, true);
     }
 
     @Override

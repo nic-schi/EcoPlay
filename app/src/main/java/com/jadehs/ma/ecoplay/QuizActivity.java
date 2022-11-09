@@ -5,7 +5,7 @@ import android.os.Bundle;
 public class QuizActivity extends EcoPlayActivity {
 
     public QuizActivity() {
-        super(R.string.Startseite_quiz, true);
+        super(R.string.Startseite_quiz, R.drawable.quiz, true);
     }
 
     @Override

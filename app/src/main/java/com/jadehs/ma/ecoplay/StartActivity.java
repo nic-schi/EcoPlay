@@ -2,15 +2,15 @@ package com.jadehs.ma.ecoplay;
 
 import android.os.Bundle;
 
-public class MainActivity extends EcoPlayActivity {
+public class StartActivity extends EcoPlayActivity {
 
-    public MainActivity() {
-        super(R.string.app_name, true, false);
+    public StartActivity() {
+        super(R.string.app_name, null, true, false);
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_start);
     }
 }

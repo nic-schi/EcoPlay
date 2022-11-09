@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background">#82EA67</color>
+    <color name="text_color">#121212</color>
+    <color name="background">#8CE376</color>
+
     <color name="apptitel">#ffffff</color>
 
     <!-- Nav !-->
-    <color name="navgradient_start">#5ABC41</color>
-    <color name="navgradient_end">#40982A</color>
+    <color name="navgradient_start">#206323</color>
+    <color name="navgradient_end">#276C2A</color>
 
     <!-- Startseite -->
     <color name="startseite_text_fields_text">#ffffff</color>
-    <color name="startseite_text_fields_image_bg">#000000</color>
-    <color name="startseite_text_fields_bg">#B3000000</color>
+    <color name="startseite_text_fields_image_bg">#276C2A</color>
+    <color name="startseite_text_fields_bg">#BF000000</color>
 </resources>

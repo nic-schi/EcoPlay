@@ -7,7 +7,7 @@ import androidx.preference.PreferenceFragmentCompat;
 public class EinstellungsActivity extends EcoPlayActivity {
 
     public EinstellungsActivity() {
-        super(R.string.Startseite_settings, false);
+        super(R.string.Startseite_settings, R.drawable.settings, false);
     }
 
     @Override

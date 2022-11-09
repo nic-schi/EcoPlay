@@ -24,7 +24,7 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:image="@drawable/logo"
+                app:image="@drawable/books"
                 app:redirect="@id/action_startseiteFragment_to_inhalteActivity"
                 app:text="@string/Startseite.read"
                 tools:layout="@layout/fragment_startseite_item" />
@@ -34,7 +34,7 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:image="@drawable/action_bar_bg"
+                app:image="@drawable/quiz"
                 app:redirect="@id/action_startseiteFragment_to_quizActivity"
                 app:text="@string/Startseite.quiz"
                 tools:layout="@layout/fragment_startseite_item" />
@@ -49,7 +49,7 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:image="@drawable/action_bar_bg"
+                app:image="@drawable/toothbrush"
                 app:redirect="@id/action_startseiteFragment_to_zahnputzassistentActivity"
                 app:text="@string/Startseite.toothbrushing_assistant"
                 tools:layout="@layout/fragment_startseite_item" />
@@ -59,7 +59,7 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:image="@drawable/action_bar_bg"
+                app:image="@drawable/wallet"
                 app:redirect="@id/action_startseiteFragment_to_taschengeldmanagerActivity"
                 app:text="@string/Startseite.money_manager"
                 tools:layout="@layout/fragment_startseite_item" />

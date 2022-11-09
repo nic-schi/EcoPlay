@@ -5,7 +5,7 @@ import android.os.Bundle;
 public class StickerActivity extends EcoPlayActivity {
 
     public StickerActivity() {
-        super(R.string.Startseite_sticker, true);
+        super(R.string.Startseite_sticker, null, true);
     }
 
     @Override

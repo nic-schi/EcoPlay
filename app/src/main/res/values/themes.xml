@@ -5,6 +5,17 @@
         <!-- ActionBar -->
         <item name="android:actionBarStyle">@style/Theme.EcoPlay.ActionBar</item>
         <item name="actionBarStyle">@style/Theme.EcoPlay.ActionBar</item>
+
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+
+        <item name="android:textColor">@color/text_color</item>
+
+        <item name="android:actionOverflowButtonStyle">@style/OwnActionButtonOverflow</item>
+        <item name="actionOverflowButtonStyle">@style/OwnActionButtonOverflow</item>
+
+        <item name="android:overlapAnchor">false</item>
+        <item name="overlapAnchor">false</item>
     </style>
 
     <!-- ActionBar -->
@@ -28,6 +39,11 @@
 
         <item name="android:displayOptions">showHome|useLogo|showTitle</item>
         <item name="displayOptions">showHome|useLogo|showTitle</item>
+    </style>
+
+    <!-- Overflow button -->
+    <style name="OwnActionButtonOverflow" parent="@style/Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/actionbar_overflow</item>
     </style>
 
     <!-- AppTitel -->

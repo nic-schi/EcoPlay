@@ -1,6 +1,5 @@
 package com.jadehs.ma.ecoplay;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,10 +9,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.NavHost;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
 
 public abstract class EcoPlayActivity extends AppCompatActivity {
 
@@ -44,6 +39,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
 
         if (bar != null) {
             bar.setDisplayHomeAsUpEnabled(this.useBackButton);
+            bar.setHomeButtonEnabled(true);
 
             // titel
             if (actionBarTitelResourceID != null) {
@@ -76,6 +72,10 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
                 intent.setClass(this, UeberUnsActivity.class);
                 startActivity(intent);
             }
+        }
+        // Zurücknavigation
+        if (item.getItemId() == 16908332) {
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }

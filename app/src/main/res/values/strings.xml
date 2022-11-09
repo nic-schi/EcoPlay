@@ -13,7 +13,6 @@
     <string name="Startseite.money_manager">Taschengeldmanager</string>
     <string name="Startseite.sticker">Sticker</string>
     <string name="Startseite.settings">Einstellungen</string>
-    <string name="title_activity_einstellungs">EinstellungsActivity</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

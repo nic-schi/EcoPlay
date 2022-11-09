@@ -21,49 +21,42 @@
         </activity>
         <activity
             android:name=".EinstellungsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_einstellungs"
-            android:parentActivityName=".StartActivity">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".TaschengeldmanagerActivity"
-            android:exported="false"
-            android:parentActivityName=".StartActivity">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".StickerActivity"
-            android:exported="false"
-            android:parentActivityName=".StartActivity">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".ZahnputzassistentActivity"
-            android:exported="false"
-            android:parentActivityName=".StartActivity">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".InhalteActivity"
-            android:exported="false"
-            android:parentActivityName=".StartActivity">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".QuizActivity"
-            android:exported="false"
-            android:parentActivityName=".StartActivity">
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

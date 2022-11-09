@@ -31,8 +31,8 @@
 
         <item name="fontFamily">@font/roboto_bold</item>
 
-        <item name="android:height">@dimen/action_bar_height</item>
-        <item name="height">@dimen/action_bar_height</item>
+        <item name="android:height">@dimen/action_bar.height</item>
+        <item name="height">@dimen/action_bar.height</item>
 
         <item name="android:homeAsUpIndicator">@drawable/go_back_btn</item>
         <item name="homeAsUpIndicator">@drawable/go_back_btn</item>
@@ -76,7 +76,7 @@
 
     <!-- AppTitel -->
     <style name="TextAppearance.Apptitel" parent="TextAppearance.EcoPlay">
-        <item name="android:textSize">@dimen/apptitel_text_size</item>
+        <item name="android:textSize">@dimen/apptitel.text_size</item>
         <item name="android:textColor">@color/apptitel</item>
 
         <item name="fontFamily">@font/roboto_bold</item>
@@ -85,6 +85,6 @@
 
     <!-- Onboarding AppTitel -->
     <style name="TextAppearance.Onboarding.AppTitel" parent="TextAppearance.Apptitel">
-        <item name="android:textSize">@dimen/onboarding_apptitel_text_size</item>
+        <item name="android:textSize">@dimen/onboarding.apptitel.text_size</item>
     </style>
 </resources>

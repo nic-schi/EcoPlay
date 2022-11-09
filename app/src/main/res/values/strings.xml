@@ -6,13 +6,27 @@
     <string name="actionbar_menu.action_about">Über uns</string>
 
     <!-- Startseite -->
-    <string name="Startseite.startseite">Startseite</string>
-    <string name="Startseite.read">Inhalte</string>
-    <string name="Startseite.quiz">Quiz</string>
-    <string name="Startseite.toothbrushing_assistant">Zahnputzassistent</string>
-    <string name="Startseite.money_manager">Taschengeldmanager</string>
-    <string name="Startseite.sticker">Sticker</string>
-    <string name="Startseite.settings">Einstellungen</string>
+    <string name="startseite.startseite">Startseite</string>
+    <string name="startseite.read">Inhalte</string>
+    <string name="startseite.quiz">Quiz</string>
+    <string name="startseite.zahnputzassistent">Zahnputzassistent</string>
+    <string name="startseite.taschengeld">Taschengeldmanager</string>
+    <string name="startseite.sticker">Sticker</string>
+    <string name="startseite.settings">Einstellungen</string>
+
+    <!--- Onboarding -->
+    <!-- Onboarding: Intro -->
+    <string name="onboarding.intro.start">Reise beginnen</string>
+    <string name="onboarding.intro.skip">Ich kenn mich aus</string>
+    <string name="onboarding.intro.header">Vielen Dank, dass du unsere App benutzt!</string>
+    <string name="onboarding.intro.text">Mit dieser App lernst du die Welt der Nachhaltigkeit kennen. Wenn du diese App schon einmal benutzt hast, dann bist du ein Erfahrener Nutzer. Wenn nicht, dann empfehlen wir dir, die Reise anzutreten um die App etwas kennenzulernen.</string>
+
+    <!-- Onboarding: Wissensprüfung -->
+    <string name="onboarding.wissensprüfung.text">Bevor du diese App benutzen kannst musst du erst einmal ein paar Fragen beantworten, aber keine Sorge, es dauert auch nicht lange.\n\nDiese Frage bestimmt über die Schwierigkeit der lesbaren Inhalte und den durchführbaren Quizzes.</string>
+    <string name="onboarding.wissensprüfung.frage">Wie gut kennst du dich mit Nachhaltigkeit aus?</string>
+    <string name="onboarding.wissensprüfung.sidekick">Ich habe noch wenig Wissen und kenn mich nicht so gut aus!</string>
+    <string name="onboarding.wissensprüfung.held">Ich habe schon etwas Wissen und kenne mich aus!</string>
+    <string name="onboarding.wissensprüfung.knopf">Fertig</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

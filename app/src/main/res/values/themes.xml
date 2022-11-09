@@ -29,6 +29,8 @@
         <item name="android:logo">@drawable/logo</item>
         <item name="logo">@drawable/logo</item>
 
+        <item name="fontFamily">@font/roboto_bold</item>
+
         <item name="android:height">@dimen/action_bar_height</item>
         <item name="height">@dimen/action_bar_height</item>
 
@@ -36,6 +38,9 @@
         <item name="homeAsUpIndicator">@drawable/go_back_btn</item>
 
         <item name="android:elevation">10dp</item>
+
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="windowActionBarOverlay">true</item>
 
         <item name="android:displayOptions">showHome|useLogo|showTitle</item>
         <item name="displayOptions">showHome|useLogo|showTitle</item>
@@ -46,9 +51,40 @@
         <item name="android:src">@drawable/actionbar_overflow</item>
     </style>
 
+    <!-- Buttons -->
+    <style name="Button.EcoPlay" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="paddingStart">6dip</item>
+        <item name="paddingEnd">6dip</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <!--- TextAppearances -->
+    <!-- Standard -->
+    <style name="TextAppearance.EcoPlay" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <!-- Header -->
+    <style name="TextAppearance.EcoPlay.Header" parent="TextAppearance.EcoPlay">
+        <item name="android:textSize">24sp</item>
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+    </style>
+
     <!-- AppTitel -->
-    <style name="TextAppearance.Apptitel" parent="TextAppearance.AppCompat.Large">
+    <style name="TextAppearance.Apptitel" parent="TextAppearance.EcoPlay">
         <item name="android:textSize">@dimen/apptitel_text_size</item>
         <item name="android:textColor">@color/apptitel</item>
+
+        <item name="fontFamily">@font/roboto_bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <!-- Onboarding AppTitel -->
+    <style name="TextAppearance.Onboarding.AppTitel" parent="TextAppearance.Apptitel">
+        <item name="android:textSize">@dimen/onboarding_apptitel_text_size</item>
     </style>
 </resources>

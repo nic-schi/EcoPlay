@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".onboarding.OnboardingIntroFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/logoFragment"
+        android:name="com.jadehs.ma.ecoplay.onboarding.OnboardingLogoFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_onboarding_logo" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="181dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/onboarding_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoFragment" />
+
+    <TextView
+        android:id="@+id/onboardingHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="-3sp"
+        android:text="@string/onboarding.intro.header"
+        android:textAppearance="@style/TextAppearance.EcoPlay.Header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/onboardingText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/onboarding.intro.text"
+        android:textAppearance="@style/TextAppearance.EcoPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboardingHeader" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:elevation="0dp"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboardingText">
+
+        <Button
+            android:id="@+id/start"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="145dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="beginOnboarding"
+            android:text="@string/onboarding.intro.start"
+            android:textSize="14sp"
+            tools:text="@string/onboarding.intro.start" />
+
+        <Button
+            android:id="@+id/skip"
+            style="@android:style/Widget.Holo.Light.Button"
+            android:layout_width="145dp"
+            android:layout_height="48dp"
+            android:fontFamily="@font/roboto_medium"
+            android:onClick="skipOnboarding"
+            android:text="@string/onboarding.intro.skip"
+            android:textSize="14sp"
+            tools:text="@string/onboarding.intro.skip" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

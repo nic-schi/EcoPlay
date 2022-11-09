@@ -5,7 +5,7 @@ import android.os.Bundle;
 public class ZahnputzassistentActivity extends EcoPlayActivity {
 
     public ZahnputzassistentActivity() {
-        super(R.string.Startseite_toothbrushing_assistant, R.drawable.toothbrush, true);
+        super(true, R.string.startseite_zahnputzassistent, R.drawable.toothbrush, true);
     }
 
     @Override

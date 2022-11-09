@@ -10,26 +10,38 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.jadehs.ma.ecoplay.startseite.StartActivity;
+
 public abstract class EcoPlayActivity extends AppCompatActivity {
 
     private final Integer logo;
     private final Integer actionBarTitelResourceID;
     private final boolean addMenu;
     private final boolean useBackButton;
+    private final boolean showBar;
 
-    public EcoPlayActivity(Integer actionBarTitelResourceID) {
-        this(actionBarTitelResourceID, R.drawable.logo, false);
+    public EcoPlayActivity() {
+        this(false, R.string.app_name, null, false);
     }
 
-    public EcoPlayActivity(Integer actionBarTitelResourceID, Integer logo, boolean addMenu) {
-        this(actionBarTitelResourceID, logo, addMenu, true);
+    public EcoPlayActivity(boolean showBar) {
+        this(showBar, R.string.app_name, null, false);
     }
 
-    public EcoPlayActivity(Integer actionBarTitelResourceID, Integer logo, boolean addMenu, boolean useBackButton) {
+    public EcoPlayActivity(boolean showBar, Integer actionBarTitelResourceID) {
+        this(showBar, actionBarTitelResourceID, null, false);
+    }
+
+    public EcoPlayActivity(boolean showBar, Integer actionBarTitelResourceID, Integer logo, boolean addMenu) {
+        this(showBar, actionBarTitelResourceID, logo, addMenu, true);
+    }
+
+    public EcoPlayActivity(boolean showBar, Integer actionBarTitelResourceID, Integer logo, boolean addMenu, boolean useBackButton) {
         this.addMenu = addMenu;
         this.actionBarTitelResourceID = actionBarTitelResourceID;
         this.useBackButton = useBackButton;
         this.logo = logo;
+        this.showBar = showBar;
     }
 
     @Override
@@ -38,21 +50,26 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         ActionBar bar = this.getSupportActionBar();
 
         if (bar != null) {
-            bar.setDisplayHomeAsUpEnabled(this.useBackButton);
-            bar.setHomeButtonEnabled(true);
+            if (this.showBar) {
+                bar.setDisplayHomeAsUpEnabled(this.useBackButton);
+                bar.setHomeButtonEnabled(true);
+                bar.setDisplayShowTitleEnabled(true);
 
-            // titel
-            if (actionBarTitelResourceID != null) {
-                bar.setTitle(this.actionBarTitelResourceID);
-            } else {
-                bar.setTitle(R.string.app_name);
-            }
+                // titel
+                if (actionBarTitelResourceID != null) {
+                    bar.setTitle(this.actionBarTitelResourceID);
+                } else {
+                    bar.setTitle(R.string.app_name);
+                }
 
-            // Logo
-            if (logo != null) {
-                bar.setLogo(logo);
+                // Logo
+                if (logo != null) {
+                    bar.setLogo(logo);
+                } else {
+                    bar.setLogo(R.drawable.logo_small);
+                }
             } else {
-                bar.setLogo(R.drawable.logo);
+                bar.hide();
             }
         }
     }

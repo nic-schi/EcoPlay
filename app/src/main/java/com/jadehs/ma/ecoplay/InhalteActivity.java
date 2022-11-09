@@ -5,7 +5,7 @@ import android.os.Bundle;
 public class InhalteActivity extends EcoPlayActivity {
 
     public InhalteActivity() {
-        super(R.string.Startseite_read, R.drawable.books, true);
+        super(true, R.string.startseite_read, R.drawable.books, true);
     }
 
     @Override

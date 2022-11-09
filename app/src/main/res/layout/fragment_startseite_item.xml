@@ -35,6 +35,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center_vertical"
         android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.EcoPlay"
         android:textColor="@color/startseite_text_fields_text"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="@+id/view"

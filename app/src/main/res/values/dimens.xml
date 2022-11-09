@@ -5,4 +5,7 @@
 
     <!-- Apptitel -->
     <dimen name="apptitel_text_size">20sp</dimen>
+
+    <!-- Onboarding -->
+    <dimen name="onboarding_apptitel_text_size">30sp</dimen>
 </resources>

@@ -13,6 +13,13 @@
         android:theme="@style/Theme.EcoPlay"
         tools:targetApi="33">
         <activity
+            android:name=".onboarding.OnboardingActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".UeberUnsActivity"
             android:exported="false">
             <meta-data
@@ -62,7 +69,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".StartActivity"
+            android:name=".startseite.StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

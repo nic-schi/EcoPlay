@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 app:image="@drawable/books"
                 app:redirect="@id/action_startseiteFragment_to_inhalteActivity"
-                app:text="@string/Startseite.read"
+                app:text="@string/startseite.read"
                 tools:layout="@layout/fragment_startseite_item" />
 
             <androidx.fragment.app.FragmentContainerView
@@ -36,7 +36,7 @@
                 android:layout_height="wrap_content"
                 app:image="@drawable/quiz"
                 app:redirect="@id/action_startseiteFragment_to_quizActivity"
-                app:text="@string/Startseite.quiz"
+                app:text="@string/startseite.quiz"
                 tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
 
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 app:image="@drawable/toothbrush"
                 app:redirect="@id/action_startseiteFragment_to_zahnputzassistentActivity"
-                app:text="@string/Startseite.toothbrushing_assistant"
+                app:text="@string/startseite.zahnputzassistent"
                 tools:layout="@layout/fragment_startseite_item" />
 
             <androidx.fragment.app.FragmentContainerView
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 app:image="@drawable/wallet"
                 app:redirect="@id/action_startseiteFragment_to_taschengeldmanagerActivity"
-                app:text="@string/Startseite.money_manager"
+                app:text="@string/startseite.taschengeld"
                 tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
 
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 app:image="@drawable/action_bar_bg"
                 app:redirect="@id/action_startseiteFragment_to_stickerActivity"
-                app:text="@string/Startseite.sticker"
+                app:text="@string/startseite.sticker"
                 tools:layout="@layout/fragment_startseite_item" />
 
             <androidx.fragment.app.FragmentContainerView
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 app:image="@drawable/settings"
                 app:redirect="@id/action_startseiteFragment_to_einstellungsActivity"
-                app:text="@string/Startseite.settings"
+                app:text="@string/startseite.settings"
                 tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
     </TableLayout>

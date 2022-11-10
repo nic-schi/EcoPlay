@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 
 public abstract class EcoPlayActivity extends AppCompatActivity {
@@ -121,6 +122,11 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
             // Über uns
             if (item.getItemId() == R.id.action_about) {
                 intent.setClass(this, UeberUnsActivity.class);
+                startActivity(intent);
+            }
+            // TODO: remove in production
+            if (item.getItemId() == R.id.action_debug_onboarding) {
+                intent.setClass(this, OnboardingActivity.class);
                 startActivity(intent);
             }
         }

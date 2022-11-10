@@ -19,6 +19,11 @@
                 android:icon="@drawable/settings"
                 android:title="@string/startseite.settings"
                 app:showAsAction="always|withText" />
+            <!-- TODO: remove in production -->
+            <item
+                android:id="@+id/action_debug_onboarding"
+                android:title="launch Onboarding"
+                app:showAsAction="always|withText" />
         </menu>
     </item>
 

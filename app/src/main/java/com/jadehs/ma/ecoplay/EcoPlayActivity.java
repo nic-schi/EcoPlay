@@ -1,6 +1,7 @@
 package com.jadehs.ma.ecoplay;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,12 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 
 public abstract class EcoPlayActivity extends AppCompatActivity {
-
+    public static final String PREFNAME = "ECOPLAY";
     private final Integer logo;
     private final Integer actionBarTitelResourceID;
     private final boolean addMenu;
     private final boolean useBackButton;
     private final boolean showBar;
+    private SharedPreferences pref;
+    private SharedPreferences.Editor prefEdit;
 
     public EcoPlayActivity() {
         this(false, R.string.app_name, null, false);
@@ -42,6 +45,34 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.useBackButton = useBackButton;
         this.logo = logo;
         this.showBar = showBar;
+    }
+
+    public Difficulty getDifficulty() {
+        return Difficulty.values()[this.pref.getInt("difficulty", Difficulty.SIDEKICK.ordinal())];
+    }
+
+    /**
+     * Setzt die Difficulty in den SharedPreferences
+     *
+     * @param value Die neue Difficulty
+     */
+    public void setDifficulty(Difficulty value) {
+        this.prefEdit.putInt("difficulty", value.ordinal());
+        this.prefEdit.apply();
+    }
+
+    public boolean getOnboarding() {
+        return this.pref.getBoolean("onboarding", true);
+    }
+
+    /**
+     * Setzt das Onboarding in den SharedPreferences
+     *
+     * @param value Das neue Onboarding
+     */
+    public void setOnboarding(boolean value) {
+        this.prefEdit.putBoolean("onboarding", value);
+        this.prefEdit.apply();
     }
 
     @Override
@@ -72,6 +103,9 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
                 bar.hide();
             }
         }
+
+        this.pref = this.getSharedPreferences(PREFNAME, MODE_PRIVATE);
+        this.prefEdit = pref.edit();
     }
 
     @Override
@@ -91,7 +125,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
             }
         }
         // Zurücknavigation
-        if (item.getItemId() == 16908332) {
+        if (item.getItemId() == 16908332 /* R.id.home nicht vorhanden, daher statisch */) {
             finish();
         }
         return super.onOptionsItemSelected(item);

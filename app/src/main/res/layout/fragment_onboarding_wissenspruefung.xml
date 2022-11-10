@@ -33,92 +33,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoFragment2" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView7"
+        android:name="com.jadehs.ma.ecoplay.onboarding.SidekickOrHeroFragment"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@color/onboarding_logo_container_bg"
-        android:paddingStart="16dp"
-        android:paddingLeft="16dp"
-        android:paddingTop="24dp"
-        android:paddingEnd="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="24dp"
+        app:antwort_held="@string/onboarding.wissensprüfung.held"
+        app:antwort_sidekick="@string/onboarding.wissensprüfung.sidekick"
+        app:frage="@string/onboarding.wissensprüfung.frage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text2">
-
-        <TextView
-            android:id="@+id/onboardingFrage1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:lineSpacingExtra="-3sp"
-            android:text="@string/onboarding.wissensprüfung.frage"
-            android:textAppearance="@style/TextAppearance.EcoPlay.Header"
-            android:textColor="@color/onboarding_wissenspruefung_text_color"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/linearLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/onboardingFrage1"
-            tools:layout_editor_absoluteX="16dp">
-
-            <ImageButton
-                android:id="@+id/sidekick"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:backgroundTint="@color/onboarding_wissenspruefung_btn_active_bg"
-                android:scaleType="fitXY"
-                android:src="@drawable/robin" />
-
-            <ImageButton
-                android:id="@+id/held"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:adjustViewBounds="true"
-                android:backgroundTint="@color/onboarding_wissenspruefung_btn_bg"
-                android:scaleType="fitXY"
-                android:src="@drawable/batman" />
-
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/arrow_right"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:scaleType="center"
-            android:src="@drawable/ic_baseline_arrow_right_24"
-            app:layout_constraintEnd_toStartOf="@+id/onboardingAntwort1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
-
-        <TextView
-            android:id="@+id/onboardingAntwort1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:lineSpacingExtra="4sp"
-            android:text="@string/onboarding.wissensprüfung.sidekick"
-            android:textAppearance="@style/TextAppearance.EcoPlay"
-            android:textColor="@color/onboarding_wissenspruefung_text_color"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/arrow_right"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        tools:layout="@layout/fragment_sidekick_or_hero" />
 
     <Button
         android:id="@+id/knopf"
@@ -126,16 +53,15 @@
         android:layout_width="145dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
         android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:fontFamily="@font/roboto_medium"
-        android:onClick="skipOnboarding"
+        android:onClick="finishOnboarding"
         android:text="@string/onboarding.wissensprüfung.knopf"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView7"
         tools:text="@string/onboarding.wissensprüfung.knopf" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

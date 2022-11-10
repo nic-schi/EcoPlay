@@ -1,8 +1,8 @@
 package com.jadehs.ma.ecoplay.startseite;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
@@ -18,15 +18,14 @@ public class StartActivity extends EcoPlayActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences preferences = getSharedPreferences("PREFERENCE", MODE_PRIVATE);
-        boolean showOnboarding = preferences.getBoolean("onboarding", true);
-
-        if (showOnboarding) {
+        if (this.getOnboarding()) {
             Intent intent = new Intent(this, OnboardingActivity.class);
             startActivity(intent);
         }
 
-        preferences.edit().putBoolean("onboarding", false).apply();
+        Log.v("ecoplay", getDifficulty().name());
+
+        this.setOnboarding(false);
         setContentView(R.layout.activity_start);
     }
 }

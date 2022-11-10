@@ -6,15 +6,12 @@ import android.view.View;
 
 import androidx.navigation.Navigation;
 
+import com.jadehs.ma.ecoplay.Difficulty;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 
 public class OnboardingActivity extends EcoPlayActivity {
-
-    public OnboardingActivity() {
-        super();
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +20,7 @@ public class OnboardingActivity extends EcoPlayActivity {
     }
 
     /**
-     * Wird aufgerufen wenn das Onboarding beginne soll
+     * Wird aufgerufen wenn das Onboarding beginnen soll
      *
      * @param view Der Knopf
      */
@@ -39,10 +36,18 @@ public class OnboardingActivity extends EcoPlayActivity {
     public void skipOnboarding(View view) {
         Intent intent = new Intent(this, StartActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        setDifficulty(Difficulty.SIDEKICK);
+        startActivity(intent);
+    }
 
-        // TODO: set default settings if user is experienced (given by onboarding logic)
-        // ...
-
+    /**
+     * Wird aufgerufen wenn das Onboarding fertig ist
+     *
+     * @param view Der Knopf
+     */
+    public void finishOnboarding(View view) {
+        Intent intent = new Intent(this, StartActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 

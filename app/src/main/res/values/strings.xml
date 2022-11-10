@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">EcoPlay</string>
 
+    <!-- Einstellungen -->
+    <string name="settings.text">Hier kannst du einige Einstellungen machen, welche das Appverhalten ändern.\n\nSie werden automatisch gespeichert sobald du etwas auswählst.</string>
+    <string name="settings.difficulty.frage">Schwierigkeit der Inhalte &amp; Quizzes</string>
+    <string name="settings.difficulty.antwort_sidekick">Schwierigkeit: Leicht\n\nDie Texte sind einfach geschrieben. Fragen im Quiz sind einfach.</string>
+    <string name="settings.difficulty.antwort_held">Schwierigkeit: Mittel-Schwierig\n\nDie Texte beeinhalten Fachwörter und sind akademisch geschrieben. Fragen im Quiz sind mittel bis schwierig.</string>
+
     <!-- Menüeinträge -->
     <string name="actionbar_menu.action_settings">Einstellungen</string>
     <string name="actionbar_menu.action_about">Über uns</string>

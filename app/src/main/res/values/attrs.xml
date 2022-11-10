@@ -5,4 +5,10 @@
         <attr name="text" format="string" />
         <attr name="redirect" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="SidekickOrHeroFragment">
+        <attr name="frage" format="string" />
+        <attr name="antwort_sidekick" format="string" />
+        <attr name="antwort_held" format="string" />
+    </declare-styleable>
 </resources>

@@ -2,8 +2,8 @@
     <string name="app_name" translatable="false">EcoPlay</string>
 
     <!-- Placeholder -->
-    <string name="placeholder.header.short" translatable="false">Lorem ipsum dolor sit amet</string>
-    <string name="placeholder.header.long" translatable="false">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</string>
+    <string name="placeholder.header.short" translatable="false">Lorem ipsum dolor sit</string>
+    <string name="placeholder.header.long" translatable="false">Lorem ipsum dolor sit amet, consetetur</string>
     <string name="placeholder.text.20" translatable="false">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam</string>
     <string name="placeholder.text.50" translatable="false">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
     <string name="placeholder.text.100" translatable="false">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</string>
@@ -41,4 +41,16 @@
     <string name="onboarding.wissensprüfung.sidekick">Ich habe noch wenig Wissen und kenn mich nicht so gut aus!</string>
     <string name="onboarding.wissensprüfung.held">Ich habe schon etwas Wissen und kenne mich aus!</string>
     <string name="onboarding.wissensprüfung.knopf">Fertig</string>
+
+    <!-- Sticker -->
+    <string name="sticker.placeholder.name" translatable="false">\?????</string>
+    <string name="sticker.text">Hier kannst du alle deine gesammelten Sticker anschauen. Sticker sind Herausforderungen die du durchs benutzen der App bewältigen kannst.\n\nViel Spaß beim sammeln!</string>
+    <string name="sticker.1.stickername">Summ, summ, summ!</string>
+    <string name="sticker.1.description">Lese den Text zu den Bienen</string>
+    <string name="sticker.2.stickername">Bienenliebhaber!</string>
+    <string name="sticker.2.description">Schließe erfolgreich ein Quiz zum Thema Bienen ab</string>
+    <string name="sticker.3.stickername">Vorsicht heiß!</string>
+    <string name="sticker.3.description">Schließe erfolgreich ein Quiz zum Theme Waldbrände ab</string>
+    <string name="sticker.4.stickername">Auf eine neue Ära!</string>
+    <string name="sticker.4.description">Überlebe die Einführung in die App</string>
 </resources>

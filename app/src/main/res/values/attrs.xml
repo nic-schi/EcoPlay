@@ -11,4 +11,10 @@
         <attr name="antwort_sidekick" format="string" />
         <attr name="antwort_held" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="StickerFragment">
+        <attr name="stickername" format="string"/>
+        <attr name="description" format="string"/>
+        <attr name="stickericon" format="reference"/>
+    </declare-styleable>
 </resources>

@@ -40,7 +40,7 @@
         tools:layout="@layout/activity_inhalte" />
     <activity
         android:id="@+id/stickerActivity"
-        android:name="com.jadehs.ma.ecoplay.StickerActivity"
+        android:name="com.jadehs.ma.ecoplay.sticker.StickerActivity"
         android:label="activity_sticker"
         tools:layout="@layout/activity_sticker" />
     <activity

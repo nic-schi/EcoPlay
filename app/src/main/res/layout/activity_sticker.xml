@@ -1,8 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StickerActivity">
+    tools:context=".sticker.StickerActivity">
+
+    <TextView
+        android:id="@+id/stickerText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/sticker.text"
+        android:textAppearance="@style/TextAppearance.EcoPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stickerText">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/sticker1"
+            android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_sticker"
+            app:stickername="@string/sticker.1.stickername"
+            app:description="@string/sticker.1.description"
+            app:stickericon="@drawable/bees01"
+            android:tag="bee01"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/sticker2"
+            android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_sticker"
+            app:stickername="@string/sticker.2.stickername"
+            app:description="@string/sticker.2.description"
+            app:stickericon="@drawable/bees02"
+            android:tag="bee02"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/sticker3"
+            android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="fireplace"
+            app:description="@string/sticker.3.description"
+            app:stickericon="@drawable/fireplace"
+            app:stickername="@string/sticker.3.stickername"
+            tools:layout="@layout/fragment_sticker" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

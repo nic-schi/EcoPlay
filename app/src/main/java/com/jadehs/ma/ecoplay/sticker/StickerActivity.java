@@ -1,6 +1,9 @@
-package com.jadehs.ma.ecoplay;
+package com.jadehs.ma.ecoplay.sticker;
 
 import android.os.Bundle;
+
+import com.jadehs.ma.ecoplay.EcoPlayActivity;
+import com.jadehs.ma.ecoplay.R;
 
 public class StickerActivity extends EcoPlayActivity {
 

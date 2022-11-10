@@ -15,6 +15,9 @@ import androidx.preference.PreferenceManager;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 
 public abstract class EcoPlayActivity extends AppCompatActivity {
     public static final String PREFNAME = "ECOPLAY";
@@ -56,6 +59,20 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
 
     public Difficulty getDifficulty() {
         return Difficulty.values()[this.pref.getInt("difficulty", Difficulty.SIDEKICK.ordinal())];
+    }
+
+    /**
+     * Setzt die Sticker die der benutzer aktuell hat
+     *
+     * @param set Das set an stickern
+     */
+    public void setSticker(Set<String> set) {
+        this.prefEdit.putStringSet("sticker", set);
+        this.prefEdit.apply();
+    }
+
+    public Set<String> getSticker() {
+        return this.pref.getStringSet("sticker", new HashSet<>());
     }
 
     /**

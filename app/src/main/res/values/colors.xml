@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="text_color">#121212</color>
+    <color name="text_color">#191919</color>
     <color name="text_color_bright">#EBEBEB</color>
     <color name="background">#8CE376</color>
 
@@ -20,4 +20,11 @@
     <color name="startseite_text_fields_text">@color/text_color_bright</color>
     <color name="startseite_text_fields_image_bg">#276C2A</color>
     <color name="startseite_text_fields_bg">#BF000000</color>
+
+    <!-- Sticker -->
+    <color name="sticker.background">#276C2A</color>
+    <color name="sticker.text.color">@color/text_color_bright</color>
+    <color name="sticker.questionmark.bg">#00FFFFFF</color> <!-- #B6DCFE -->
+    <color name="sticker.questionmark.color">#FF87E84C</color ><!-- #D95763 -->
+    <color name="sticker.questionmark.color.akzent">#628C49</color> <!-- #FFCDD2 -->
 </resources>

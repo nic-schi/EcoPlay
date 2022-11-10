@@ -4,7 +4,7 @@
     <dimen name="startseite.icon_size">100dp</dimen>
 
     <!-- Apptitel -->
-    <dimen name="apptitel.text_size">20sp</dimen>
+    <dimen name="apptitel.text_size">25sp</dimen>
 
     <!-- Onboarding -->
     <dimen name="onboarding.apptitel.text_size">30sp</dimen>

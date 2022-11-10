@@ -10,19 +10,25 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 
+
 public abstract class EcoPlayActivity extends AppCompatActivity {
     public static final String PREFNAME = "ECOPLAY";
+
     private final Integer logo;
     private final Integer actionBarTitelResourceID;
+
     private final boolean addMenu;
     private final boolean useBackButton;
     private final boolean showBar;
+
     private SharedPreferences pref;
     private SharedPreferences.Editor prefEdit;
+    private SharedPreferences defaultPref;
 
     public EcoPlayActivity() {
         this(false, R.string.app_name, null, false);
@@ -105,6 +111,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
             }
         }
 
+        this.defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
         this.pref = this.getSharedPreferences(PREFNAME, MODE_PRIVATE);
         this.prefEdit = pref.edit();
     }

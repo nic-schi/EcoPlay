@@ -6,6 +6,7 @@ import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ import com.jadehs.ma.ecoplay.R;
 
 public class SidekickOrHeroFragment extends Fragment {
 
-    private String header;
+    private String frage;
     private String antwort_sidekick;
     private String antwort_held;
 
@@ -44,31 +45,42 @@ public class SidekickOrHeroFragment extends Fragment {
         this.sidekick = view.findViewById(R.id.sidekick);
         this.held = view.findViewById(R.id.held);
 
+        // setze onClickListener
+        this.sidekick.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.SIDEKICK));
+        this.held.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.HELD));
+
+        String frage = this.frage;
+        if (savedInstanceState != null)
+            frage = savedInstanceState.getString("frage");
+
         // Setze fragentext
-        TextView frage = view.findViewById(R.id.frage);
-        frage.setText(this.header);
+        TextView frageView = view.findViewById(R.id.frage);
+        frageView.setText(frage);
 
         // Setze antwortentext
         this.resetDifficultyButtonColors();
         Activity activity = this.requireActivity();
 
+        String heldentext = this.antwort_held;
+        if (savedInstanceState != null)
+            heldentext = savedInstanceState.getString("antwort_held");
+
+        String sidekicktext = this.antwort_held;
+        if (savedInstanceState != null)
+            sidekicktext = savedInstanceState.getString("antwort_held");
+
         if (activity instanceof EcoPlayActivity) {
             Difficulty diff = ((EcoPlayActivity) activity).getDifficulty();
             TextView antwort = view.findViewById(R.id.antwort);
 
-
             if (diff == Difficulty.HELD) {
-                antwort.setText(this.antwort_held);
+                antwort.setText(heldentext);
                 this.setDifficultyButtonActiveColor(this.held);
             } else {
-                antwort.setText(this.antwort_sidekick);
+                antwort.setText(sidekicktext);
                 this.setDifficultyButtonActiveColor(this.sidekick);
             }
         }
-
-        // setze onClickListener
-        this.sidekick.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.SIDEKICK));
-        this.held.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.HELD));
 
         return view;
     }
@@ -79,11 +91,29 @@ public class SidekickOrHeroFragment extends Fragment {
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SidekickOrHeroFragment);
 
-        this.header = a.getString(R.styleable.SidekickOrHeroFragment_frage);
+        this.frage = a.getString(R.styleable.SidekickOrHeroFragment_frage);
         this.antwort_sidekick = a.getString(R.styleable.SidekickOrHeroFragment_antwort_sidekick);
         this.antwort_held = a.getString(R.styleable.SidekickOrHeroFragment_antwort_held);
 
         a.recycle();
+    }
+
+    @Override
+    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            this.antwort_sidekick = savedInstanceState.getString("antwort_sidekick");
+            this.antwort_held = savedInstanceState.getString("antwort_held");
+            this.frage = savedInstanceState.getString("frage");
+        }
+        super.onViewStateRestored(savedInstanceState);
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putString("frage", this.frage);
+        outState.putString("antwort_sidekick", this.antwort_sidekick);
+        outState.putString("antwort_held", this.antwort_held);
+        super.onSaveInstanceState(outState);
     }
 
     /**

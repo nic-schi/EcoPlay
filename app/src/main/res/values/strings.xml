@@ -13,19 +13,20 @@
     <string name="settings.difficulty.frage">Schwierigkeit der Inhalte &amp; Quizzes</string>
     <string name="settings.difficulty.antwort_sidekick">Schwierigkeit: Leicht\n\nDie Texte sind einfach geschrieben. Fragen im Quiz sind einfach.</string>
     <string name="settings.difficulty.antwort_held">Schwierigkeit: Mittel-Schwierig\n\nDie Texte beeinhalten Fachwörter und sind akademisch geschrieben. Fragen im Quiz sind mittel bis schwierig.</string>
+    <string name="settings.sprache">Sprache</string>
+    <string name="settings.sprache.summary">Aktuelle Sprache: %s</string>
 
     <!-- Menüeinträge -->
     <string name="actionbar_menu.action_settings">Einstellungen</string>
     <string name="actionbar_menu.action_about">Über uns</string>
 
     <!-- Startseite -->
-    <string name="startseite.startseite">Startseite</string>
     <string name="startseite.read">Inhalte</string>
     <string name="startseite.quiz">Quiz</string>
     <string name="startseite.zahnputzassistent">Zahnputzassistent</string>
     <string name="startseite.taschengeld">Taschengeld</string>
     <string name="startseite.sticker">Sticker</string>
-    <string name="startseite.settings">Einstellungen</string>
+    <string name="startseite.settings">@string/actionbar_menu.action_settings</string>
 
     <!--- Onboarding -->
     <!-- Onboarding: Intro -->

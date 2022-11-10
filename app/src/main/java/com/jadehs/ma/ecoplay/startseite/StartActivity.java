@@ -1,8 +1,12 @@
 package com.jadehs.ma.ecoplay.startseite;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
@@ -18,14 +22,20 @@ public class StartActivity extends EcoPlayActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // prüfe auf onboarding
         if (this.getOnboarding()) {
             Intent intent = new Intent(this, OnboardingActivity.class);
             startActivity(intent);
         }
-
-        Log.v("ecoplay", getDifficulty().name());
-
         this.setOnboarding(false);
+
         setContentView(R.layout.activity_start);
     }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        setContentView(R.layout.activity_start);
+    }
+
 }

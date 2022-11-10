@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +18,7 @@ import androidx.fragment.app.Fragment;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 
+import java.util.HashSet;
 import java.util.Set;
 
 
@@ -77,11 +77,9 @@ public class StickerFragment extends Fragment {
         Activity activity = this.requireActivity();
 
         if (activity instanceof EcoPlayActivity) {
-            Set<String> sticker = ((EcoPlayActivity) activity).getSticker();
+            Set<String> sticker = new HashSet<>(((EcoPlayActivity) activity).getSticker());
             sticker.add(id);
             ((EcoPlayActivity) activity).setSticker(sticker);
-            Log.v("ecoplay", "unclock sticker --> " + this.getTag());
-            Log.v("ecoplay", "current sticker --> " + sticker);
         }
     }
 
@@ -89,7 +87,6 @@ public class StickerFragment extends Fragment {
         Activity activity = this.requireActivity();
         if (activity instanceof EcoPlayActivity) {
             Set<String> sticker = ((EcoPlayActivity) activity).getSticker();
-            Log.v("ecoplay", this.getTag());
             return sticker.contains(this.getTag());
         }
         return true;

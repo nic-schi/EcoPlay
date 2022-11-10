@@ -25,7 +25,8 @@
         android:textColor="@color/onboarding_wissenspruefung_text_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/placeholder.header.short" />
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -81,6 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/arrow_right"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:text="@string/placeholder.text.20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

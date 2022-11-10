@@ -55,7 +55,7 @@
             android:adjustViewBounds="true"
             android:backgroundTint="@color/onboarding_wissenspruefung_btn_bg"
             android:scaleType="fitXY"
-            android:src="@drawable/batman" />
+            android:src="@drawable/eco_superheld" />
 
     </LinearLayout>
 

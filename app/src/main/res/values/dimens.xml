@@ -10,5 +10,5 @@
     <dimen name="onboarding.apptitel.text_size">30sp</dimen>
 
     <!-- Sticker -->
-    <dimen name="sticker.icon_size">100dp</dimen>
+    <dimen name="sticker.icon_size">70dp</dimen>
 </resources>

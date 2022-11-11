@@ -33,7 +33,7 @@
     <string name="onboarding.intro.start">Reise beginnen</string>
     <string name="onboarding.intro.skip">Ich kenn mich aus</string>
     <string name="onboarding.intro.header">Vielen Dank, dass du unsere App benutzt!</string>
-    <string name="onboarding.intro.text">Mit dieser App lernst du die Welt der Nachhaltigkeit kennen. Wenn du diese App schon einmal benutzt hast, dann bist du ein Erfahrener Nutzer. Wenn nicht, dann empfehlen wir dir, die Reise anzutreten um die App etwas kennenzulernen.</string>
+    <string name="onboarding.intro.text">Mit dieser App lernst du die Welt der Nachhaltigkeit kennen. \n\nWenn du diese App schon einmal benutzt hast, dann bist du ein Erfahrener Nutzer. Wenn nicht, dann empfehlen wir dir, die Reise anzutreten um die App etwas kennenzulernen.</string>
 
     <!-- Onboarding: Wissensprüfung -->
     <string name="onboarding.wissensprüfung.text">Bevor du diese App benutzen kannst musst du erst einmal ein paar Fragen beantworten, aber keine Sorge, es dauert auch nicht lange.\n\nDiese Frage bestimmt über die Schwierigkeit der lesbaren Inhalte und den durchführbaren Quizzes.</string>

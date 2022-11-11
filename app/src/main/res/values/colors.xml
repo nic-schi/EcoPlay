@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="text_color">#191919</color>
-    <color name="text_color_bright">#EBEBEB</color>
-    <color name="background">#8CE376</color>
+    <color name="primary">#4C9150</color>
+    <color name="secondary">#8ABF67</color>
+    <color name="akzent">#F0DC71</color>
+    <color name="akzent_heller">#f4e594</color>
+    <color name="akzent_dunkler">#eed65b</color>
+
+    <color name="text_color">#1E1E1E</color>
+    <color name="text_color_bright">#DFDFDF</color>
+    <color name="background">@color/secondary</color>
 
     <color name="apptitel">@color/text_color_bright</color>
 
     <!-- Nav !-->
-    <color name="navgradient_start">#206323</color>
-    <color name="navgradient_end">#276C2A</color>
+    <color name="navgradient_start">@color/primary</color>
+    <color name="navgradient_end">#3B803F</color>
 
     <!-- Onboarding -->
-    <color name="onboarding_logo_container_bg">#B3000000</color>
-    <color name="onboarding_wissenspruefung_btn_bg">#1B511D</color>
-    <color name="onboarding_wissenspruefung_btn_active_bg">#276C2A</color>
+    <color name="onboarding_logo_container_bg">@color/primary</color>
+    <color name="onboarding_wissenspruefung_btn_bg">@color/akzent_dunkler</color>
+    <color name="onboarding_wissenspruefung_btn_active_bg">@color/akzent</color>
     <color name="onboarding_wissenspruefung_text_color">@color/text_color_bright</color>
 
     <!-- Startseite -->
     <color name="startseite_text_fields_text">@color/text_color_bright</color>
-    <color name="startseite_text_fields_image_bg">#276C2A</color>
-    <color name="startseite_text_fields_bg">#BF000000</color>
+    <color name="startseite_text_fields_image_bg">@color/primary</color>
+    <color name="startseite_text_fields_bg">#33000000</color>
 
     <!-- Sticker -->
-    <color name="sticker.background">#276C2A</color>
+    <color name="sticker.background">@color/primary</color>
     <color name="sticker.text.color">@color/text_color_bright</color>
-    <color name="sticker.questionmark.bg">#00FFFFFF</color> <!-- #B6DCFE -->
-    <color name="sticker.questionmark.color">#FF87E84C</color ><!-- #D95763 -->
-    <color name="sticker.questionmark.color.akzent">#628C49</color> <!-- #FFCDD2 -->
+    <color name="sticker.questionmark.bg">#00000000</color> <!-- #B6DCFE -->
+    <color name="sticker.questionmark.color">@color/akzent</color ><!-- #D95763 -->
+    <color name="sticker.questionmark.color.akzent">@color/akzent_heller</color> <!-- #FFCDD2 -->
 </resources>

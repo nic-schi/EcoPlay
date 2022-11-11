@@ -40,6 +40,7 @@ public class OnboardingActivity extends EcoPlayActivity {
         setDifficulty(Difficulty.SIDEKICK);
         startActivity(intent);
         this.addArchievement();
+        this.setOnboarding(false);
     }
 
     private void addArchievement() {
@@ -56,6 +57,7 @@ public class OnboardingActivity extends EcoPlayActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
         this.addArchievement();
+        this.setOnboarding(false);
     }
 
 }

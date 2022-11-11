@@ -54,10 +54,13 @@
     </style>
 
     <!-- Buttons -->
-    <style name="Button.EcoPlay" parent="@android:style/Widget.Holo.Light.Button">
+    <style name="Button.EcoPlay" parent="@style/Widget.AppCompat.Button.Colored">
         <item name="paddingStart">6dip</item>
         <item name="paddingEnd">6dip</item>
         <item name="fontFamily">@font/roboto_medium</item>
+        <item name="backgroundTint">@color/akzent</item>
+        <item name="android:backgroundTint">@color/akzent</item>
+        <item name="android:textAllCaps">false</item>
     </style>
 
     <!--- TextAppearances -->

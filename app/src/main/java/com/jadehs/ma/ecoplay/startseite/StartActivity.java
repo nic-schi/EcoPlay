@@ -29,11 +29,8 @@ public class StartActivity extends EcoPlayActivity {
             Intent intent = new Intent(this, OnboardingActivity.class);
             startActivity(intent);
         }
-        this.setOnboarding(false);
 
         setContentView(R.layout.activity_start);
-
-        new StickerManager(this);
     }
 
     @Override

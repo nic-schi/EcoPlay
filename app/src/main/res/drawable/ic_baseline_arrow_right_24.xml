@@ -2,7 +2,7 @@
     android:width="70dp"
     android:height="50dp"
     android:autoMirrored="true"
-    android:tint="@color/onboarding_wissenspruefung_text_color"
+    android:tint="@color/akzent"
     android:viewportWidth="24"
     android:viewportHeight="24">
     <path

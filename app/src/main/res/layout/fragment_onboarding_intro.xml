@@ -62,6 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="16dp"
         android:elevation="0dp"
         android:orientation="horizontal"
         android:paddingTop="20dp"
@@ -73,7 +74,7 @@
 
         <Button
             android:id="@+id/start"
-            style="@android:style/Widget.Holo.Light.Button"
+            style="@style/Button.EcoPlay"
             android:layout_width="145dp"
             android:layout_height="48dp"
             android:layout_marginEnd="15dp"
@@ -85,8 +86,8 @@
 
         <Button
             android:id="@+id/skip"
-            style="@android:style/Widget.Holo.Light.Button"
-            android:layout_width="145dp"
+            style="@style/Button.EcoPlay"
+            android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:fontFamily="@font/roboto_medium"
             android:onClick="skipOnboarding"

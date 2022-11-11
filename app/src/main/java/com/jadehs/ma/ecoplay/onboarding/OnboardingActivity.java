@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.navigation.Navigation;
 
-import com.jadehs.ma.ecoplay.Difficulty;
+import com.jadehs.ma.ecoplay.utils.Difficulty;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;

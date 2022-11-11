@@ -13,9 +13,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
+import com.jadehs.ma.ecoplay.FAQ.FAQActivity;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
+import com.jadehs.ma.ecoplay.utils.Difficulty;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -33,7 +35,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
 
     private SharedPreferences pref;
     private SharedPreferences.Editor prefEdit;
-    private SharedPreferences defaultPref;
+
 
     public EcoPlayActivity() {
         this(false, R.string.app_name, null, false);
@@ -129,9 +131,9 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
                 bar.hide();
             }
         }
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        this.defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
         this.pref = this.getSharedPreferences(PREFNAME, MODE_PRIVATE);
         this.prefEdit = pref.edit();
     }
@@ -149,6 +151,11 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
             // Über uns
             if (item.getItemId() == R.id.action_about) {
                 intent.setClass(this, UeberUnsActivity.class);
+                startActivity(intent);
+            }
+            // FAQ
+            if (item.getItemId() == R.id.action_faq) {
+                intent.setClass(this, FAQActivity.class);
                 startActivity(intent);
             }
             // TODO: remove in production

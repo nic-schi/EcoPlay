@@ -15,6 +15,7 @@ import androidx.preference.PreferenceManager;
 
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
+import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
 
 import java.util.HashSet;
 import java.util.Set;

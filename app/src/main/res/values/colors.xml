@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Primärfarben, Sekündärfarben, Akzente -->
     <color name="primary">#4C9150</color>
     <color name="secondary">#8ABF67</color>
     <color name="akzent">#F0DC71</color>
@@ -25,12 +26,12 @@
     <!-- Startseite -->
     <color name="startseite_text_fields_text">@color/text_color_bright</color>
     <color name="startseite_text_fields_image_bg">@color/primary</color>
-    <color name="startseite_text_fields_bg">#33000000</color>
+    <color name="startseite_text_fields_bg">#4D000000</color>
 
     <!-- Sticker -->
     <color name="sticker.background">@color/primary</color>
     <color name="sticker.text.color">@color/text_color_bright</color>
     <color name="sticker.questionmark.bg">#00000000</color> <!-- #B6DCFE -->
-    <color name="sticker.questionmark.color">@color/akzent</color ><!-- #D95763 -->
+    <color name="sticker.questionmark.color">@color/akzent</color><!-- #D95763 -->
     <color name="sticker.questionmark.color.akzent">@color/akzent_heller</color> <!-- #FFCDD2 -->
 </resources>

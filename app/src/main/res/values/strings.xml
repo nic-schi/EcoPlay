@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name" translatable="false">EcoPlay</string>
 
+    <!-- Über uns -->
+    <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>\n\nWir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
+    <string name="jadehochschule">Jade Hochschule</string>
+    <string name="teamText">Das sind wir:</string>
+    <string name="author.1" translatable="false">Nichlas Schipper</string>
+    <string name="author.2" translatable="false">Marco Janssen</string>
+    <string name="author.3" translatable="false">Simon Schadrin</string>
+
     <!-- Placeholder -->
     <string name="placeholder.header.short" translatable="false">Lorem ipsum dolor sit</string>
     <string name="placeholder.header.long" translatable="false">Lorem ipsum dolor sit amet, consetetur</string>

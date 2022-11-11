@@ -2,6 +2,7 @@ package com.jadehs.ma.ecoplay;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -127,6 +128,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
                 bar.hide();
             }
         }
+        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         this.defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
         this.pref = this.getSharedPreferences(PREFNAME, MODE_PRIVATE);

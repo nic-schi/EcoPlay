@@ -10,24 +10,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
-public class FileManager {
-    public final Context ctx;
+public class FileManager extends Manager<String> {
 
     public FileManager(Context ctx) {
-        this.ctx = ctx;
+        super(ctx);
     }
 
-    public void writeToFile(String filename, String content) {
-        try (FileOutputStream fos = ctx.openFileOutput(filename, Context.MODE_PRIVATE)) {
-            fos.write(content.getBytes(StandardCharsets.UTF_8));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public String readFile(String filename) {
+    @Override
+    public String read(String filename) {
         try {
-            FileInputStream fis = this.ctx.openFileInput(filename);
+            FileInputStream fis = this.getContext().openFileInput(filename);
             InputStreamReader inputStreamReader = new InputStreamReader(fis, StandardCharsets.UTF_8);
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -46,6 +38,15 @@ public class FileManager {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void write(String filename, String data) {
+        try (FileOutputStream fos = this.getContext().openFileOutput(filename, Context.MODE_PRIVATE)) {
+            fos.write(data.getBytes(StandardCharsets.UTF_8));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -22,7 +22,7 @@ public class StartActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
 
         // Schreibe Sticker
-        new StickerManager(this).schreibe();
+        new StickerManager(this).writeDefault();
 
         // prüfe auf onboarding
         if (this.getOnboarding()) {

@@ -22,7 +22,7 @@ public class StickerActivity extends EcoPlayActivity {
         FragmentManager fragM = this.getSupportFragmentManager();
         FragmentTransaction trans = fragM.beginTransaction();
 
-        Sticker[] allesticker = new StickerManager(this).lese();
+        Sticker[] allesticker = new StickerManager(this).read(StickerManager.FILENAME);
         for (Sticker sticker : allesticker) {
             StickerFragment frag = StickerFragment.newInstance(sticker);
             trans.add(R.id.allesticker, frag, sticker.getTag());

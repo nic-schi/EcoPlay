@@ -7,46 +7,50 @@ import android.media.MediaPlayer;
 import android.widget.Toast;
 
 import com.jadehs.ma.ecoplay.R;
-import com.jadehs.ma.ecoplay.utils.FileManager;
+import com.jadehs.ma.ecoplay.utils.JSONFileManager;
+import com.jadehs.ma.ecoplay.utils.Manager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-public class StickerManager {
-    private final Context ctx;
-    private final FileManager manager;
+public class StickerManager extends Manager<Sticker[]> {
+    public static final String FILENAME = "sticker.json";
+    private final JSONFileManager jManager;
 
     public StickerManager(Context ctx) {
-        this.ctx = ctx;
-        this.manager = new FileManager(ctx);
+        super(ctx);
+        this.jManager = new JSONFileManager(ctx);
     }
 
     private Sticker[] getDefault() {
         return new Sticker[]{
                 new Sticker(
-                        ctx.getString(R.string.sticker_4_stickername),
-                        ctx.getString(R.string.sticker_4_description),
+                        getContext().getString(R.string.sticker_4_stickername),
+                        getContext().getString(R.string.sticker_4_description),
                         R.drawable.logo_small,
                         "onboarding"
                 ),
                 new Sticker(
-                        ctx.getString(R.string.sticker_1_stickername),
-                        ctx.getString(R.string.sticker_1_description),
+                        getContext().getString(R.string.sticker_1_stickername),
+                        getContext().getString(R.string.sticker_1_description),
                         R.drawable.bees01,
                         "bee01"
                 ),
                 new Sticker(
-                        ctx.getString(R.string.sticker_2_stickername),
-                        ctx.getString(R.string.sticker_2_description),
+                        getContext().getString(R.string.sticker_2_stickername),
+                        getContext().getString(R.string.sticker_2_description),
                         R.drawable.bees02,
                         "bee02"
                 ),
                 new Sticker(
-                        ctx.getString(R.string.sticker_3_stickername),
-                        ctx.getString(R.string.sticker_3_description),
+                        getContext().getString(R.string.sticker_3_stickername),
+                        getContext().getString(R.string.sticker_3_description),
                         R.drawable.fireplace,
                         "fireplace"
                 )
@@ -54,23 +58,23 @@ public class StickerManager {
     }
 
     public void unlockedArchievement(String tag, String name) {
-        MediaPlayer mp = MediaPlayer.create(this.ctx, R.raw.levelup);
+        MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.levelup);
         mp.setVolume(0.15f, 0.15f);
         mp.start();
 
-        Toast toast = Toast.makeText(this.ctx, ctx.getString(R.string.sticker_unlocked, name), Toast.LENGTH_SHORT);
+        Toast toast = Toast.makeText(getContext(), getContext().getString(R.string.sticker_unlocked, name), Toast.LENGTH_SHORT);
         toast.show();
 
-        SharedPreferences pref = ctx.getSharedPreferences("ECOPLAY", Context.MODE_PRIVATE);
+        SharedPreferences pref = getContext().getSharedPreferences("ECOPLAY", Context.MODE_PRIVATE);
         Set<String> sticker = new HashSet<>(pref.getStringSet("sticker", new HashSet<>()));
         sticker.add(tag);
         pref.edit().putStringSet("sticker", sticker).apply();
     }
 
-    public Sticker[] lese() {
+    @Override
+    public Sticker[] read(String filename) {
         try {
-            String content = manager.readFile("sticker.json");
-            JSONArray array = new JSONArray(content);
+            JSONArray array = this.jManager.read(filename);
             Sticker[] sticker = new Sticker[array.length()];
 
             for (int i = 0; i < array.length(); i++) {
@@ -78,16 +82,31 @@ public class StickerManager {
             }
             return sticker;
         } catch (JSONException e) {
-            e.printStackTrace();
+            // Fehler
         }
         return null;
     }
 
-    public void schreibe() {
+    @Override
+    public void write(String filename, Sticker[] data) {
         try {
-            manager.writeToFile("sticker.json", new JSONArray(this.getDefault()).toString());
+            this.jManager.write(filename, new JSONArray(data));
         } catch (JSONException e) {
-            // fehler
+            // Fehler
+        }
+    }
+
+    public void writeDefault() {
+        try {
+            FileInputStream fis = this.getContext().openFileInput(FILENAME);
+            int c = fis.read();
+            if (c == -1) {
+                this.write(FILENAME, this.getDefault());
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

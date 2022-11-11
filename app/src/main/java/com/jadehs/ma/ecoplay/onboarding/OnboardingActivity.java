@@ -10,6 +10,7 @@ import com.jadehs.ma.ecoplay.Difficulty;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
+import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 public class OnboardingActivity extends EcoPlayActivity {
 
@@ -38,6 +39,11 @@ public class OnboardingActivity extends EcoPlayActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         setDifficulty(Difficulty.SIDEKICK);
         startActivity(intent);
+        this.addArchievement();
+    }
+
+    private void addArchievement() {
+        new StickerManager(this).unlockedArchievement("onboarding", this.getString(R.string.sticker_4_stickername));
     }
 
     /**
@@ -49,6 +55,7 @@ public class OnboardingActivity extends EcoPlayActivity {
         Intent intent = new Intent(this, StartActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
+        this.addArchievement();
     }
 
 }

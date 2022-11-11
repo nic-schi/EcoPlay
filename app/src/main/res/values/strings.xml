@@ -23,7 +23,7 @@
     <!-- Startseite -->
     <string name="startseite.read">Inhalte</string>
     <string name="startseite.quiz">Quiz</string>
-    <string name="startseite.zahnputzassistent">Zahnputzassistent</string>
+    <string name="startseite.zahnputzassistent">Zähneputzen</string>
     <string name="startseite.taschengeld">Taschengeld</string>
     <string name="startseite.sticker">Sticker</string>
     <string name="startseite.settings">@string/actionbar_menu.action_settings</string>
@@ -44,6 +44,7 @@
 
     <!-- Sticker -->
     <string name="sticker.placeholder.name" translatable="false">\?????</string>
+    <string name="sticker.unlocked">Sticker \"%1$s\" freigeschaltet!</string>
     <string name="sticker.text">Hier kannst du alle deine gesammelten Sticker anschauen. Sticker sind Herausforderungen die du durchs benutzen der App bewältigen kannst.\n\nViel Spaß beim sammeln!</string>
     <string name="sticker.1.stickername">Summ, summ, summ!</string>
     <string name="sticker.1.description">Lese den Text zu den Bienen</string>

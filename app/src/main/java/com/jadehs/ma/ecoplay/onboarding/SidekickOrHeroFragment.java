@@ -65,9 +65,9 @@ public class SidekickOrHeroFragment extends Fragment {
         if (savedInstanceState != null)
             heldentext = savedInstanceState.getString("antwort_held");
 
-        String sidekicktext = this.antwort_held;
+        String sidekicktext = this.antwort_sidekick;
         if (savedInstanceState != null)
-            sidekicktext = savedInstanceState.getString("antwort_held");
+            sidekicktext = savedInstanceState.getString("antwort_sidekick");
 
         if (activity instanceof EcoPlayActivity) {
             Difficulty diff = ((EcoPlayActivity) activity).getDifficulty();

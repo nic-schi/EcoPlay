@@ -37,4 +37,5 @@
     <string name="sticker.3.description">Successfully complete a quiz on the theme of forest fires</string>
     <string name="sticker.4.stickername">To a new era!</string>
     <string name="sticker.4.description">Survive the app introduction</string>
+    <string name="sticker.unlocked">Sticker \"%1$s\" unlocked!</string>
 </resources>

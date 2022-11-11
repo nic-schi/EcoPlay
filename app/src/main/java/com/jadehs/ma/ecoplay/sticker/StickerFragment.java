@@ -1,17 +1,13 @@
 package com.jadehs.ma.ecoplay.sticker;
 
 import android.app.Activity;
-import android.content.Context;
-import android.content.res.TypedArray;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -28,20 +24,51 @@ public class StickerFragment extends Fragment {
     private String description;
     private int icon;
 
+    public StickerFragment() {
+    }
+
+    public StickerFragment(String name, String description, int icon) {
+        this.name = name;
+        this.description = description;
+        this.icon = icon;
+    }
+
+    static StickerFragment newInstance(Sticker sticker) {
+        return StickerFragment.newInstance(sticker.getName(), sticker.getDescription(), sticker.getIcon());
+    }
+
+    static StickerFragment newInstance(String name, String description, int icon) {
+        StickerFragment fragment = new StickerFragment();
+
+        Bundle args = new Bundle();
+        args.putString("name", name);
+        args.putString("description", description);
+        args.putInt("icon", icon);
+        fragment.setArguments(args);
+
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Bundle args = getArguments();
+        if (args != null) {
+            name = args.getString("name");
+            icon = args.getInt("icon");
+            description = args.getString("description");
+        }
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sticker, container, false);
 
         String name = this.name;
-        String description = this.description;
         int icon = this.icon;
-
-        if (savedInstanceState != null) {
-            name = savedInstanceState.getString("stickername");
-            description = savedInstanceState.getString("description");
-            icon = savedInstanceState.getInt("stickericon");
-        }
+        String description = this.description;
 
         // prüfe ob sticker vorhanden
         if (!this.hatSticker()) {
@@ -73,14 +100,7 @@ public class StickerFragment extends Fragment {
 
     // TODO: remove in production
     private void unlock() {
-        String id = this.getTag();
-        Activity activity = this.requireActivity();
-
-        if (activity instanceof EcoPlayActivity) {
-            Set<String> sticker = new HashSet<>(((EcoPlayActivity) activity).getSticker());
-            sticker.add(id);
-            ((EcoPlayActivity) activity).setSticker(sticker);
-        }
+        new StickerManager(this.getContext()).unlockedArchievement(this.getTag(), this.name);
     }
 
     private boolean hatSticker() {
@@ -92,34 +112,4 @@ public class StickerFragment extends Fragment {
         return true;
     }
 
-    @Override
-    public void onInflate(@NonNull Context context, @NonNull AttributeSet attrs, @Nullable Bundle savedInstanceState) {
-        super.onInflate(context, attrs, savedInstanceState);
-
-        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.StickerFragment);
-
-        this.name = a.getString(R.styleable.StickerFragment_stickername);
-        this.description = a.getString(R.styleable.StickerFragment_description);
-        this.icon = a.getResourceId(R.styleable.StickerFragment_stickericon, R.drawable.logo_small);
-
-        a.recycle();
-    }
-
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        if (savedInstanceState != null) {
-            this.name = savedInstanceState.getString("stickername");
-            this.description = savedInstanceState.getString("description");
-            this.icon = savedInstanceState.getInt("stickericon");
-        }
-        super.onViewStateRestored(savedInstanceState);
-    }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        outState.putString("stickername", this.name);
-        outState.putString("description", this.description);
-        outState.putInt("stickericon", this.icon);
-        super.onSaveInstanceState(outState);
-    }
 }

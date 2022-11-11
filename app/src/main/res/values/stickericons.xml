@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="sticker.icons">
+        <item>@drawable/bees01</item>
+        <item>@drawable/bees02</item>
+        <item>@drawable/fireplace</item>
+    </array>
+</resources>

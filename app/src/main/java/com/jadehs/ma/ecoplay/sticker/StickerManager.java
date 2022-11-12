@@ -13,9 +13,6 @@ import com.jadehs.ma.ecoplay.utils.Manager;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -97,16 +94,6 @@ public class StickerManager extends Manager<Sticker[]> {
     }
 
     public void writeDefault() {
-        try {
-            FileInputStream fis = this.getContext().openFileInput(FILENAME);
-            int c = fis.read();
-            if (c == -1) {
-                this.write(FILENAME, this.getDefault());
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.write(FILENAME, this.getDefault());
     }
 }

@@ -36,7 +36,7 @@ public class Sticker extends JSONObject {
                     o.getString("tag")
             );
         } catch (JSONException e) {
-            e.printStackTrace();
+            // fehler
         }
         return null;
     }

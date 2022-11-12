@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
+import com.jadehs.ma.ecoplay.FAQ.FAQManager;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.sticker.StickerManager;
@@ -21,8 +22,9 @@ public class StartActivity extends EcoPlayActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Schreibe Sticker
+        // Schreibe Sticker & FAQ
         new StickerManager(this).writeDefault();
+        new FAQManager(this).writeDefault();
 
         // prüfe auf onboarding
         if (this.getOnboarding()) {

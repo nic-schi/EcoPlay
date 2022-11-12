@@ -2,7 +2,13 @@
 <resources>
     <!-- Primärfarben, Sekündärfarben, Akzente -->
     <color name="primary">#4C9150</color>
+    <color name="primary_heller">#71b475</color>
+    <color name="primary_dunkler">#438046</color>
+
     <color name="secondary">#8ABF67</color>
+    <color name="secondary_heller">#a7cf8d</color>
+    <color name="secondary_dunkler">#77b54e</color>
+
     <color name="akzent">#F0DC71</color>
     <color name="akzent_heller">#f4e594</color>
     <color name="akzent_dunkler">#eed65b</color>

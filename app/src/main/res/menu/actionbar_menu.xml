@@ -6,7 +6,7 @@
         android:id="@+id/empty"
         android:icon="@drawable/actionbar_overflow"
         android:orderInCategory="101"
-        android:title="Item"
+        android:title="@string/placeholder.header.short"
         app:showAsAction="always">
         <menu>
             <item
@@ -19,12 +19,12 @@
                 android:icon="@drawable/settings"
                 android:title="@string/startseite.settings"
                 app:showAsAction="ifRoom|withText" />
-            <!-- TODO: remove in production -->
             <item
                 android:id="@+id/action_faq"
                 android:icon="@drawable/question_round"
                 android:title="@string/actionbar_menu.faq"
                 app:showAsAction="ifRoom|withText" />
+            <!-- TODO: remove in production -->
             <item
                 android:id="@+id/action_debug_onboarding"
                 android:title="launch Onboarding"

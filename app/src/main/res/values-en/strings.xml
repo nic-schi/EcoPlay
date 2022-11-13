@@ -25,16 +25,6 @@
     <string name="onboarding.wissensprüfung.sidekick">I still have little knowledge and don\'t know it that well!</string>
     <string name="onboarding.wissensprüfung.held">I already have some knowledge and know my way around!</string>
     <string name="onboarding.wissensprüfung.knopf">Done</string>
-    <string name="sticker.text">Here you can view all your collected stickers. Stickers are challenges you can complete by using the app.\n\nHave fun collecting them!</string>
-    <string name="sticker.1.stickername">Hum, hum, hum!</string>
-    <string name="sticker.1.description">Read the text about the bees</string>
-    <string name="sticker.2.stickername">I love bees!</string>
-    <string name="sticker.2.description">Successfully complete a quiz on the topic of bees</string>
-    <string name="sticker.3.stickername">Watch out hot!</string>
-    <string name="sticker.3.description">Successfully complete a quiz on the theme of forest fires</string>
-    <string name="sticker.4.stickername">To a new era!</string>
-    <string name="sticker.4.description">Survive the app introduction</string>
-    <string name="sticker.unlocked">Sticker \"%1$s\" unlocked!</string>
     <string name="jadehochschule">Jade University</string>
     <string name="teamText">This is us:</string>
     <string name="actionbar_menu.faq">FAQ</string>
@@ -43,12 +33,4 @@
     <string name="settings.übertragung.code">Code…</string>
     <string name="datenübertragen.übertragen">Transfer</string>
     <string name="datenübertragen.abbrechen">Cancel</string>
-    <string name="datenübertragen.title">Transfer data</string>
-    <string name="faq">Here you can see the most frequently asked questions about the app. We hope this helps you.</string>
-    <string name="faq.1.frage">How do I transfer my stickers to another phone?</string>
-    <string name="faq.1.antwort">To do this, you just need to go to the settings and generate a transfer code.\n\nThen enter it in your new phone and voila, your data is now on the new phone.\n\nHave fun :)</string>
-    <string name="faq.2.frage">How do I change the difficulty level?</string>
-    <string name="faq.2.antwort">To change the difficulty level you have to select either Superhero or Sidekick in the settings.</string>
-    <string name="faq.3.frage">Will my stickers be lost if I get another phone?</string>
-    <string name="faq.3.antwort">To avoid losing your stickers, you can transfer them to your new phone.\n\nJust generate a transfer code in the settings and enter it on your new phone.\n\nAfter that, your stickers will be on your new phone.</string>
-</resources>
+    <string name="datenübertragen.title">Transfer data</string></resources>

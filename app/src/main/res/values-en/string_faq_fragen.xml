@@ -1,0 +1,9 @@
+<resources>
+    <string name="faq">Here you can see the most frequently asked questions about the app. We hope this helps you.</string>
+    <string name="faq.1.frage">How do I transfer my stickers to another phone?</string>
+    <string name="faq.1.antwort">To do this, you just need to go to the settings and generate a transfer code.\n\nThen enter it in your new phone and voila, your data is now on the new phone.\n\nHave fun :)</string>
+    <string name="faq.2.frage">How do I change the difficulty level?</string>
+    <string name="faq.2.antwort">To change the difficulty level you have to select either Superhero or Sidekick in the settings.</string>
+    <string name="faq.3.frage">Will my stickers be lost if I get another phone?</string>
+    <string name="faq.3.antwort">To avoid losing your stickers, you can transfer them to your new phone.\n\nJust generate a transfer code in the settings and enter it on your new phone.\n\nAfter that, your stickers will be on your new phone.</string>
+</resources>

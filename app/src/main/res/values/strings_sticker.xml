@@ -1,0 +1,14 @@
+<resources>
+    <string name="sticker.placeholder.name" translatable="false">\?????</string>
+    <string name="sticker.unlocked">Sticker \"%1$s\" freigeschaltet!</string>
+    <string name="sticker.text">Hier kannst du alle deine gesammelten Sticker anschauen. Sticker sind Herausforderungen die du durchs benutzen der App bewältigen kannst.\n\nViel Spaß beim sammeln!</string>
+
+    <string name="sticker.1.stickername">Summ, summ, summ!</string>
+    <string name="sticker.1.description">Lese den Text zu den Bienen</string>
+    <string name="sticker.2.stickername">Bienenliebhaber!</string>
+    <string name="sticker.2.description">Schließe erfolgreich ein Quiz zum Thema Bienen ab</string>
+    <string name="sticker.3.stickername">Vorsicht heiß!</string>
+    <string name="sticker.3.description">Schließe erfolgreich ein Quiz zum Theme Waldbrände ab</string>
+    <string name="sticker.4.stickername">Auf eine neue Ära!</string>
+    <string name="sticker.4.description">Überlebe die Einführung in die App</string>
+</resources>

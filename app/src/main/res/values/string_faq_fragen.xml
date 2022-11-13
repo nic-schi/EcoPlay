@@ -1,0 +1,9 @@
+<resources>
+    <string name="faq">Hier siehst du die häufigsten gestellten Fragen zur App. Wir hoffen dies hilft dir weiter.</string>
+    <string name="faq.1.frage">Wie übertrage ich meine Sticker auf ein anderes Handy?</string>
+    <string name="faq.1.antwort">Dazu musst du nur zu den Einstellungen und einen Übertragungscode generieren.\n\nDann gibst du diesen bei deinem neuen Handy ein und voila, deine Daten sind nun auf dem neuen Handy.\n\nViel spaß :)</string>
+    <string name="faq.2.frage">Wie ändere Ich den Schwierigkeitsgrad?</string>
+    <string name="faq.2.antwort">Um den Schwierigkeitsgrad zu ändern musst du in den Einstellungen entweder den Superheld oder den Sidekick auswählen.</string>
+    <string name="faq.3.frage">Gehen meine Sticker verloren wenn Ich ein anderes Handy bekomme?</string>
+    <string name="faq.3.antwort">Um deine Sticker nicht zu verlieren kannst du diese auf dein neues Handy übertragen.\n\nDazu musst du nur in den Einstellungen einen Übertragungscode generieren und diesen dann bei deinen neuen Handy eingeben.\n\nDanach sind deine Sticker auch auf dem neuen Handy.</string>
+</resources>

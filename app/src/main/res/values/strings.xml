@@ -57,26 +57,4 @@
     <string name="onboarding.wissensprüfung.sidekick">Ich habe noch wenig Wissen und kenn mich nicht so gut aus!</string>
     <string name="onboarding.wissensprüfung.held">Ich habe schon etwas Wissen und kenne mich aus!</string>
     <string name="onboarding.wissensprüfung.knopf">Fertig</string>
-
-    <!-- Sticker -->
-    <string name="sticker.placeholder.name" translatable="false">\?????</string>
-    <string name="sticker.unlocked">Sticker \"%1$s\" freigeschaltet!</string>
-    <string name="sticker.text">Hier kannst du alle deine gesammelten Sticker anschauen. Sticker sind Herausforderungen die du durchs benutzen der App bewältigen kannst.\n\nViel Spaß beim sammeln!</string>
-    <string name="sticker.1.stickername">Summ, summ, summ!</string>
-    <string name="sticker.1.description">Lese den Text zu den Bienen</string>
-    <string name="sticker.2.stickername">Bienenliebhaber!</string>
-    <string name="sticker.2.description">Schließe erfolgreich ein Quiz zum Thema Bienen ab</string>
-    <string name="sticker.3.stickername">Vorsicht heiß!</string>
-    <string name="sticker.3.description">Schließe erfolgreich ein Quiz zum Theme Waldbrände ab</string>
-    <string name="sticker.4.stickername">Auf eine neue Ära!</string>
-    <string name="sticker.4.description">Überlebe die Einführung in die App</string>
-
-    <!-- FAQ -->
-    <string name="faq">Hier siehst du die häufigsten gestellten Fragen zur App. Wir hoffen dies hilft dir weiter.</string>
-    <string name="faq.1.frage">Wie übertrage ich meine Sticker auf ein anderes Handy?</string>
-    <string name="faq.1.antwort">Dazu musst du nur zu den Einstellungen und einen Übertragungscode generieren.\n\nDann gibst du diesen bei deinem neuen Handy ein und voila, deine Daten sind nun auf dem neuen Handy.\n\nViel spaß :)</string>
-    <string name="faq.2.frage">Wie ändere Ich den Schwierigkeitsgrad?</string>
-    <string name="faq.2.antwort">Um den Schwierigkeitsgrad zu ändern musst du in den Einstellungen entweder den Superheld oder den Sidekick auswählen.</string>
-    <string name="faq.3.frage">Gehen meine Sticker verloren wenn Ich ein anderes Handy bekomme?</string>
-    <string name="faq.3.antwort">Um deine Sticker nicht zu verlieren kannst du diese auf dein neues Handy übertragen.\n\nDazu musst du nur in den Einstellungen einen Übertragungscode generieren und diesen dann bei deinen neuen Handy eingeben.\n\nDanach sind deine Sticker auch auf dem neuen Handy.</string>
 </resources>

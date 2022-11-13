@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">EcoPlay</string>
 
     <!-- Über uns -->
-    <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>\n\nWir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
+    <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>  Wir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
     <string name="jadehochschule">Jade Hochschule</string>
     <string name="teamText">Das sind wir:</string>
     <string name="author.1" translatable="false">Nichlas Schipper</string>
@@ -25,7 +25,7 @@
     <!-- Daten übertragen !-->
     <string name="settings.übertragung.generieren">Übertragungscode generieren</string>
     <string name="settings.übertragung.code">Code…</string>
-    <string name="settings.übertragung.übertragen">Daten übertragen</string>
+    <string name="settings.übertragung.übertragen" translatable="false">@string/datenübertragen.title</string>
     <string name="datenübertragen.title">Daten übertragen</string>
     <string name="datenübertragen.übertragen">Übertragen</string>
     <string name="datenübertragen.abbrechen">Abbrechen</string>
@@ -34,7 +34,7 @@
     <string name="actionbar_menu.action_settings">Einstellungen</string>
     <string name="actionbar_menu.action_about">Über uns</string>
     <string name="actionbar_menu.faq">FAQ</string>
-    <string name="actionbar_menu.datenuebertragen">Daten übertragen</string>
+    <string name="actionbar_menu.datenuebertragen" translatable="false">@string/datenübertragen.title</string>
 
     <!-- Startseite -->
     <string name="startseite.read">Inhalte</string>

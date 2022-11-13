@@ -5,15 +5,12 @@
     <string name="settings.difficulty.antwort_sidekick">Difficulty: easy\n\nThe texts are simply written. Questions in the quiz are easy.</string>
     <string name="settings.difficulty.antwort_held">Difficulty: Medium-Hard\n\nThe texts contain technical words and are written in an academic way. Questions in the quiz are medium to difficult.</string>
 
-    <string name="settings.sprache">Language</string>
-    <string name="settings.sprache.summary">Current language: %s</string>
-
     <string name="actionbar_menu.action_settings">Settings</string>
     <string name="actionbar_menu.action_about">About us</string>
 
     <string name="startseite.read">Contents</string>
     <string name="startseite.quiz">Quiz</string>
-    <string name="startseite.zahnputzassistent">Toothbrush Assistant</string>
+    <string name="startseite.zahnputzassistent">Toothbrushing</string>
     <string name="startseite.taschengeld">Pocketmoney</string>
     <string name="startseite.sticker">Sticker</string>
     <string name="startseite.settings">@string/actionbar_menu.action_settings</string>
@@ -40,4 +37,18 @@
     <string name="sticker.unlocked">Sticker \"%1$s\" unlocked!</string>
     <string name="jadehochschule">Jade University</string>
     <string name="teamText">This is us:</string>
+    <string name="actionbar_menu.faq">FAQ</string>
+    <string name="überuns"><b>Hello, nice to meet you.</b>\n\nWe are a small team of 3 students who have developed this app as part of our studies at the Jade University in Wilhelmshaven. It serves as an exam for the elective subject Mobile Applications.</string>
+    <string name="settings.übertragung.generieren">Generate transfer code</string>
+    <string name="settings.übertragung.code">Code…</string>
+    <string name="datenübertragen.übertragen">Transfer</string>
+    <string name="datenübertragen.abbrechen">Cancel</string>
+    <string name="datenübertragen.title">Transfer data</string>
+    <string name="faq">Here you can see the most frequently asked questions about the app. We hope this helps you.</string>
+    <string name="faq.1.frage">How do I transfer my stickers to another phone?</string>
+    <string name="faq.1.antwort">To do this, you just need to go to the settings and generate a transfer code.\n\nThen enter it in your new phone and voila, your data is now on the new phone.\n\nHave fun :)</string>
+    <string name="faq.2.frage">How do I change the difficulty level?</string>
+    <string name="faq.2.antwort">To change the difficulty level you have to select either Superhero or Sidekick in the settings.</string>
+    <string name="faq.3.frage">Will my stickers be lost if I get another phone?</string>
+    <string name="faq.3.antwort">To avoid losing your stickers, you can transfer them to your new phone.\n\nJust generate a transfer code in the settings and enter it on your new phone.\n\nAfter that, your stickers will be on your new phone.</string>
 </resources>

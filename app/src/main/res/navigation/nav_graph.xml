@@ -35,7 +35,7 @@
         tools:layout="@layout/activity_quiz" />
     <activity
         android:id="@+id/inhalteActivity"
-        android:name="com.jadehs.ma.ecoplay.InhalteActivity"
+        android:name="com.jadehs.ma.ecoplay.inhalte.InhalteActivity"
         android:label="activity_inhalte"
         tools:layout="@layout/activity_inhalte" />
     <activity

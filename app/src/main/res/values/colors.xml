@@ -40,4 +40,8 @@
     <color name="sticker.questionmark.bg">#00000000</color> <!-- #B6DCFE -->
     <color name="sticker.questionmark.color">@color/akzent</color><!-- #D95763 -->
     <color name="sticker.questionmark.color.akzent">@color/akzent_heller</color>
+
+    <!-- Inhalte -->
+    <color name="inhalte.overlay.bg">#B3000000</color>
+    <color name="inhalte.overlay.text.color">@color/text_color_bright</color>
 </resources>

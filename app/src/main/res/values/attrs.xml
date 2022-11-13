@@ -23,4 +23,11 @@
         <attr name="description" format="string" />
         <attr name="stickericon" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="InhalteFragment">
+        <attr name="thema" format="string" />
+        <attr name="inhaltIcon" format="reference" />
+        <attr name="inhaltImage" format="reference" />
+        <attr name="inhaltRedirect" format="string" />
+    </declare-styleable>
 </resources>

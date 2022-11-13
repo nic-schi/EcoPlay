@@ -2,9 +2,6 @@ package com.jadehs.ma.ecoplay.sticker;
 
 import android.os.Bundle;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 

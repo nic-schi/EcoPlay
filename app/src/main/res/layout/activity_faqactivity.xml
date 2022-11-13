@@ -53,30 +53,30 @@
                     android:name="com.jadehs.ma.ecoplay.FAQ.FAQFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_f_a_q"
                     app:FAQFrage="@string/faq.1.frage"
                     app:antwort="@string/faq.1.antwort"
-                    app:collapsed="true"/>
+                    app:collapsed="true"
+                    tools:layout="@layout/fragment_f_a_q" />
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/faq"
                     android:name="com.jadehs.ma.ecoplay.FAQ.FAQFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_f_a_q"
                     app:FAQFrage="@string/faq.2.frage"
                     app:antwort="@string/faq.2.antwort"
-                    app:collapsed="false" />
+                    app:collapsed="false"
+                    tools:layout="@layout/fragment_f_a_q" />
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/faq2"
                     android:name="com.jadehs.ma.ecoplay.FAQ.FAQFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_f_a_q"
                     app:FAQFrage="@string/faq.3.frage"
                     app:antwort="@string/faq.3.antwort"
-                    app:collapsed="false" />
+                    app:collapsed="false"
+                    tools:layout="@layout/fragment_f_a_q" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="inhalte.text">Hier kannst du ein bisschen darüber erfahren, was Nachhaltigkeit bedeutet und warum dies so wichtig ist.</string>
+
+    <string name="inhalte.1.thema">Bienen</string>
+    <string name="inhalte.2.thema">Waldbrände</string>
+    <string name="inhalte.3.thema">Erdrutsch</string>
+</resources>

@@ -75,24 +75,22 @@
         <Button
             android:id="@+id/start"
             style="@style/Button.EcoPlay"
-            android:layout_width="145dp"
+            android:layout_width="159dp"
             android:layout_height="48dp"
             android:layout_marginEnd="15dp"
             android:fontFamily="@font/roboto_medium"
             android:onClick="beginOnboarding"
             android:text="@string/onboarding.intro.start"
-            android:textSize="14sp"
             tools:text="@string/onboarding.intro.start" />
 
         <Button
             android:id="@+id/skip"
             style="@style/Button.EcoPlay"
-            android:layout_width="wrap_content"
+            android:layout_width="175dp"
             android:layout_height="48dp"
             android:fontFamily="@font/roboto_medium"
             android:onClick="skipOnboarding"
             android:text="@string/onboarding.intro.skip"
-            android:textSize="14sp"
             tools:text="@string/onboarding.intro.skip" />
 
     </LinearLayout>

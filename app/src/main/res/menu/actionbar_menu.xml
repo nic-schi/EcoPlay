@@ -24,6 +24,11 @@
                 android:icon="@drawable/question_round"
                 android:title="@string/actionbar_menu.faq"
                 app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_datenuebertragen"
+                android:icon="@drawable/database"
+                android:title="@string/actionbar_menu.datenuebertragen"
+                app:showAsAction="ifRoom|withText" />
             <!-- TODO: remove in production -->
             <item
                 android:id="@+id/action_debug_onboarding"

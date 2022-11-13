@@ -24,10 +24,19 @@
     <string name="settings.sprache">Sprache</string>
     <string name="settings.sprache.summary">Aktuelle Sprache: %s</string>
 
+    <!-- Daten übertragen !-->
+    <string name="settings.übertragung.generieren">Übertragungscode generieren</string>
+    <string name="settings.übertragung.code">Code…</string>
+    <string name="settings.übertragung.übertragen">Daten übertragen</string>
+    <string name="datenübertragen.title">Daten übertragen</string>
+    <string name="datenübertragen.übertragen">Übertragen</string>
+    <string name="datenübertragen.abbrechen">Abbrechen</string>
+
     <!-- Menüeinträge -->
     <string name="actionbar_menu.action_settings">Einstellungen</string>
     <string name="actionbar_menu.action_about">Über uns</string>
     <string name="actionbar_menu.faq">FAQ</string>
+    <string name="actionbar_menu.datenuebertragen">Daten übertragen</string>
 
     <!-- Startseite -->
     <string name="startseite.read">Inhalte</string>

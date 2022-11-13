@@ -58,7 +58,6 @@
         android:fontFamily="@font/roboto_medium"
         android:onClick="finishOnboarding"
         android:text="@string/onboarding.wissensprüfung.knopf"
-        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView7"
         tools:text="@string/onboarding.wissensprüfung.knopf" />

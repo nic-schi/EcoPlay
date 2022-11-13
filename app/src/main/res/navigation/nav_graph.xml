@@ -55,6 +55,6 @@
         tools:layout="@layout/activity_zahnputzassistent" />
     <activity
         android:id="@+id/einstellungsActivity"
-        android:name="com.jadehs.ma.ecoplay.EinstellungsActivity"
+        android:name="com.jadehs.ma.ecoplay.einstellungen.EinstellungsActivity"
         android:label="EinstellungsActivity" />
 </navigation>

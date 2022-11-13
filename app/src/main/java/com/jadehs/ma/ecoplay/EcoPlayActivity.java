@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
 import com.jadehs.ma.ecoplay.FAQ.FAQActivity;
+import com.jadehs.ma.ecoplay.einstellungen.DatenUebertragenDialogFragment;
+import com.jadehs.ma.ecoplay.einstellungen.EinstellungsActivity;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
@@ -157,6 +159,11 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
             if (item.getItemId() == R.id.action_faq) {
                 intent.setClass(this, FAQActivity.class);
                 startActivity(intent);
+            }
+            // Daten übertragen
+            if (item.getItemId() == R.id.action_datenuebertragen) {
+                DatenUebertragenDialogFragment daten = new DatenUebertragenDialogFragment();
+                daten.show(this.getSupportFragmentManager(), "datenuebertragen");
             }
             // TODO: remove in production
             if (item.getItemId() == R.id.action_debug_onboarding) {

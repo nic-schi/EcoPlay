@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="action_bar.height">55dp</dimen>
+
+    <!-- Icon size -->
+    <dimen name="icon_size">40dp</dimen>
     <dimen name="startseite.icon_size">100dp</dimen>
 
     <!-- Apptitel -->

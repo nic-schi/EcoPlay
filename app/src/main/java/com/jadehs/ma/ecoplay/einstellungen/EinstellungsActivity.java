@@ -41,6 +41,15 @@ public class EinstellungsActivity extends EcoPlayActivity {
         generierenKnopf.setOnClickListener(new DatenGenerieren());
     }
 
+    public static class SettingsFragment extends PreferenceFragmentCompat {
+
+        @Override
+        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+            setPreferencesFromResource(R.xml.root_preferences, rootKey);
+        }
+
+    }
+
     public class DatenGenerieren implements View.OnClickListener {
         @Override
         public void onClick(View v) {
@@ -57,14 +66,5 @@ public class EinstellungsActivity extends EcoPlayActivity {
             DatenUebertragenDialogFragment dialog = new DatenUebertragenDialogFragment();
             dialog.show(EinstellungsActivity.this.getSupportFragmentManager(), "datenübertragung");
         }
-    }
-
-    public static class SettingsFragment extends PreferenceFragmentCompat {
-
-        @Override
-        public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
-        }
-
     }
 }

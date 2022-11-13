@@ -17,9 +17,9 @@ import androidx.annotation.Nullable;
 import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 
-import com.jadehs.ma.ecoplay.utils.Difficulty;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.utils.Difficulty;
 
 public class SidekickOrHeroFragment extends Fragment {
 

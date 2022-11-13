@@ -15,7 +15,7 @@ import com.jadehs.ma.ecoplay.sticker.StickerManager;
 public class StartActivity extends EcoPlayActivity {
 
     public StartActivity() {
-        super(true, R.string.app_name, R.drawable.logo_small, true, false);
+        super(true, R.string.app_name, R.drawable.logo, true, false);
     }
 
     @Override

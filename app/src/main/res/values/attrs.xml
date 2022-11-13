@@ -13,8 +13,8 @@
     </declare-styleable>
 
     <declare-styleable name="StickerFragment">
-        <attr name="stickername" format="string"/>
-        <attr name="description" format="string"/>
-        <attr name="stickericon" format="reference"/>
+        <attr name="stickername" format="string" />
+        <attr name="description" format="string" />
+        <attr name="stickericon" format="reference" />
     </declare-styleable>
 </resources>

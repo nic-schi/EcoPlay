@@ -30,7 +30,7 @@ public class StickerManager extends Manager<Sticker[]> {
                 new Sticker(
                         getContext().getString(R.string.sticker_4_stickername),
                         getContext().getString(R.string.sticker_4_description),
-                        R.drawable.logo_small,
+                        R.drawable.logo,
                         "onboarding"
                 ),
                 new Sticker(

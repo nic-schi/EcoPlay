@@ -21,8 +21,6 @@
     <string name="settings.difficulty.frage">Schwierigkeit der Inhalte &amp; Quizzes</string>
     <string name="settings.difficulty.antwort_sidekick">Schwierigkeit: Leicht\n\nDie Texte sind einfach geschrieben. Fragen im Quiz sind einfach.</string>
     <string name="settings.difficulty.antwort_held">Schwierigkeit: Mittel-Schwierig\n\nDie Texte beeinhalten Fachwörter und sind akademisch geschrieben. Fragen im Quiz sind mittel bis schwierig.</string>
-    <string name="settings.sprache">Sprache</string>
-    <string name="settings.sprache.summary">Aktuelle Sprache: %s</string>
 
     <!-- Daten übertragen !-->
     <string name="settings.übertragung.generieren">Übertragungscode generieren</string>

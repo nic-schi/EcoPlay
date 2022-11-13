@@ -6,11 +6,11 @@ import android.view.View;
 
 import androidx.navigation.Navigation;
 
-import com.jadehs.ma.ecoplay.utils.Difficulty;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 import com.jadehs.ma.ecoplay.sticker.StickerManager;
+import com.jadehs.ma.ecoplay.utils.Difficulty;
 
 public class OnboardingActivity extends EcoPlayActivity {
 

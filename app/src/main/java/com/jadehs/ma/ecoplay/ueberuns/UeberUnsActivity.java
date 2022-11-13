@@ -4,8 +4,6 @@ import static org.osmdroid.views.overlay.Marker.ANCHOR_CENTER;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
 
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.preference.PreferenceManager;

@@ -46,6 +46,13 @@
 
         <item name="android:displayOptions">showHome|useLogo|showTitle</item>
         <item name="displayOptions">showHome|useLogo|showTitle</item>
+
+        <item name="actionBarWidgetTheme">@style/Theme.Ecoplay.ActionBar.Widget</item>
+    </style>
+
+    <style name="Theme.Ecoplay.ActionBar.Widget" parent="@style/Theme.AppCompat">
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:paddingRight">32dp</item>
     </style>
 
     <!-- Overflow button -->

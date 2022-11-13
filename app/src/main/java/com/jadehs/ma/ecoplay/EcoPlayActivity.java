@@ -11,7 +11,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.PreferenceManager;
 
 import com.jadehs.ma.ecoplay.FAQ.FAQActivity;
 import com.jadehs.ma.ecoplay.einstellungen.DatenUebertragenDialogFragment;
@@ -68,12 +67,12 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
     }
 
     /**
-     * Setzt die Sticker die der benutzer aktuell hat
+     * Setzt die Difficulty in den SharedPreferences
      *
-     * @param set Das set an stickern
+     * @param value Die neue Difficulty
      */
-    public void setSticker(Set<String> set) {
-        this.prefEdit.putStringSet("sticker", set);
+    public void setDifficulty(Difficulty value) {
+        this.prefEdit.putInt("difficulty", value.ordinal());
         this.prefEdit.apply();
     }
 
@@ -82,12 +81,12 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
     }
 
     /**
-     * Setzt die Difficulty in den SharedPreferences
+     * Setzt die Sticker die der benutzer aktuell hat
      *
-     * @param value Die neue Difficulty
+     * @param set Das set an stickern
      */
-    public void setDifficulty(Difficulty value) {
-        this.prefEdit.putInt("difficulty", value.ordinal());
+    public void setSticker(Set<String> set) {
+        this.prefEdit.putStringSet("sticker", set);
         this.prefEdit.apply();
     }
 
@@ -114,28 +113,26 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
             if (this.showBar) {
                 bar.setDisplayHomeAsUpEnabled(this.useBackButton);
                 bar.setHomeButtonEnabled(true);
-                bar.setDisplayShowTitleEnabled(true);
+                bar.setDisplayShowTitleEnabled(false);
+                bar.setDisplayShowCustomEnabled(true);
 
-                // titel
-                if (actionBarTitelResourceID != null) {
-                    bar.setTitle(this.actionBarTitelResourceID);
-                } else {
-                    bar.setTitle(R.string.app_name);
-                }
+                int title = (actionBarTitelResourceID != null) ? this.actionBarTitelResourceID : R.string.app_name;
+                ActionBarCustomView customView = new ActionBarCustomView(this, title);
 
                 // Logo
                 if (logo != null) {
                     bar.setLogo(logo);
                 } else {
-                    bar.setLogo(R.drawable.logo_small);
+                    bar.setLogo(R.drawable.logo);
                 }
+                bar.setCustomView(customView);
             } else {
                 bar.hide();
             }
         }
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        SharedPreferences defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
+//        SharedPreferences defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
         this.pref = this.getSharedPreferences(PREFNAME, MODE_PRIVATE);
         this.prefEdit = pref.edit();
     }

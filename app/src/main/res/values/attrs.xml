@@ -6,6 +6,12 @@
         <attr name="redirect" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="FAQFragment">
+        <attr name="collapsed" format="boolean" />
+        <attr name="FAQFrage" format="string" />
+        <attr name="antwort" format="string" />
+    </declare-styleable>
+
     <declare-styleable name="SidekickOrHeroFragment">
         <attr name="frage" format="string" />
         <attr name="antwort_sidekick" format="string" />

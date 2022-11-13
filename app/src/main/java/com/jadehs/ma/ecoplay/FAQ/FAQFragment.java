@@ -1,12 +1,17 @@
 package com.jadehs.ma.ecoplay.FAQ;
 
+import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
@@ -39,6 +44,19 @@ public class FAQFragment extends Fragment {
         fragment.setArguments(args);
 
         return fragment;
+    }
+
+    @Override
+    public void onInflate(@NonNull Context context, @NonNull AttributeSet attrs, @Nullable Bundle savedInstanceState) {
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.FAQFragment);
+
+        // Frage & Antwort
+        this.antwort = a.getString(R.styleable.FAQFragment_antwort);
+        this.frage = a.getString(R.styleable.FAQFragment_FAQFrage);
+        this.markedAsCollapsed = a.getBoolean(R.styleable.FAQFragment_collapsed, false);
+
+        a.recycle();
+        super.onInflate(context, attrs, savedInstanceState);
     }
 
     @Override

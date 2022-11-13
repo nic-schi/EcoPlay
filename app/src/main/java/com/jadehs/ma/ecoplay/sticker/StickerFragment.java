@@ -1,13 +1,17 @@
 package com.jadehs.ma.ecoplay.sticker;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -58,6 +62,18 @@ public class StickerFragment extends Fragment {
             icon = args.getInt("icon");
             description = args.getString("description");
         }
+    }
+
+    @Override
+    public void onInflate(@NonNull Context context, @NonNull AttributeSet attrs, @Nullable Bundle savedInstanceState) {
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.StickerFragment);
+
+        this.name = a.getString(R.styleable.StickerFragment_stickername);
+        this.description = a.getString(R.styleable.StickerFragment_description);
+        this.icon = a.getResourceId(R.styleable.StickerFragment_stickericon, R.drawable.question);
+
+        a.recycle();
+        super.onInflate(context, attrs, savedInstanceState);
     }
 
     @Override

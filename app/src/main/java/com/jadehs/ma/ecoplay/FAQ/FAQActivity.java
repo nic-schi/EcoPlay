@@ -24,18 +24,18 @@ public class FAQActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faqactivity);
 
-        FragmentManager fragM = this.getSupportFragmentManager();
-        FragmentTransaction trans = fragM.beginTransaction();
+//        FragmentManager fragM = this.getSupportFragmentManager();
+//        FragmentTransaction trans = fragM.beginTransaction();
 
-        int i = 0;
-        FAQ[] faqs = new FAQManager(this).read(FAQManager.FILENAME);
-        for (FAQ faq : faqs) {
-            FAQFragment frag = FAQFragment.newInstance(faq);
-            frag.markAsCollapsed(i == 0);
-            trans.add(R.id.alle_faqs, frag);
-            i++;
-        }
-        trans.commit();
+//        int i = 0;
+//        FAQ[] faqs = new FAQManager(this).read(FAQManager.FILENAME);
+//        for (FAQ faq : faqs) {
+//            FAQFragment frag = FAQFragment.newInstance(faq);
+//            frag.markAsCollapsed(i == 0);
+//            trans.add(R.id.alle_faqs, frag);
+//            i++;
+//        }
+//        trans.commit();
     }
 
     public void closeOtherFAQs(Fragment current) {

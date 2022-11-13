@@ -46,7 +46,38 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/faqText"></LinearLayout>
+                app:layout_constraintTop_toBottomOf="@+id/faqText">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/faq1"
+                    android:name="com.jadehs.ma.ecoplay.FAQ.FAQFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_f_a_q"
+                    app:FAQFrage="@string/faq.1.frage"
+                    app:antwort="@string/faq.1.antwort"
+                    app:collapsed="true"/>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/faq"
+                    android:name="com.jadehs.ma.ecoplay.FAQ.FAQFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_f_a_q"
+                    app:FAQFrage="@string/faq.2.frage"
+                    app:antwort="@string/faq.2.antwort"
+                    app:collapsed="false" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/faq2"
+                    android:name="com.jadehs.ma.ecoplay.FAQ.FAQFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:layout="@layout/fragment_f_a_q"
+                    app:FAQFrage="@string/faq.3.frage"
+                    app:antwort="@string/faq.3.antwort"
+                    app:collapsed="false" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -19,14 +19,14 @@ public class StickerActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sticker);
 
-        FragmentManager fragM = this.getSupportFragmentManager();
-        FragmentTransaction trans = fragM.beginTransaction();
-
-        Sticker[] allesticker = new StickerManager(this).read(StickerManager.FILENAME);
-        for (Sticker sticker : allesticker) {
-            StickerFragment frag = StickerFragment.newInstance(sticker);
-            trans.add(R.id.allesticker, frag, sticker.getTag());
-        }
-        trans.commit();
+//        FragmentManager fragM = this.getSupportFragmentManager();
+//        FragmentTransaction trans = fragM.beginTransaction();
+//
+//        Sticker[] allesticker = new StickerManager(this).read(StickerManager.FILENAME);
+//        for (Sticker sticker : allesticker) {
+//            StickerFragment frag = StickerFragment.newInstance(sticker);
+//            trans.add(R.id.allesticker, frag, sticker.getTag());
+//        }
+//        trans.commit();
     }
 }

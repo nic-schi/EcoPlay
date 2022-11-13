@@ -11,7 +11,7 @@ An Android app where kids can playfully learn about sustainability. This app was
 # Prototype
 As part of the development, a prototype of the app was created. This represents the app in its basic form.
 
-The Full Prototype can be found [here](https://github.com/nic-schi/EcoPlay/files/9945215/Prototyp.pdf).
+The Full Prototype can be found [here](https://github.com/nic-schi/EcoPlay/files/9996537/Prototyp-final.pdf).
 
 Homepage of Prototype      |  Homepage of finished App
 :-------------------------:|:-------------------------:

@@ -67,7 +67,8 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:gravity="center">
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView5"
@@ -77,16 +78,6 @@
                 app:image="@drawable/action_bar_bg"
                 app:redirect="@id/action_startseiteFragment_to_stickerActivity"
                 app:text="@string/startseite.sticker"
-                tools:layout="@layout/fragment_startseite_item" />
-
-            <androidx.fragment.app.FragmentContainerView
-                android:id="@+id/fragmentContainerView6"
-                android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:image="@drawable/settings"
-                app:redirect="@id/action_startseiteFragment_to_einstellungsActivity"
-                app:text="@string/startseite.settings"
                 tools:layout="@layout/fragment_startseite_item" />
         </TableRow>
     </TableLayout>

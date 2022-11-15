@@ -39,7 +39,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
 
 
     public EcoPlayActivity() {
-        this(false, R.string.app_name, null, false);
+        this(true, R.string.app_name, null, false);
     }
 
     public EcoPlayActivity(boolean showBar) {

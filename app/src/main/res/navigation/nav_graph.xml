@@ -30,9 +30,9 @@
     </fragment>
     <activity
         android:id="@+id/quizActivity"
-        android:name="com.jadehs.ma.ecoplay.QuizActivity"
+        android:name="com.jadehs.ma.ecoplay.quiz.QuizListeActivity"
         android:label="activity_quiz"
-        tools:layout="@layout/activity_quiz" />
+        tools:layout="@layout/activity_quiz_liste" />
     <activity
         android:id="@+id/inhalteActivity"
         android:name="com.jadehs.ma.ecoplay.inhalte.InhalteActivity"

@@ -14,6 +14,10 @@ import com.jadehs.ma.ecoplay.utils.Difficulty;
 
 public class OnboardingActivity extends EcoPlayActivity {
 
+    public OnboardingActivity() {
+        super(false);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,7 +30,7 @@ public class InhalteFragment extends Fragment {
 
         this.redirect = a.getString(R.styleable.InhalteFragment_inhaltRedirect);
         this.thema = a.getString(R.styleable.InhalteFragment_thema);
-        this.icon = a.getResourceId(R.styleable.InhalteFragment_inhaltIcon, R.drawable.placeholder);
+        this.icon = a.getResourceId(R.styleable.InhalteFragment_inhaltIcon, -1);
         this.image = a.getResourceId(R.styleable.InhalteFragment_inhaltImage, R.drawable.placeholder);
 
         a.recycle();
@@ -51,7 +52,11 @@ public class InhalteFragment extends Fragment {
 
         // Setze Icon
         ImageView iconView = view.findViewById(R.id.inhalteIcon);
-        iconView.setImageResource(this.icon);
+        if (this.icon == -1) {
+            iconView.setVisibility(View.GONE);
+        } else {
+            iconView.setImageResource(this.icon);
+        }
 
         // Setze Redirect
         view.findViewById(R.id.inhalteBild).setOnClickListener(this::onRedirect);

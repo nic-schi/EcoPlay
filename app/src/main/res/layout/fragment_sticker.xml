@@ -44,7 +44,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:textAppearance="@style/TextAppearance.EcoPlay.Header"
-        android:textColor="@color/sticker.text.color"
+        android:textColor="@color/akzent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/stickerIcon"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout2"

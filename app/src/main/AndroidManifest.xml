@@ -17,6 +17,13 @@
         android:theme="@style/Theme.EcoPlay"
         tools:targetApi="33">
         <activity
+            android:name=".quiz.BienenQuizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".inhalte.InhaltBienenActivity"
             android:exported="false">
             <meta-data
@@ -80,7 +87,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".QuizActivity"
+            android:name=".quiz.QuizListeActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

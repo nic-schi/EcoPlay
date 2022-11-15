@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">EcoPlay</string>
 
     <!-- Über uns -->
-    <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>  Wir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
+    <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>\n\nWir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
     <string name="jadehochschule">Jade Hochschule</string>
     <string name="teamText">Das sind wir:</string>
     <string name="author.1" translatable="false">Nichlas Schipper</string>

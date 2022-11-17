@@ -1,9 +1,17 @@
 package com.jadehs.ma.ecoplay.sticker;
 
+import android.content.ClipDescription;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.DragEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
+
+import java.util.Arrays;
 
 public class StickerActivity extends EcoPlayActivity {
 
@@ -25,5 +33,64 @@ public class StickerActivity extends EcoPlayActivity {
 //            trans.add(R.id.allesticker, frag, sticker.getTag());
 //        }
 //        trans.commit();
+
+        // Drag listener
+        View.OnDragListener draglistener = (view, e) -> {
+            Log.v("eco", String.valueOf(e.getAction()));
+            switch (e.getAction()) {
+                case DragEvent.ACTION_DRAG_STARTED:
+                    return e.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN);
+                case DragEvent.ACTION_DRAG_ENTERED:
+                case DragEvent.ACTION_DRAG_EXITED:
+                    view.invalidate();
+                    return true;
+                case DragEvent.ACTION_DRAG_ENDED:
+                    View v = (View) e.getLocalState();
+                    v.setVisibility(View.VISIBLE);
+                    view.invalidate();
+                    return true;
+                case DragEvent.ACTION_DRAG_LOCATION:
+                    return true;
+                case DragEvent.ACTION_DROP:
+                    view.invalidate();
+
+                    v = (View) e.getLocalState();
+
+                    float x = e.getX() - ((float) v.getWidth() / 2);
+                    float y = e.getY() - ((float) v.getHeight() / 2);
+                    v.setX(x);
+                    v.setY(y);
+
+                    ViewGroup vg = (ViewGroup) v.getParent();
+                    vg.removeView(v);
+
+                    ViewGroup destination = (ViewGroup) view;
+                    if (destination.getTag() != null ) {
+                        if (destination.getTag().equals("drop_start")) {
+                            v.setX(0.0f);
+                            v.setY(0.0f);
+                            ((ViewGroup) this.findViewById(R.id.layout)).addView(v);
+                        } else if (destination.getTag().equals("drop_ziel")) {
+                            destination.addView(v);
+                        } else {
+                            return false;
+                        }
+                    } else {
+                        return false;
+                    }
+
+                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(v.getLayoutParams());
+                    params.setMargins(4,4,4,4);
+                    v.setLayoutParams(params);
+                    v.setVisibility(View.VISIBLE);
+                    return true;
+                default:
+                    return false;
+            }
+        };
+
+        // add drag listener
+        this.findViewById(R.id.drop_start).setOnDragListener(draglistener);
+        this.findViewById(R.id.drop_ziel).setOnDragListener(draglistener);
     }
 }

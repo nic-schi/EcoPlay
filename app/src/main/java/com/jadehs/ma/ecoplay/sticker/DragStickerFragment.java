@@ -1,9 +1,14 @@
 package com.jadehs.ma.ecoplay.sticker;
 
+import static android.view.View.DRAG_FLAG_OPAQUE;
+
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.AttributeSet;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,16 +39,29 @@ public class DragStickerFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_drag_sticker, container, false);
 
+        ImageView iconView = view.findViewById(R.id.stickericon);
         StickerActivity activity = (StickerActivity) requireActivity();
         StickerFragment frag = (StickerFragment) activity.getSupportFragmentManager().findFragmentByTag(this.stickertag);
-        if (frag != null) {
-            if (frag.hatSticker()) {
-                ImageView iconView = view.findViewById(R.id.stickericon);
-                iconView.setImageResource(frag.getIcon());
-            } else {
-                view.setVisibility(View.GONE);
-            }
+        assert frag != null;
+
+        if (frag.hatSticker()) {
+            iconView.setImageResource(frag.getIcon());
+        } else {
+            view.setVisibility(View.GONE);
         }
+
+        // add drag and drop
+        iconView.setOnLongClickListener(v -> {
+            String clipText = frag.getName();
+            ClipData.Item item = new ClipData.Item(clipText);
+            ClipData data = new ClipData(clipText, new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
+
+            View.DragShadowBuilder builder = new View.DragShadowBuilder(v);
+            v.startDragAndDrop(data, builder, v, 0);
+
+            v.setVisibility(View.INVISIBLE);
+            return true;
+        });
 
         return view;
     }

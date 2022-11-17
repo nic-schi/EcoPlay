@@ -25,14 +25,127 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
                 android:lineSpacingExtra="4sp"
                 android:text="@string/sticker.text"
                 android:textAppearance="@style/TextAppearance.EcoPlay"
-                app:layout_constraintBottom_toTopOf="@+id/allesticker"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stickerText">
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView6"
+                    android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    app:headertext="@string/sticker.header.pinnwand"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout="@layout/fragment_header" />
+
+                <TextView
+                    android:id="@+id/stickerText2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:lineSpacingExtra="4sp"
+                    android:text="@string/sticker.pinnwand.text"
+                    android:textAppearance="@style/TextAppearance.EcoPlay"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView6" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/stickerText2">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/dragsticker"
+                        android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:stickertag="bee01"
+                        tools:layout="@layout/fragment_drag_sticker" />
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/dragsticker1"
+                        android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:stickertag="bee02"
+                        tools:layout="@layout/fragment_drag_sticker" />
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/dragsticker2"
+                        android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:stickertag="fireplace"
+                        tools:layout="@layout/fragment_drag_sticker" />
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/dragsticker3"
+                        android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:stickertag="onboarding"
+                        tools:layout="@layout/fragment_drag_sticker" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/pinnwand"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+                    app:srcCompat="@drawable/pinnwand" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView9"
+                android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+                tools:layout="@layout/fragment_header"
+                app:headertext="@string/sticker.header.alle"/>
 
             <LinearLayout
                 android:id="@+id/allesticker"
@@ -43,7 +156,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/stickerText">
+                app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView9">
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/sticker1"

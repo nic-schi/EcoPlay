@@ -2,6 +2,9 @@
     <string name="sticker.placeholder.name" translatable="false">\?????</string>
     <string name="sticker.unlocked">Sticker \"%1$s\" freigeschaltet!</string>
     <string name="sticker.text">Hier kannst du alle deine gesammelten Sticker anschauen. Sticker sind Herausforderungen die du durchs benutzen der App bewältigen kannst.\n\nViel Spaß beim sammeln!</string>
+    <string name="sticker.header.alle">Alle Sticker</string>
+    <string name="sticker.header.pinnwand">Deine Stickerpinnwand</string>
+    <string name="sticker.pinnwand.text">Hier kannst du deine Sticker beliebig platzieren.</string>
 
     <string name="sticker.1.stickername">Summ, summ, summ!</string>
     <string name="sticker.1.description">Lese den Text zu den Bienen</string>

@@ -30,4 +30,12 @@
         <attr name="inhaltImage" format="reference" />
         <attr name="inhaltRedirect" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="HeaderFragment">
+        <attr name="headertext" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DragStickerFragment">
+        <attr name="stickertag" format="string" />
+    </declare-styleable>
 </resources>

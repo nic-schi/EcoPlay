@@ -113,12 +113,24 @@ public class StickerFragment extends Fragment {
         return view;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public int getIcon() {
+        return this.icon;
+    }
+
     // TODO: remove in production
     private void unlock() {
         new StickerManager(this.getContext()).unlockedArchievement(this.getTag(), this.name);
     }
 
-    private boolean hatSticker() {
+    public boolean hatSticker() {
         Activity activity = this.requireActivity();
         if (activity instanceof EcoPlayActivity) {
             Set<String> sticker = ((EcoPlayActivity) activity).getSticker();

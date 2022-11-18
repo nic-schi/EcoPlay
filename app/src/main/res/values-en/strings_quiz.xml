@@ -1,3 +1,7 @@
 <resources>
+    <string name="quiz.text">Here you can challenge yourself. Are you ready to check how much you know about sustainability? Then choose a Quiz and get started!</string>
+
+    <!-- Quiz 1: Bees -->
+    <string name="quiz.1.name">Bee Quiz</string>
 
 </resources>

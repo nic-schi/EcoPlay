@@ -1,3 +1,8 @@
 <resources>
+    <string name="inhalte.text">Here you can learn about sustainability and why it is so important.</string>
+
+    <string name="inhalte.1.thema">Bees</string>
+    <string name="inhalte.2.thema">Forest Fires</string>
+    <string name="inhalte.3.thema">Landslides</string>
 
 </resources>

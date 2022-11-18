@@ -1,17 +1,28 @@
 package com.jadehs.ma.ecoplay.sticker;
 
 import android.content.ClipDescription;
+import android.content.Context;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.StateSet;
+import androidx.fragment.app.FragmentContainerView;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.startseite.StartActivity;
 
-import java.util.Arrays;
+import org.json.JSONArray;
 
 public class StickerActivity extends EcoPlayActivity {
 
@@ -34,9 +45,32 @@ public class StickerActivity extends EcoPlayActivity {
 //        }
 //        trans.commit();
 
+        StickerPinnwand pinnwand = this.getStickerpinnwand();
+
+        for (StickerPinnwandItem item : pinnwand) {
+            LinearLayout start = this.findViewById(R.id.layout);
+
+            View found = null;
+            for (int i = 0; i < start.getChildCount(); i++) {
+                View view = start.getChildAt(i);
+                if (view.getTag().equals("pw-" + item.tag)) {
+                    found = view;
+                    break;
+                }
+            }
+
+            assert found != null;
+            start.removeView(found);
+
+            found.setX(item.x);
+            found.setY(item.y);
+
+            ConstraintLayout ziel = this.findViewById(R.id.drop_ziel);
+            ziel.addView(found);
+        }
+
         // Drag listener
         View.OnDragListener draglistener = (view, e) -> {
-            Log.v("eco", String.valueOf(e.getAction()));
             switch (e.getAction()) {
                 case DragEvent.ACTION_DRAG_STARTED:
                     return e.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN);
@@ -70,11 +104,16 @@ public class StickerActivity extends EcoPlayActivity {
                             v.setX(0.0f);
                             v.setY(0.0f);
                             ((ViewGroup) this.findViewById(R.id.layout)).addView(v);
+
+                            pinnwand.remove(e.getClipData().getItemAt(0).getText().toString());
                         } else if (destination.getTag().equals("drop_ziel")) {
                             destination.addView(v);
+
+                            pinnwand.update(e.getClipData().getItemAt(0).getText().toString(), x, y);
                         } else {
                             return false;
                         }
+                        this.setStickerpinnwand(pinnwand);
                     } else {
                         return false;
                     }
@@ -83,6 +122,7 @@ public class StickerActivity extends EcoPlayActivity {
                     params.setMargins(4,4,4,4);
                     v.setLayoutParams(params);
                     v.setVisibility(View.VISIBLE);
+
                     return true;
                 default:
                     return false;
@@ -93,4 +133,5 @@ public class StickerActivity extends EcoPlayActivity {
         this.findViewById(R.id.drop_start).setOnDragListener(draglistener);
         this.findViewById(R.id.drop_ziel).setOnDragListener(draglistener);
     }
+
 }

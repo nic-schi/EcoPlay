@@ -17,8 +17,13 @@ import com.jadehs.ma.ecoplay.einstellungen.DatenUebertragenDialogFragment;
 import com.jadehs.ma.ecoplay.einstellungen.EinstellungsActivity;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
+import com.jadehs.ma.ecoplay.sticker.StickerPinnwand;
+import com.jadehs.ma.ecoplay.sticker.StickerPinnwandItem;
 import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -60,6 +65,30 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.useBackButton = useBackButton;
         this.logo = logo;
         this.showBar = showBar;
+    }
+
+    public void setStickerpinnwand(StickerPinnwand pw) {
+        this.prefEdit.putString("stickerpinnwand", pw.toString());
+        this.prefEdit.apply();
+    }
+
+    public StickerPinnwand getStickerpinnwand() {
+        try {
+            String string = this.pref.getString("stickerpinnwand", "");
+            JSONArray ar;
+            if (string.equals("")) {
+                ar = new JSONArray();
+            } else {
+                ar = new JSONArray(string);
+            }
+            return new StickerPinnwand(ar);
+        } catch (JSONException ignored) {}
+        return null;
+    }
+
+    public boolean istAufStickerpinnwand(String tag) {
+        StickerPinnwand pinnwand = this.getStickerpinnwand();
+        return pinnwand.hatSticker(tag) != null;
     }
 
     public Difficulty getDifficulty() {

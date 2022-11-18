@@ -11,6 +11,7 @@ import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 
 public class StartActivity extends EcoPlayActivity {
+    public static final String TAG = "ECOPLAY";
 
     public StartActivity() {
         super(true, R.string.app_name, R.drawable.logo, true, false);

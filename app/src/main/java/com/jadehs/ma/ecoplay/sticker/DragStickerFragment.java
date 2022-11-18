@@ -1,28 +1,28 @@
 package com.jadehs.ma.ecoplay.sticker;
 
-import static android.view.View.DRAG_FLAG_OPAQUE;
-
 import android.content.ClipData;
 import android.content.ClipDescription;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.AttributeSet;
-import android.view.DragEvent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import com.jadehs.ma.ecoplay.R;
 
 public class DragStickerFragment extends Fragment {
 
-    private String stickertag;
+    public String stickertag;
 
     @Override
     public void onInflate(@NonNull Context context, @NonNull AttributeSet attrs, @Nullable Bundle savedInstanceState) {
@@ -32,6 +32,10 @@ public class DragStickerFragment extends Fragment {
 
         a.recycle();
         super.onInflate(context, attrs, savedInstanceState);
+    }
+
+    public StickerFragment getAssociatedSticker() {
+        return (StickerFragment) this.requireActivity().getSupportFragmentManager().findFragmentByTag(stickertag);
     }
 
     @Nullable
@@ -52,7 +56,7 @@ public class DragStickerFragment extends Fragment {
 
         // add drag and drop
         iconView.setOnLongClickListener(v -> {
-            String clipText = frag.getName();
+            String clipText = frag.getTag();
             ClipData.Item item = new ClipData.Item(clipText);
             ClipData data = new ClipData(clipText, new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
 
@@ -65,4 +69,5 @@ public class DragStickerFragment extends Fragment {
 
         return view;
     }
+
 }

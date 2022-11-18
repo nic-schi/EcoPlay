@@ -104,6 +104,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:tag="pw-bee01"
                             app:stickertag="bee01"
                             tools:layout="@layout/fragment_drag_sticker" />
 
@@ -113,6 +114,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:tag="pw-bee02"
                             app:stickertag="bee02"
                             tools:layout="@layout/fragment_drag_sticker" />
 
@@ -122,6 +124,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:tag="pw-fireplace"
                             app:stickertag="fireplace"
                             tools:layout="@layout/fragment_drag_sticker" />
 
@@ -131,6 +134,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:tag="pw-onboarding"
                             app:stickertag="onboarding"
                             tools:layout="@layout/fragment_drag_sticker" />
 

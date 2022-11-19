@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.utils.Utils;
 import com.jadehs.ma.ecoplay.utils.confirmalert.ConfirmAlert;
 
 public class StickerActivity extends EcoPlayActivity {
@@ -66,9 +67,7 @@ public class StickerActivity extends EcoPlayActivity {
                     R.string.sticker_confirm_dialog_msg,
                     () -> {
                         this.resetStickerpinnwand();
-                        startActivity(getIntent());
-                        finish();
-                        overridePendingTransition(0, 0);
+                        Utils.refreshActivity(this);
                     }
             );
             alert.show();

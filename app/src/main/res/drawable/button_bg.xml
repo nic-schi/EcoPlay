@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/akzent" />
-    <stroke android:width="2dp" android:color="#19000000" />
-
-    <corners android:bottomRightRadius="10dp" android:bottomLeftRadius="10dp"
-        android:topLeftRadius="10dp" android:topRightRadius="10dp"/>
-</shape>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--  Non focused states
+      -->
+    <item android:drawable="@drawable/button_bg_unfocused" android:state_focused="false" android:state_pressed="false" android:state_selected="false" />
+    <item android:drawable="@drawable/button_bg_unfocused" android:state_focused="false" android:state_pressed="false" android:state_selected="true" />
+    <!--  Focused states
+     -->
+    <item android:drawable="@drawable/button_bg_focused" android:state_focused="true" android:state_pressed="false" android:state_selected="false" />
+    <item android:drawable="@drawable/button_bg_focused" android:state_focused="true" android:state_pressed="false" android:state_selected="true" />
+    <!--  Pressed
+     -->
+    <item android:drawable="@drawable/button_bg_focused" android:state_pressed="true" />
+</selector>

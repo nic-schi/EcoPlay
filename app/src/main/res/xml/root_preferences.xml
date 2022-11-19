@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen></PreferenceScreen>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListPreference
+        android:layout_width="wrap_content"
+        android:defaultValue="de"
+        android:entries="@array/supported_languages"
+        android:entryValues="@array/supported_languages_values"
+        android:key="sprache"
+        android:title="@string/settings.sprache"
+        app:dialogIcon="@drawable/earth_globe"
+        app:icon="@drawable/earth_globe"
+        app:isPreferenceVisible="true"
+        app:summary="@string/settings.sprache.summary" />
+</PreferenceScreen>

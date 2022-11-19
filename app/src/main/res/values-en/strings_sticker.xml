@@ -9,4 +9,12 @@
     <string name="sticker.4.stickername">To a new era!</string>
     <string name="sticker.4.description">Survive the app introduction</string>
     <string name="sticker.unlocked">Sticker \"%1$s\" unlocked!</string>
+    <string name="confirm.dialog.title">Are you sure?</string>
+    <string name="confirm.dialog.confirm">Yes</string>
+    <string name="confirm.dialog.cancel">Cancel</string>
+    <string name="sticker.header.alle">All Stickers</string>
+    <string name="sticker.header.pinnwand">Your sticker pinboard</string>
+    <string name="sticker.pinnwand.text">Here you can place your stickers as you like.</string>
+    <string name="sticker.pinnwand.reset">Reset</string>
+    <string name="sticker.confirm.dialog.msg">All stickers on your pinboard will be removed.</string>
 </resources>

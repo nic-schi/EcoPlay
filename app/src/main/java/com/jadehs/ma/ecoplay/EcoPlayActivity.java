@@ -1,9 +1,11 @@
 package com.jadehs.ma.ecoplay;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -11,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import com.jadehs.ma.ecoplay.FAQ.FAQActivity;
 import com.jadehs.ma.ecoplay.einstellungen.DatenUebertragenDialogFragment;
@@ -21,11 +24,14 @@ import com.jadehs.ma.ecoplay.sticker.StickerPinnwand;
 import com.jadehs.ma.ecoplay.sticker.StickerPinnwandItem;
 import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
+import com.jadehs.ma.ecoplay.utils.LanguageChanger;
+import com.jadehs.ma.ecoplay.utils.Utils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 
 import java.util.HashSet;
+import java.util.Locale;
 import java.util.Set;
 
 
@@ -39,9 +45,11 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
     private final boolean useBackButton;
     private final boolean showBar;
 
+    private String currentLanguage;
+
     private SharedPreferences pref;
     private SharedPreferences.Editor prefEdit;
-
+    private SharedPreferences defaultPref;
 
     public EcoPlayActivity() {
         this(true, R.string.app_name, null, false);
@@ -65,6 +73,29 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.useBackButton = useBackButton;
         this.logo = logo;
         this.showBar = showBar;
+    }
+
+    public void setLanguageOnStart() {
+        String sprache = this.getLanguage();
+        String prefSprache = this.defaultPref.getString("sprache", null);
+        String handydefault = Locale.getDefault().getLanguage();
+
+        if (prefSprache == null) {
+            SharedPreferences.Editor edit = this.defaultPref.edit();
+            edit.putString("sprache", handydefault);
+            edit.apply();
+        }
+        new LanguageChanger(this, sprache);
+    }
+
+    public String getLanguage() {
+        String sprache = this.defaultPref.getString("sprache", null);
+        String handydefault = Locale.getDefault().getLanguage();
+        if (sprache == null) {
+            return handydefault;
+        } else {
+            return sprache;
+        }
     }
 
     public void setStickerpinnwand(StickerPinnwand pw) {
@@ -138,6 +169,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.prefEdit.apply();
     }
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -166,9 +198,26 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         }
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-//        SharedPreferences defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
+        // setze aktuelle sprache
+        this.defaultPref = PreferenceManager.getDefaultSharedPreferences(this);
+        this.currentLanguage = defaultPref.getString("sprache", "de");
+        this.setLanguageOnStart();
+
+        // setze preferences
         this.pref = this.getSharedPreferences(PREFNAME, MODE_PRIVATE);
         this.prefEdit = pref.edit();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // guck nach ob sich sprache geändert hat
+        String sprache = this.defaultPref.getString("sprache", null);
+        if (sprache != null && !sprache.equals(this.currentLanguage)) {
+            Utils.refreshActivity(this);
+            currentLanguage = sprache;
+        }
     }
 
     @Override

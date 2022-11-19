@@ -5,6 +5,9 @@
     <string name="settings.difficulty.antwort_sidekick">Difficulty: easy\n\nThe texts are simply written. Questions in the quiz are easy.</string>
     <string name="settings.difficulty.antwort_held">Difficulty: Medium-Hard\n\nThe texts contain technical words and are written in an academic way. Questions in the quiz are medium to difficult.</string>
 
+    <string name="settings.sprache">Language</string>
+    <string name="settings.sprache.summary">Current language: %s</string>
+
     <string name="actionbar_menu.action_settings">Settings</string>
     <string name="actionbar_menu.action_about">About us</string>
 
@@ -34,4 +37,5 @@
     <string name="datenübertragen.übertragen">Transfer</string>
     <string name="datenübertragen.abbrechen">Cancel</string>
     <string name="datenübertragen.title">Transfer data</string>
+    <string name="settings.else">Other settings</string>
 </resources>

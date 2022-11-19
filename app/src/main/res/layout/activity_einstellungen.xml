@@ -99,14 +99,31 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView10"
+                android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:headertext="@string/settings.else"
+                app:layout_constraintEnd_toStartOf="@+id/übertragung"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/übertragung"
+                tools:layout="@layout/fragment_header" />
+
             <FrameLayout
                 android:id="@+id/settings"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/übertragung" />
+                app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView10" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

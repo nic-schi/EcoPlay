@@ -2,16 +2,22 @@ package com.jadehs.ma.ecoplay.einstellungen;
 
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.utils.LanguageChanger;
+import com.jadehs.ma.ecoplay.utils.Utils;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class EinstellungsActivity extends EcoPlayActivity {
@@ -42,12 +48,20 @@ public class EinstellungsActivity extends EcoPlayActivity {
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
-
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
-        }
 
+            Preference sprachePref = findPreference("sprache");
+            assert sprachePref != null;
+            sprachePref.setOnPreferenceChangeListener((preference, newValue) -> {
+                Log.v("eco", Locale.getDefault().toString());
+                String sprache = newValue.toString();
+                new LanguageChanger(this.requireActivity(), sprache);
+                Utils.refreshActivity(this.requireActivity());
+                return true;
+            });
+        }
     }
 
     public class DatenGenerieren implements View.OnClickListener {

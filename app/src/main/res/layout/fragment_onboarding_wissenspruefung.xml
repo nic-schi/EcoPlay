@@ -36,7 +36,7 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView7"
         android:name="com.jadehs.ma.ecoplay.onboarding.SidekickOrHeroFragment"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:antwort_held="@string/onboarding.wissensprüfung.held"

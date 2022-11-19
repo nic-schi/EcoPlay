@@ -45,7 +45,7 @@
             android:adjustViewBounds="true"
             android:backgroundTint="@color/onboarding_wissenspruefung_btn_bg"
             android:scaleType="fitXY"
-            android:src="@drawable/eco_undercover" />
+            android:src="@drawable/eco_ungebildet" />
 
         <ImageButton
             android:id="@+id/held"
@@ -55,7 +55,7 @@
             android:adjustViewBounds="true"
             android:backgroundTint="@color/onboarding_wissenspruefung_btn_bg"
             android:scaleType="fitXY"
-            android:src="@drawable/eco_superheld" />
+            android:src="@drawable/eco_bibliothekar" />
 
     </LinearLayout>
 

@@ -34,7 +34,7 @@
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView8"
                 android:name="com.jadehs.ma.ecoplay.onboarding.SidekickOrHeroFragment"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:antwort_held="@string/settings.difficulty.antwort_held"

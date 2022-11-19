@@ -72,6 +72,11 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.prefEdit.apply();
     }
 
+    public void resetStickerpinnwand() {
+        this.prefEdit.putString("stickerpinnwand", "[]");
+        this.prefEdit.apply();
+    }
+
     public StickerPinnwand getStickerpinnwand() {
         try {
             String string = this.pref.getString("stickerpinnwand", "");

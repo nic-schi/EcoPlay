@@ -1,28 +1,18 @@
 package com.jadehs.ma.ecoplay.sticker;
 
 import android.content.ClipDescription;
-import android.content.Context;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.AttributeSet;
-import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.StateSet;
-import androidx.fragment.app.FragmentContainerView;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
-import com.jadehs.ma.ecoplay.startseite.StartActivity;
-
-import org.json.JSONArray;
+import com.jadehs.ma.ecoplay.utils.confirmalert.ConfirmAlert;
 
 public class StickerActivity extends EcoPlayActivity {
 
@@ -68,6 +58,20 @@ public class StickerActivity extends EcoPlayActivity {
             ConstraintLayout ziel = this.findViewById(R.id.drop_ziel);
             ziel.addView(found);
         }
+
+        Button resetKnopf = this.findViewById(R.id.resetKnopf);
+        resetKnopf.setOnClickListener(v -> {
+            ConfirmAlert alert = new ConfirmAlert(
+                    this,
+                    R.string.sticker_confirm_dialog_msg,
+                    () -> {
+                        this.resetStickerpinnwand();
+                        finish();
+                        startActivity(getIntent());
+                    }
+            );
+            alert.show();
+        });
 
         // Drag listener
         View.OnDragListener draglistener = (view, e) -> {

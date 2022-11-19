@@ -9,6 +9,11 @@
     <string name="author.2" translatable="false">Marco Janssen</string>
     <string name="author.3" translatable="false">Simon Schadrin</string>
 
+    <!-- Confirm dialog -->
+    <string name="confirm.dialog.title">Bist du dir sicher?</string>
+    <string name="confirm.dialog.confirm">Ja bin ich</string>
+    <string name="confirm.dialog.cancel">Abbrechen</string>
+
     <!-- Placeholder -->
     <string name="placeholder.header.short" translatable="false">Lorem ipsum dolor sit</string>
     <string name="placeholder.header.long" translatable="false">Lorem ipsum dolor sit amet, consetetur</string>

@@ -17,38 +17,43 @@ public class StickerPinnwandItem extends JSONObject {
             this.put("tag", tag);
             this.put("x", x);
             this.put("y", y);
-        } catch (JSONException ignored) {}
+        } catch (JSONException ignored) {
+        }
+    }
+
+    public static StickerPinnwandItem from(JSONObject o) {
+        try {
+            return new StickerPinnwandItem(
+                    o.getString("tag"),
+                    (float) o.getDouble("x"),
+                    (float) o.getDouble("y")
+            );
+        } catch (JSONException ignored) {
+        }
+        return null;
     }
 
     public void setTag(String tag) {
         this.tag = tag;
         try {
             this.put("tag", tag);
-        } catch (JSONException ignored) {}
+        } catch (JSONException ignored) {
+        }
     }
 
     public void setX(float x) {
         this.x = x;
         try {
             this.put("x", x);
-        } catch (JSONException ignored) {}
+        } catch (JSONException ignored) {
+        }
     }
 
     public void setY(float y) {
         this.y = y;
         try {
             this.put("y", y);
-        } catch (JSONException ignored) {}
-    }
-
-    public static StickerPinnwandItem from(JSONObject o) {
-        try {
-            return new StickerPinnwandItem(
-                o.getString("tag"),
-                (float) o.getDouble("x"),
-                (float) o.getDouble("y")
-            );
-        } catch (JSONException ignored) {}
-        return null;
+        } catch (JSONException ignored) {
+        }
     }
 }

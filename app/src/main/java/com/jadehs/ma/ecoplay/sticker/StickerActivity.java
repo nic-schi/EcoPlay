@@ -103,7 +103,7 @@ public class StickerActivity extends EcoPlayActivity {
                     vg.removeView(v);
 
                     ViewGroup destination = (ViewGroup) view;
-                    if (destination.getTag() != null ) {
+                    if (destination.getTag() != null) {
                         if (destination.getTag().equals("drop_start")) {
                             v.setX(0.0f);
                             v.setY(0.0f);
@@ -123,7 +123,7 @@ public class StickerActivity extends EcoPlayActivity {
                     }
 
                     LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(v.getLayoutParams());
-                    params.setMargins(4,4,4,4);
+                    params.setMargins(4, 4, 4, 4);
                     v.setLayoutParams(params);
                     v.setVisibility(View.VISIBLE);
 

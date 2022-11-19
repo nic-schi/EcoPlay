@@ -255,7 +255,7 @@
                     android:layout_height="wrap_content"
                     android:tag="onboarding"
                     app:description="@string/sticker.4.description"
-                    app:stickericon="@drawable/logo"
+                    app:stickericon="@drawable/eco_era"
                     app:stickername="@string/sticker.4.stickername"
                     tools:layout="@layout/fragment_sticker" />
 

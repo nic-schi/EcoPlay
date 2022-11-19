@@ -7,7 +7,7 @@ import androidx.annotation.Nullable;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 
-public class QuizActivity extends EcoPlayActivity {
+public abstract class QuizActivity extends EcoPlayActivity {
 
     public QuizActivity(int titleResource) {
         super(true, titleResource, R.drawable.questionstripes, false);

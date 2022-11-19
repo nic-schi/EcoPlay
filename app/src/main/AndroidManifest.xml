@@ -24,7 +24,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".inhalte.InhaltBienenActivity"
+            android:name=".inhalte.bienen.InhaltBienenActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

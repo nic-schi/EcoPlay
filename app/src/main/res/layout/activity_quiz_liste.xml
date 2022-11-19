@@ -44,9 +44,9 @@
                     android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:inhaltIcon="@drawable/bee"
                     app:inhaltImage="@drawable/placeholder"
                     app:inhaltRedirect="com.jadehs.ma.ecoplay.quiz.BienenQuizActivity"
-                    app:inhaltIcon="@drawable/bee"
                     app:thema="@string/inhalte.1.thema"
                     tools:layout="@layout/fragment_inhalte" />
 

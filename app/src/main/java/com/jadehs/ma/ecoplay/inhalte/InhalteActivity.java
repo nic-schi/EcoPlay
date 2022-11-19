@@ -16,4 +16,5 @@ public class InhalteActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inhalte);
     }
+
 }

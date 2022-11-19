@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">EcoPlay</string>
 
+    <!-- Fehlermeldungen -->
+    <string name="fehler.tts">Beim Vorlesen ist ein Fehler aufgetreten!</string>
+
     <!-- Über uns -->
     <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>\n\nWir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
     <string name="jadehochschule">Jade Hochschule</string>

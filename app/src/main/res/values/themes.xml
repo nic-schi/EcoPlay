@@ -75,6 +75,18 @@
         <item name="android:elevation">10dp</item>
     </style>
 
+    <!-- Imagebutton -->
+    <style name="ImageButton.EcoPlay" parent="Widget.AppCompat.ImageButton">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:background">@drawable/button_bg</item>
+
+        <item name="elevation">10dp</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
     <!--- TextAppearances -->
     <!-- Standard -->
     <style name="TextAppearance.EcoPlay" parent="TextAppearance.AppCompat.Body1">

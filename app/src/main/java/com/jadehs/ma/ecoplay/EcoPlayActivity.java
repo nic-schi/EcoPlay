@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -21,7 +20,6 @@ import com.jadehs.ma.ecoplay.einstellungen.EinstellungsActivity;
 import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 import com.jadehs.ma.ecoplay.sticker.StickerPinnwand;
-import com.jadehs.ma.ecoplay.sticker.StickerPinnwandItem;
 import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
 import com.jadehs.ma.ecoplay.utils.LanguageChanger;
@@ -98,11 +96,6 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         }
     }
 
-    public void setStickerpinnwand(StickerPinnwand pw) {
-        this.prefEdit.putString("stickerpinnwand", pw.toString());
-        this.prefEdit.apply();
-    }
-
     public void resetStickerpinnwand() {
         this.prefEdit.putString("stickerpinnwand", "[]");
         this.prefEdit.apply();
@@ -118,8 +111,14 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
                 ar = new JSONArray(string);
             }
             return new StickerPinnwand(ar);
-        } catch (JSONException ignored) {}
+        } catch (JSONException ignored) {
+        }
         return null;
+    }
+
+    public void setStickerpinnwand(StickerPinnwand pw) {
+        this.prefEdit.putString("stickerpinnwand", pw.toString());
+        this.prefEdit.apply();
     }
 
     public boolean istAufStickerpinnwand(String tag) {
@@ -167,6 +166,14 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
     public void setOnboarding(boolean value) {
         this.prefEdit.putBoolean("onboarding", value);
         this.prefEdit.apply();
+    }
+
+    public int getActionbarTitelRessourceID() {
+        return this.actionBarTitelResourceID;
+    }
+
+    public int getLogoRessourceID() {
+        return this.logo;
     }
 
     @SuppressLint("SourceLockedOrientationActivity")

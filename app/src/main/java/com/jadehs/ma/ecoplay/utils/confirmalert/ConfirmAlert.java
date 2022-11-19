@@ -22,7 +22,8 @@ public class ConfirmAlert {
         builder.setTitle(R.string.confirm_dialog_title);
         builder.setMessage(this.message);
         builder.setPositiveButton(R.string.confirm_dialog_confirm, (dialog, which) -> this.listener.onConfirm());
-        builder.setNegativeButton(R.string.confirm_dialog_cancel, ((dialog, which) -> {}));
+        builder.setNegativeButton(R.string.confirm_dialog_cancel, ((dialog, which) -> {
+        }));
         AlertDialog dialog = builder.create();
         dialog.show();
     }

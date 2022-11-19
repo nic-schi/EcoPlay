@@ -66,8 +66,9 @@ public class StickerActivity extends EcoPlayActivity {
                     R.string.sticker_confirm_dialog_msg,
                     () -> {
                         this.resetStickerpinnwand();
-                        finish();
                         startActivity(getIntent());
+                        finish();
+                        overridePendingTransition(0, 0);
                     }
             );
             alert.show();

@@ -19,7 +19,8 @@ import com.jadehs.ma.ecoplay.R;
 public class HeaderFragment extends Fragment {
     private String headertext;
 
-    public HeaderFragment() {}
+    public HeaderFragment() {
+    }
 
     public HeaderFragment(String headertext) {
         this.headertext = headertext;

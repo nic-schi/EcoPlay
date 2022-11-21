@@ -19,11 +19,10 @@ import com.jadehs.ma.ecoplay.utils.HeaderFragment;
 
 public abstract class ZahnSchrittFragment extends Fragment {
 
-    private SchrittTimer runnable = new SchrittTimer();
     private final Handler handler = new Handler();
-
     private final int title;
     private final int schrittLayout;
+    private SchrittTimer runnable = new SchrittTimer();
 
     public ZahnSchrittFragment(int title, int schrittLayout) {
         this.title = title;

@@ -1,6 +1,57 @@
 <resources>
     <string name="quiz.text">Hier kannst du dich selbst herausforden. Bist du bereit zu prüfen wie sehr du in der Nachhaltigkeit bewandert bist? Dann such dir ein Quiz aus und leg los.</string>
+    <string name="quiz.continue">Weiter</string>
+    <string name="quiz.fertig">Ergebnisse ansehen</string>
+    <string name="quiz.repeat">Quiz wiederholen</string>
+    <string name="quiz.goback">Anderes Quiz spielen</string>
+    <string name="quiz.noanswer">Bitte gebe eine Antwort an.</string>
+    <string name="quiz.feedback">%1$d von %2$d Fragen korrekt beantwortet!</string>
+    <string name="quiz.current">%1$d von %2$d</string>
 
-    <!-- Quiz 1: Bienen -->
+    <!--- Quiz 1: Bienen -->
     <string name="quiz.1.name">Bienenquiz</string>
+    <!-- Frage 1 -->
+    <string name="quiz.1.frage.1.bezeichnung">Wie alt können Bienen werden?</string>
+    <string-array name="quiz.1.frage.1.antworten">
+        <item>31 Tage</item>
+        <item>35 Tage</item>
+        <item>62 Tage</item>
+        <item>28 Tage</item>
+    </string-array>
+
+    <!-- Frage 2 -->
+    <string name="quiz.1.frage.2.bezeichnung">Was soll man beim Bauen eines Bienenhotels vermeiden?</string>
+    <string-array name="quiz.1.frage.2.antworten">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+
+    <!-- Frage 3 -->
+    <string name="quiz.1.frage.3.bezeichnung">Frage 3</string>
+    <string-array name="quiz.1.frage.3.antworten">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+
+    <!-- Frage 4 -->
+    <string name="quiz.1.frage.4.bezeichnung">Frage 4</string>
+    <string-array name="quiz.1.frage.4.antworten">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+
+    <!-- Frage 5 -->
+    <string name="quiz.1.frage.5.bezeichnung">Frage 5</string>
+    <string-array name="quiz.1.frage.5.antworten">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
 </resources>

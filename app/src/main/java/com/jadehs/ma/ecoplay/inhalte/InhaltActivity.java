@@ -2,10 +2,7 @@ package com.jadehs.ma.ecoplay.inhalte;
 
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
-import android.speech.tts.TextToSpeechService;
 import android.speech.tts.UtteranceProgressListener;
-import android.speech.tts.Voice;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -44,7 +41,8 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         }, "com.google.android.tts");
         this.tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
             @Override
-            public void onStart(String utteranceId) {}
+            public void onStart(String utteranceId) {
+            }
 
             @Override
             public void onDone(String utteranceId) {
@@ -57,6 +55,13 @@ public abstract class InhaltActivity extends EcoPlayActivity {
                 Toast.makeText(InhaltActivity.this, R.string.fehler_tts, Toast.LENGTH_LONG).show();
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        tts.stop();
+        tts.shutdown();
     }
 
     public void onSpeaker(View view) {

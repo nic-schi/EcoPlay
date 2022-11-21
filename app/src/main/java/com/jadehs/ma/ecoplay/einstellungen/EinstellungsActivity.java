@@ -57,7 +57,7 @@ public class EinstellungsActivity extends EcoPlayActivity {
                 Log.v("eco", Locale.getDefault().toString());
                 String sprache = newValue.toString();
                 new LanguageChanger(this.requireActivity(), sprache);
-                Utils.refreshActivity(this.requireActivity());
+                Utils.instantRefreshActivity(this.requireActivity());
                 return true;
             });
         }

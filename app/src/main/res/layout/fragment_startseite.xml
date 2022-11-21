@@ -34,7 +34,7 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:image="@drawable/questionstripes"
+                app:image="@drawable/question"
                 app:redirect="@id/action_startseiteFragment_to_quizActivity"
                 app:text="@string/startseite.quiz"
                 tools:layout="@layout/fragment_startseite_item" />

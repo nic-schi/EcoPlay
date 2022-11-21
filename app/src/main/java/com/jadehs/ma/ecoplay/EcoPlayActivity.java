@@ -222,7 +222,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         // guck nach ob sich sprache geändert hat
         String sprache = this.defaultPref.getString("sprache", null);
         if (sprache != null && !sprache.equals(this.currentLanguage)) {
-            Utils.refreshActivity(this);
+            Utils.instantRefreshActivity(this);
             currentLanguage = sprache;
         }
     }

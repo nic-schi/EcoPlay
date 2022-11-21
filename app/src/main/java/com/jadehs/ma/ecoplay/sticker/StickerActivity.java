@@ -67,7 +67,7 @@ public class StickerActivity extends EcoPlayActivity {
                     R.string.sticker_confirm_dialog_msg,
                     () -> {
                         this.resetStickerpinnwand();
-                        Utils.refreshActivity(this);
+                        Utils.instantRefreshActivity(this);
                     }
             );
             alert.show();

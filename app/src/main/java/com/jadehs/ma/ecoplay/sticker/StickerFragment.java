@@ -127,7 +127,7 @@ public class StickerFragment extends Fragment {
 
     // TODO: remove in production
     private void unlock() {
-        new StickerManager(this.getContext()).unlockedArchievement(this.getTag(), this.name);
+        new StickerManager(this.getContext()).unlockArchievement(this.getTag(), this.name);
     }
 
     public boolean hatSticker() {

@@ -1,7 +1,9 @@
-package com.jadehs.ma.ecoplay;
+package com.jadehs.ma.ecoplay.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+
+import com.jadehs.ma.ecoplay.R;
 
 
 @SuppressLint("ViewConstructor")

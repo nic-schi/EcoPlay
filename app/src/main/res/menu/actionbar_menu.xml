@@ -15,11 +15,6 @@
                 android:title="@string/actionbar_menu.action_about"
                 app:showAsAction="ifRoom|withText" />
             <item
-                android:id="@+id/action_setting"
-                android:icon="@drawable/settings"
-                android:title="@string/startseite.settings"
-                app:showAsAction="ifRoom|withText" />
-            <item
                 android:id="@+id/action_faq"
                 android:icon="@drawable/question_round"
                 android:title="@string/actionbar_menu.faq"
@@ -28,6 +23,11 @@
                 android:id="@+id/action_datenuebertragen"
                 android:icon="@drawable/database"
                 android:title="@string/actionbar_menu.datenuebertragen"
+                app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_setting"
+                android:icon="@drawable/settings"
+                android:title="@string/startseite.settings"
                 app:showAsAction="ifRoom|withText" />
             <!-- TODO: remove in production -->
             <item

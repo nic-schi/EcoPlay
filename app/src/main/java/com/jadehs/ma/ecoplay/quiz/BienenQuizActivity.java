@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.quiz.fragen.Frage;
 import com.jadehs.ma.ecoplay.quiz.fragen.FrageFragment;
+import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 public class BienenQuizActivity extends QuizActivity {
 
@@ -48,4 +49,12 @@ public class BienenQuizActivity extends QuizActivity {
         frage5.setSolution(Frage.D);
         this.addFrage(frage5);
     }
+
+    @Override
+    protected void onFinish(int correct, int count, double success) {
+        if (correct >= (count - 1)) {
+            new StickerManager(this).unlockArchievement("bee02", this.getString(R.string.sticker_2_stickername));
+        }
+    }
+
 }

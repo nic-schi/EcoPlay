@@ -19,6 +19,12 @@ import com.jadehs.ma.ecoplay.R;
 public class HeaderFragment extends Fragment {
     private String headertext;
 
+    public HeaderFragment() {}
+
+    public HeaderFragment(String headertext) {
+        this.headertext = headertext;
+    }
+
     @Override
     public void onInflate(@NonNull Context context, @NonNull AttributeSet attrs, @Nullable Bundle savedInstanceState) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.HeaderFragment);
@@ -39,4 +45,12 @@ public class HeaderFragment extends Fragment {
 
         return view;
     }
+
+    public void setHeadertext(String headertext) {
+        this.headertext = headertext;
+
+        TextView header = requireView().findViewById(R.id.headertext);
+        header.setText(headertext);
+    }
+
 }

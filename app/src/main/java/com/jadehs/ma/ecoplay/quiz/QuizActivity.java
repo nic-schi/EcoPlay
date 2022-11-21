@@ -129,6 +129,10 @@ public abstract class QuizActivity extends EcoPlayActivity {
 
         // verstecke knopf
         view.setVisibility(View.GONE);
+
+        // rufe onfinish auf
+        double success = (this.correctlyAnswered <= 0) ? 0 : ((double) fragen.size() / (double) correctlyAnswered);
+        this.onFinish(correctlyAnswered, fragen.size(), success * 100);
     }
 
     protected void addFrage(FrageFragment frage) {
@@ -142,6 +146,8 @@ public abstract class QuizActivity extends EcoPlayActivity {
 
         findViewById(R.id.weiterKnopf).setOnClickListener(this::weiter);
     }
+
+    protected abstract void onFinish(int correct, int count, double success);
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {

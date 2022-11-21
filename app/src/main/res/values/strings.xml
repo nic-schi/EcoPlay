@@ -68,4 +68,26 @@
     <string name="onboarding.wissensprüfung.sidekick">Ich habe noch wenig Wissen und kenn mich nicht so gut aus!</string>
     <string name="onboarding.wissensprüfung.held">Ich habe schon etwas Wissen und kenne mich aus!</string>
     <string name="onboarding.wissensprüfung.knopf">Fertig</string>
+
+    <!-- Zahnputzassistent -->
+    <string name="zaehne.start">Starten</string>
+    <string name="zaehne.start.text">@string/placeholder.text.50</string>
+    <string name="zaehne.vorbereitung.header">Vorbereitungen</string>
+    <string name="zaehne.vorbereitung.text1">@string/placeholder.text.20</string>
+    <string name="zaehne.vorbereitung.text2">@string/placeholder.header.long</string>
+    <string name="zaehne.vorbereitung.letsgo">Los gehts</string>
+
+    <string name="zaehne.schritt.putzen">Jetzt Putzen</string>
+    <string name="zaehne.schritt.stop">Stoppen</string>
+    <string name="zaehne.schritt.time.default" translatable="false">00:00</string>
+    <string name="zaehne.schritt.time" translatable="false">%1$s:%2$s</string>
+    <string name="zaehne.schritt.continue">Weiter</string>
+    <string name="zaehne.schritt.success.hurra">Hurra!!</string>
+    <string name="zaehne.schritt.success.text">Du hast erfolgreich deine Zähne geputzt!</string>
+    <string name="zaehne.schritt.success.time">Dabei hast du nur %1$s:%2$s gebraucht!</string>
+    <string name="zaehne.schritt.success.back">Zurück</string>
+    <string name="zaehne.schritt.success.ratingtext">Unser Appzahnarzt hat deine Putzkunst bewertet:</string>
+
+    <string name="zaehne.schritt1.header">Schritt 1: Backenzähne</string>
+    <string name="zaehne.schritt1.text">@string/placeholder.text.20</string>
 </resources>

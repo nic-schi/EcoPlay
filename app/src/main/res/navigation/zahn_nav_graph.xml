@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zahn_nav_graph"
+    app:startDestination="@id/zahnStartFragment">
+
+    <fragment
+        android:id="@+id/zahnStartFragment"
+        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnStartFragment"
+        android:label="ZahnStartFragment" >
+        <action
+            android:id="@+id/action_zahnStartFragment_to_zahnVorbereitungFragment"
+            app:destination="@id/zahnVorbereitungFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zahnVorbereitungFragment"
+        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnVorbereitungFragment"
+        android:label="ZahnVorbereitungFragment" >
+        <action
+            android:id="@+id/action_zahnVorbereitungFragment_to_zahnSchritt1"
+            app:destination="@id/zahnSchritt1" />
+    </fragment>
+    <fragment
+        android:id="@+id/zahnSchritt1"
+        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnSchritt1"
+        android:label="ZahnSchritt1" >
+        <action
+            android:id="@+id/action_zahnSchritt1_to_zahnSuccessFragment"
+            app:destination="@id/zahnSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zahnSuccessFragment"
+        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnSuccessFragment"
+        android:label="ZahnSuccessFragment" />
+</navigation>

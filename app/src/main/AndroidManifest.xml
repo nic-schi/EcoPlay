@@ -73,7 +73,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".ZahnputzassistentActivity"
+            android:name=".utils.zaehneputzen.ZahnputzassistentActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

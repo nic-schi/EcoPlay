@@ -48,7 +48,7 @@ public class OnboardingActivity extends EcoPlayActivity {
     }
 
     private void addArchievement() {
-        new StickerManager(this).unlockedArchievement("onboarding", this.getString(R.string.sticker_4_stickername));
+        new StickerManager(this).unlockArchievement("onboarding", this.getString(R.string.sticker_4_stickername));
     }
 
     /**

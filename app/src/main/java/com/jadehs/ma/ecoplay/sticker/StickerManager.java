@@ -54,18 +54,21 @@ public class StickerManager extends Manager<Sticker[]> {
         };
     }
 
-    public void unlockedArchievement(String tag, String name) {
-        MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.levelup);
-        mp.setVolume(0.15f, 0.15f);
-        mp.start();
-
-        Toast toast = Toast.makeText(getContext(), getContext().getString(R.string.sticker_unlocked, name), Toast.LENGTH_SHORT);
-        toast.show();
-
+    public void unlockArchievement(String tag, String name) {
         SharedPreferences pref = getContext().getSharedPreferences("ECOPLAY", Context.MODE_PRIVATE);
         Set<String> sticker = new HashSet<>(pref.getStringSet("sticker", new HashSet<>()));
-        sticker.add(tag);
-        pref.edit().putStringSet("sticker", sticker).apply();
+
+        if (!sticker.contains(tag)) {
+            MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.levelup);
+            mp.setVolume(0.15f, 0.15f);
+            mp.start();
+
+            Toast toast = Toast.makeText(getContext(), getContext().getString(R.string.sticker_unlocked, name), Toast.LENGTH_SHORT);
+            toast.show();
+
+            sticker.add(tag);
+            pref.edit().putStringSet("sticker", sticker).apply();
+        }
     }
 
     @Override

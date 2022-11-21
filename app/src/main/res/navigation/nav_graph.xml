@@ -50,9 +50,9 @@
         tools:layout="@layout/activity_taschengeldmanager" />
     <activity
         android:id="@+id/zahnputzassistentActivity"
-        android:name="com.jadehs.ma.ecoplay.ZahnputzassistentActivity"
+        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnputzassistentActivity"
         android:label="activity_zahnputzassistent"
-        tools:layout="@layout/activity_zahnputzassistent" />
+        tools:layout="@layout/fragment_zahn_start" />
     <activity
         android:id="@+id/einstellungsActivity"
         android:name="com.jadehs.ma.ecoplay.einstellungen.EinstellungsActivity"

@@ -21,6 +21,7 @@ import com.jadehs.ma.ecoplay.onboarding.OnboardingActivity;
 import com.jadehs.ma.ecoplay.startseite.StartActivity;
 import com.jadehs.ma.ecoplay.sticker.StickerPinnwand;
 import com.jadehs.ma.ecoplay.ueberuns.UeberUnsActivity;
+import com.jadehs.ma.ecoplay.utils.ActionBarCustomView;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
 import com.jadehs.ma.ecoplay.utils.LanguageChanger;
 import com.jadehs.ma.ecoplay.utils.Utils;

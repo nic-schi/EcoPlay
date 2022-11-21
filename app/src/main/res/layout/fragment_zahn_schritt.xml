@@ -55,7 +55,7 @@
             android:layout_marginStart="32dp"
             android:text="@string/zaehne.schritt.time.default"
             android:textAppearance="@style/TextAppearance.EcoPlay.Header"
-            android:textColor="@color/text_color_bright"
+            android:textColor="@color/akzent_heller"
             app:layout_constraintBottom_toBottomOf="@+id/putzenKnopf"
             app:layout_constraintStart_toEndOf="@+id/putzenKnopf"
             app:layout_constraintTop_toTopOf="@+id/putzenKnopf" />

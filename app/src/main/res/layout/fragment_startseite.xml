@@ -75,7 +75,7 @@
                 android:name="com.jadehs.ma.ecoplay.startseite.StartseiteItemFragment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:image="@drawable/action_bar_bg"
+                app:image="@drawable/sticker"
                 app:redirect="@id/action_startseiteFragment_to_stickerActivity"
                 app:text="@string/startseite.sticker"
                 tools:layout="@layout/fragment_startseite_item" />

@@ -1,6 +1,15 @@
 package com.jadehs.ma.ecoplay;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.text.DecimalFormat;
 
 public class TaschengeldmanagerActivity extends EcoPlayActivity {
 
@@ -12,5 +21,65 @@ public class TaschengeldmanagerActivity extends EcoPlayActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_taschengeldmanager);
+
+        // Setze money wert
+        this.refreshBetrag(this.getMoney());
+
+        // Füge listener hinzu
+        FloatingActionButton negativ = findViewById(R.id.negativ);
+        negativ.setOnClickListener((v) -> this.onMoney(R.id.negativ));
+
+        FloatingActionButton positiv = findViewById(R.id.positiv);
+        positiv.setOnClickListener((v) -> this.onMoney(R.id.positiv));
+
+        ((EditText) this.findViewById(R.id.aktuellerbetrag)).addTextChangedListener(new TextWatcher() {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                Float value = TaschengeldmanagerActivity.this.extractValue(R.id.aktuellerbetrag, true);
+                if (value != null) {
+                    TaschengeldmanagerActivity.this.setMoney(value);
+                }
+            }
+        });
     }
+
+    private Float extractValue(int res, boolean ignore) {
+        EditText feld = findViewById(res);
+        String rawValue = feld.getText().toString();
+        if (!rawValue.isEmpty()) {
+            try {
+                return Float.parseFloat(rawValue);
+            } catch (NumberFormatException ex) {
+                return null;
+            }
+        } else if (!ignore) {
+            Toast.makeText(this, R.string.taschengeld_noinput, Toast.LENGTH_SHORT).show();
+        }
+        return null;
+    }
+
+    private void onMoney(int type) {
+        Float value = extractValue(R.id.betragToAdd, false);
+
+        if (value != null) {
+            float betrag = getMoney();
+            this.refreshBetrag((type == R.id.positiv) ? (betrag + value) : (betrag - value));
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void refreshBetrag(float neu) {
+        EditText edit = this.findViewById(R.id.aktuellerbetrag);
+        DecimalFormat df = new DecimalFormat("#.##");
+        String formatted = df.format(neu);
+        edit.setText(formatted);
+        this.setMoney(neu);
+    }
+
 }

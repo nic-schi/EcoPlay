@@ -13,11 +13,13 @@
     <color name="akzent_heller">#f4e594</color>
     <color name="akzent_dunkler">#eed65b</color>
 
+    <!-- Sonstiges -->
     <color name="text_color">#1E1E1E</color>
     <color name="text_color_bright">#DFDFDF</color>
     <color name="background">@color/secondary</color>
-
     <color name="apptitel">@color/text_color_bright</color>
+    <color name="success">#28A745</color>
+    <color name="warning">#DC3545</color>
 
     <!-- Nav !-->
     <color name="navgradient_start">@color/primary</color>

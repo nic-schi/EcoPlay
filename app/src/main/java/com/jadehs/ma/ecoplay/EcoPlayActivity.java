@@ -97,6 +97,15 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         }
     }
 
+    public float getMoney() {
+        return this.pref.getFloat("money", 0.f);
+    }
+
+    public void setMoney(float money) {
+        this.prefEdit.putFloat("money", money);
+        this.prefEdit.apply();
+    }
+
     public void resetStickerpinnwand() {
         this.prefEdit.putString("stickerpinnwand", "[]");
         this.prefEdit.apply();

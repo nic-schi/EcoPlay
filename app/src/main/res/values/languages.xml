@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="supported_languages">
+    <string-array name="supported_languages">
         <item>Deutsch</item>
         <item>English</item>
-    </array>
+    </string-array>
 
     <array name="supported_languages_values">
         <item>de</item>

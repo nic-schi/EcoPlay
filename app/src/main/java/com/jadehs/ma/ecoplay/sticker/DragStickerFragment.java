@@ -5,6 +5,7 @@ import android.content.ClipDescription;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Bundle;
+import android.text.Layout;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,13 @@ public class DragStickerFragment extends Fragment {
             view.setVisibility(View.GONE);
         }
 
+        int size = activity.getStickerPinnwandIconSize();
+        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        layoutParams.width = size;
+        layoutParams.height = size;
+        view.setLayoutParams(layoutParams);
+        view.requestLayout();
+
         // add drag and drop
         iconView.setOnLongClickListener(v -> {
             String clipText = frag.getTag();
@@ -58,6 +66,8 @@ public class DragStickerFragment extends Fragment {
             ClipData data = new ClipData(clipText, new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
 
             View.DragShadowBuilder builder = new View.DragShadowBuilder(v);
+            builder.getView().setLayoutParams(layoutParams);
+            builder.getView().requestLayout();
             v.startDragAndDrop(data, builder, v, 0);
 
             v.setVisibility(View.INVISIBLE);

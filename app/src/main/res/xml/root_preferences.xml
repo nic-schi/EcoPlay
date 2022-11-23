@@ -12,4 +12,13 @@
         app:icon="@drawable/earth_globe"
         app:isPreferenceVisible="true"
         app:summary="@string/settings.sprache.summary" />
+    <ListPreference
+        android:defaultValue="md"
+        android:entries="@array/sticker_sizes"
+        android:entryValues="@array/sticker_sizes_values"
+        android:key="stickersize"
+        android:title="@string/sticker.pinnwand.size"
+        app:dialogIcon="@drawable/sticker"
+        app:icon="@drawable/sticker"
+        app:summary="@string/sticker.pinnwand.size.summary" />
 </PreferenceScreen>

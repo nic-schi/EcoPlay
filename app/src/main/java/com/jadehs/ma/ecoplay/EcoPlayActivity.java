@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -95,6 +96,25 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         } else {
             return sprache;
         }
+    }
+
+    public int getStickerPinnwandIconSize() {
+        String[] values = getResources().getStringArray(R.array.sticker_sizes_values);
+        String valuePref = this.defaultPref.getString("stickersize", values[1]);
+
+        Resources rsc = getResources();
+        int value = rsc.getDimensionPixelSize(R.dimen.sticker_md);
+        if (valuePref.equalsIgnoreCase(values[0])) {
+            // small
+            value = rsc.getDimensionPixelSize(R.dimen.sticker_sm);
+        } else if (valuePref.equalsIgnoreCase(values[1])) {
+            // medium
+            value = rsc.getDimensionPixelSize(R.dimen.sticker_md);
+        } else if (valuePref.equalsIgnoreCase(values[2])) {
+            // big
+            value = rsc.getDimensionPixelSize(R.dimen.sticker_lg);
+        }
+        return value;
     }
 
     public float getMoney() {

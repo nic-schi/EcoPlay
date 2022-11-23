@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sticker_sizes">
+        <item>Klein</item>
+        <item>Mittel</item>
+        <item>Groß</item>
+    </string-array>
+
+    <array name="sticker_sizes_values">
+        <item>sm</item>
+        <item>md</item>
+        <item>lg</item>
+    </array>
+</resources>

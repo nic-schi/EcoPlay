@@ -16,6 +16,8 @@
 
     <!-- Sticker -->
     <dimen name="sticker.icon_size">70dp</dimen>
-    <dimen name="sticker.pinnwand.icon_size">60dp</dimen>
+    <dimen name="sticker.sm">50dp</dimen>
+    <dimen name="sticker.md">60dp</dimen>
+    <dimen name="sticker.lg">70dp</dimen>
 
 </resources>

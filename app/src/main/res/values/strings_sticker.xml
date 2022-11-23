@@ -6,6 +6,8 @@
     <string name="sticker.header.pinnwand">Deine Stickerpinnwand</string>
     <string name="sticker.pinnwand.text">Hier kannst du deine Sticker beliebig platzieren.</string>
     <string name="sticker.pinnwand.reset">Zurücksetzen</string>
+    <string name="sticker.pinnwand.size">Stickergröße auf Pinnwand</string>
+    <string name="sticker.pinnwand.size.summary">Aktuelle Größe: %s</string>
     <string name="sticker.confirm.dialog.msg">Alle Sticker auf deiner Pinnwand werden wieder entfernt.</string>
 
     <string name="sticker.1.stickername">Summ, summ, summ!</string>

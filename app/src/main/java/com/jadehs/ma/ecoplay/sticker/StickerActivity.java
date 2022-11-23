@@ -6,6 +6,7 @@ import android.view.DragEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -56,6 +57,13 @@ public class StickerActivity extends EcoPlayActivity {
             found.setX(item.x);
             found.setY(item.y);
 
+            int size = this.getStickerPinnwandIconSize();
+            ViewGroup.LayoutParams layoutParams = found.getLayoutParams();
+            layoutParams.width = size;
+            layoutParams.height = size;
+            found.setLayoutParams(layoutParams);
+            found.requestLayout();
+
             ConstraintLayout ziel = this.findViewById(R.id.drop_ziel);
             ziel.addView(found);
         }
@@ -93,9 +101,10 @@ public class StickerActivity extends EcoPlayActivity {
                     view.invalidate();
 
                     v = (View) e.getLocalState();
+                    int size = this.getStickerPinnwandIconSize();
 
-                    float x = e.getX() - ((float) v.getWidth() / 2);
-                    float y = e.getY() - ((float) v.getHeight() / 2);
+                    float x = e.getX() - ((float) size / 2);
+                    float y = e.getY() - ((float) size / 2);
                     v.setX(x);
                     v.setY(y);
 
@@ -122,9 +131,12 @@ public class StickerActivity extends EcoPlayActivity {
                         return false;
                     }
 
-                    LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(v.getLayoutParams());
+                    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(v.getLayoutParams());
                     params.setMargins(4, 4, 4, 4);
+                    params.height = size;
+                    params.width = size;
                     v.setLayoutParams(params);
+                    v.requestLayout();
                     v.setVisibility(View.VISIBLE);
 
                     return true;

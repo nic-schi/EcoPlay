@@ -10,7 +10,9 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -53,11 +55,10 @@ public class DragStickerFragment extends Fragment {
         }
 
         int size = activity.getStickerPinnwandIconSize();
-        ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
+        ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
         layoutParams.width = size;
         layoutParams.height = size;
         view.setLayoutParams(layoutParams);
-        view.requestLayout();
 
         // add drag and drop
         iconView.setOnLongClickListener(v -> {
@@ -66,8 +67,7 @@ public class DragStickerFragment extends Fragment {
             ClipData data = new ClipData(clipText, new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
 
             View.DragShadowBuilder builder = new View.DragShadowBuilder(v);
-            builder.getView().setLayoutParams(layoutParams);
-            builder.getView().requestLayout();
+            builder.getView().setLayoutParams(new LinearLayout.LayoutParams(layoutParams));
             v.startDragAndDrop(data, builder, v, 0);
 
             v.setVisibility(View.INVISIBLE);

@@ -58,16 +58,16 @@ public class StickerActivity extends EcoPlayActivity {
             found.setY(item.y);
 
             int size = this.getStickerPinnwandIconSize();
-            ViewGroup.LayoutParams layoutParams = found.getLayoutParams();
+            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) found.getLayoutParams();
             layoutParams.width = size;
             layoutParams.height = size;
             found.setLayoutParams(layoutParams);
-            found.requestLayout();
 
             ConstraintLayout ziel = this.findViewById(R.id.drop_ziel);
             ziel.addView(found);
         }
 
+        // Zurücksetzen
         Button resetKnopf = this.findViewById(R.id.resetKnopf);
         resetKnopf.setOnClickListener(v -> {
             ConfirmAlert alert = new ConfirmAlert(
@@ -131,12 +131,16 @@ public class StickerActivity extends EcoPlayActivity {
                         return false;
                     }
 
-                    FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(v.getLayoutParams());
-                    params.setMargins(4, 4, 4, 4);
+                    ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+
+                    if (destination.getTag() != null && destination.getTag().equals("drop_start")) {
+                        params.setMargins(4, 4, 4, 4);
+                    }
+
                     params.height = size;
                     params.width = size;
+
                     v.setLayoutParams(params);
-                    v.requestLayout();
                     v.setVisibility(View.VISIBLE);
 
                     return true;

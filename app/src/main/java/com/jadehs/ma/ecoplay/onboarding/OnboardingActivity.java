@@ -41,7 +41,7 @@ public class OnboardingActivity extends EcoPlayActivity {
     public void skipOnboarding(View view) {
         Intent intent = new Intent(this, StartActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        setDifficulty(Difficulty.SIDEKICK);
+        setDifficulty(Difficulty.EASY);
         startActivity(intent);
         this.addArchievement();
         this.setOnboarding(false);

@@ -1,10 +1,11 @@
-package com.jadehs.ma.ecoplay.quiz;
+package com.jadehs.ma.ecoplay.quiz.bienen;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.quiz.QuizActivity;
 import com.jadehs.ma.ecoplay.quiz.fragen.Frage;
 import com.jadehs.ma.ecoplay.quiz.fragen.FrageFragment;
 import com.jadehs.ma.ecoplay.sticker.StickerManager;

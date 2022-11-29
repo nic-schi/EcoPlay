@@ -33,7 +33,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragmentContainerView8"
-                android:name="com.jadehs.ma.ecoplay.onboarding.SidekickOrHeroFragment"
+                android:name="com.jadehs.ma.ecoplay.onboarding.EasyOrHardFragment"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

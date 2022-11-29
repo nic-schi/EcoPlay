@@ -26,9 +26,9 @@
 
     <!-- Einstellungen -->
     <string name="settings.text">Hier kannst du einige Einstellungen machen, welche das Appverhalten ändern.\n\nSie werden automatisch gespeichert sobald du etwas auswählst.</string>
-    <string name="settings.difficulty.frage">Schwierigkeit der Inhalte &amp; Quizzes</string>
-    <string name="settings.difficulty.antwort_sidekick">Schwierigkeit: Leicht\n\nDie Texte sind einfach geschrieben. Fragen im Quiz sind einfach.</string>
-    <string name="settings.difficulty.antwort_held">Schwierigkeit: Mittel-Schwierig\n\nDie Texte beeinhalten Fachwörter und sind akademisch geschrieben. Fragen im Quiz sind mittel bis schwierig.</string>
+    <string name="settings.difficulty.frage">Schwierigkeit der Inhalte</string>
+    <string name="settings.difficulty.antwort_sidekick">Schwierigkeit: Leicht\n\nDie Texte sind einfach geschrieben. Es werden keine bis wenig Fachwörter verwendet.</string>
+    <string name="settings.difficulty.antwort_held">Schwierigkeit: Mittel-Schwierig\n\nDie Texte beeinhalten Fachwörter und sind akademisch geschrieben.</string>
     <string name="settings.else">Sonstige Einstellungen</string>
     <string name="settings.sprache">Sprache</string>
     <string name="settings.sprache.summary">Aktuelle Sprache: %s</string>
@@ -90,7 +90,7 @@
 
     <string name="zaehne.schritt1.header">Schritt 1: Backenzähne</string>
     <string name="zaehne.schritt1.text">@string/placeholder.text.20</string>
-    
+
     <!-- Taschengeldmanager -->
     <string name="taschengeld.text">@string/placeholder.text.50</string>
     <string name="taschengeld.money">Dein Geld:</string>

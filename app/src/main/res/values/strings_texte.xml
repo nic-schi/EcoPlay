@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="inhalt.1.text.1">Die Bienen sind toll.</string>
+    <!--- Bienen -->
+    <!-- Easy -->
+    <string name="inhalt.1.text.easy.1">Die Bienen sind toll.</string>
+    <string name="inhalt.1.text.easy.2">Die Bienen sind grandios.</string>
+
+    <!-- Hard -->
+    <string name="inhalt.1.text.hard.1">Die Bienen sind absolut toll.</string>
+    <string name="inhalt.1.text.hard.2">Die Bienen sind absolut grandios.</string>
 </resources>

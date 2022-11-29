@@ -10,9 +10,14 @@ public class InhaltBienenActivity extends InhaltActivity {
         super(
                 R.string.inhalte_1_thema,
                 R.drawable.bee,
-                new InhaltBienenFragment(),
+                R.layout.inhalt_bienen,
                 new int[]{
-                        R.string.inhalt_1_text_1
+                        R.string.inhalt_1_text_easy_1,
+                        R.string.inhalt_1_text_easy_2
+                },
+                new int[]{
+                        R.string.inhalt_1_text_hard_1,
+                        R.string.inhalt_1_text_hard_2
                 }
         );
     }

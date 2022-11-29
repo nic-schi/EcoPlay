@@ -157,7 +157,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
     }
 
     public Difficulty getDifficulty() {
-        return Difficulty.values()[this.pref.getInt("difficulty", Difficulty.SIDEKICK.ordinal())];
+        return Difficulty.values()[this.pref.getInt("difficulty", Difficulty.EASY.ordinal())];
     }
 
     /**

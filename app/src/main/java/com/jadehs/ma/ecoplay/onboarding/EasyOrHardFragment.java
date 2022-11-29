@@ -21,7 +21,7 @@ import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
 
-public class SidekickOrHeroFragment extends Fragment {
+public class EasyOrHardFragment extends Fragment {
 
     private String frage;
     private String antwort_sidekick;
@@ -45,8 +45,8 @@ public class SidekickOrHeroFragment extends Fragment {
         this.held = view.findViewById(R.id.held);
 
         // setze onClickListener
-        this.sidekick.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.SIDEKICK));
-        this.held.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.HELD));
+        this.sidekick.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.EASY));
+        this.held.setOnClickListener(v -> this.onDifficultyButtonClick(Difficulty.HARD));
 
         String frage = this.frage;
         if (savedInstanceState != null)
@@ -72,7 +72,7 @@ public class SidekickOrHeroFragment extends Fragment {
             Difficulty diff = ((EcoPlayActivity) activity).getDifficulty();
             TextView antwort = view.findViewById(R.id.antwort);
 
-            if (diff == Difficulty.HELD) {
+            if (diff == Difficulty.HARD) {
                 antwort.setText(heldentext);
                 this.setDifficultyButtonActiveColor(this.held);
             } else {
@@ -126,10 +126,10 @@ public class SidekickOrHeroFragment extends Fragment {
         TextView antwort = this.requireView().findViewById(R.id.antwort);
 
         // prüf ob Held oder Sidekick, dann setze den Text und die active color für den Button
-        if (diff == Difficulty.HELD) {
+        if (diff == Difficulty.HARD) {
             this.setDifficultyButtonActiveColor(this.held);
             antwort.setText(this.antwort_held);
-        } else if (diff == Difficulty.SIDEKICK) {
+        } else if (diff == Difficulty.EASY) {
             this.setDifficultyButtonActiveColor(this.sidekick);
             antwort.setText(this.antwort_sidekick);
         }

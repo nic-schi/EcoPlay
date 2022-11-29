@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -12,18 +14,38 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.utils.Difficulty;
 
 import java.util.Locale;
 
 public abstract class InhaltActivity extends EcoPlayActivity {
     private final Fragment inhaltFragment;
-    private final int[] alletexte;
-    private TextToSpeech tts;
 
-    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] alletexte) {
+    private final int[] easyTexte;
+    private int[] alleTexte;
+    private int[] hardTexte = null;
+
+    private TextToSpeech tts;
+    private int textIndex = 0;
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte) {
         super(true, actionBarTitelResourceID, logo, true, true);
         this.inhaltFragment = inhaltFragment;
-        this.alletexte = alletexte;
+        this.easyTexte = easyTexte;
+        this.alleTexte = easyTexte;
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, int inhaltFragmentLayout, int[] easyTexte) {
+        this(actionBarTitelResourceID, logo, new Fragment(inhaltFragmentLayout), easyTexte);
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte, int[] hardTexte) {
+        this(actionBarTitelResourceID, logo, inhaltFragment, easyTexte);
+        this.hardTexte = hardTexte;
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, int inhaltFragmentLayout, int[] easyTexte, int[] hardTexte) {
+        this(actionBarTitelResourceID, logo, new Fragment(inhaltFragmentLayout), easyTexte, hardTexte);
     }
 
     @Override
@@ -31,9 +53,11 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inhalt);
 
+        this.determineDifficulty();
+
         // Füge inhalt hinzu
         FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-        trans.add(R.id.inhaltContainer, this.inhaltFragment, getString(this.getActionbarTitelRessourceID()) + "-fragment");
+        trans.add(R.id.inhaltContainer, this.inhaltFragment, getString(this.getActionbarTitelRessourceID()).toLowerCase() + "-fragment");
         trans.commit();
 
         // Baue TTS
@@ -57,6 +81,55 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         });
     }
 
+    private void determineDifficulty() {
+        // Ermittle die richtigen Texte jenachdem ob easy oder hard
+        Difficulty difficulty = this.getDifficulty();
+
+        if (difficulty.equals(Difficulty.HARD) && this.hardTexte != null) {
+            // Hard
+            this.alleTexte = this.hardTexte;
+        } else if (difficulty.equals(Difficulty.EASY)) {
+            // Easy
+            this.alleTexte = this.easyTexte;
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        this.determineDifficulty();
+
+        // setze texte
+        View view = this.inhaltFragment.requireView();
+        this.textIndex = 0;
+        this.setTexte(view);
+    }
+
+    /**
+     * Findet die Textviews mit einem rekursiven call um alle Viewgroups abzugehen
+     *
+     * @param view Die Rootview
+     */
+    private void setTexte(View view) {
+        if (view instanceof ViewGroup) {
+            ViewGroup viewGroup = (ViewGroup) view;
+
+            for (int i = 0; i < viewGroup.getChildCount(); i++) {
+                this.setTexte(viewGroup.getChildAt(i));
+            }
+        } else if (view instanceof TextView) {
+            TextView textView = (TextView) view;
+            textView.setText(this.alleTexte[textIndex]);
+            this.textIndex++;
+        }
+    }
+
+    @Override
+    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        this.textIndex = 0;
+    }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -72,7 +145,7 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         this.tts.setLanguage(new Locale(this.getLanguage()));
 
         StringBuilder texte = new StringBuilder();
-        for (int text : this.alletexte) {
+        for (int text : this.alleTexte) {
             texte.append(this.getString(text)).append("..");
         }
 

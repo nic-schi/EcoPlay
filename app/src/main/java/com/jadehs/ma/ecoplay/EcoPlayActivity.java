@@ -32,6 +32,7 @@ import org.json.JSONException;
 
 import java.util.HashSet;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -75,6 +76,15 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.showBar = showBar;
     }
 
+    public void setInhaltTimeSpent(String id, long time) {
+        this.prefEdit.putLong(id, time);
+        this.prefEdit.apply();
+    }
+
+    public long getInhaltTimeSpent(String id) {
+        return this.pref.getLong(id, 0);
+    }
+
     public void setLanguageOnStart() {
         String sprache = this.getLanguage();
         String prefSprache = this.defaultPref.getString("sprache", null);
@@ -91,11 +101,7 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
     public String getLanguage() {
         String sprache = this.defaultPref.getString("sprache", null);
         String handydefault = Locale.getDefault().getLanguage();
-        if (sprache == null) {
-            return handydefault;
-        } else {
-            return sprache;
-        }
+        return Objects.requireNonNullElse(sprache, handydefault);
     }
 
     public int getStickerPinnwandIconSize() {

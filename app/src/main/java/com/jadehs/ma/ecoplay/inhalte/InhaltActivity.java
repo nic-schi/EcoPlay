@@ -3,6 +3,7 @@ package com.jadehs.ma.ecoplay.inhalte;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -28,6 +29,8 @@ public abstract class InhaltActivity extends EcoPlayActivity {
     private TextToSpeech tts;
     private int textIndex = 0;
 
+    private long startTime;
+
     public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte) {
         super(true, actionBarTitelResourceID, logo, true, true);
         this.inhaltFragment = inhaltFragment;
@@ -48,11 +51,14 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         this(actionBarTitelResourceID, logo, new Fragment(inhaltFragmentLayout), easyTexte, hardTexte);
     }
 
+    protected abstract void onHasRead(long millisecondsSpent, long secondsSpent, long minutesSpent);
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inhalt);
 
+        this.startTime = System.currentTimeMillis();
         this.determineDifficulty();
 
         // Füge inhalt hinzu
@@ -81,6 +87,28 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         });
     }
 
+    private void callOnHasRead() {
+        String id = this.getClass().getSimpleName();
+        long endTime = System.currentTimeMillis();
+        long timeSpent = this.getInhaltTimeSpent(id) + (endTime - this.startTime);
+        this.setInhaltTimeSpent(id, timeSpent);
+
+        this.onHasRead(timeSpent, timeSpent / 1000, timeSpent / 60000);
+        this.startTime = System.currentTimeMillis();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        this.callOnHasRead();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        this.callOnHasRead();
+    }
+
     private void determineDifficulty() {
         // Ermittle die richtigen Texte jenachdem ob easy oder hard
         Difficulty difficulty = this.getDifficulty();
@@ -97,6 +125,7 @@ public abstract class InhaltActivity extends EcoPlayActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        this.startTime = System.currentTimeMillis();
         this.determineDifficulty();
 
         // setze texte
@@ -133,6 +162,7 @@ public abstract class InhaltActivity extends EcoPlayActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        this.callOnHasRead();
         tts.stop();
         tts.shutdown();
     }

@@ -1,8 +1,9 @@
 package com.jadehs.ma.ecoplay.inhalte.bienen;
 
-
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.inhalte.InhaltActivity;
+import com.jadehs.ma.ecoplay.sticker.StickerManager;
+
 
 public class InhaltBienenActivity extends InhaltActivity {
 
@@ -20,6 +21,13 @@ public class InhaltBienenActivity extends InhaltActivity {
                         R.string.inhalt_1_text_hard_2
                 }
         );
+    }
+
+    @Override
+    protected void onHasRead(long millisecondsSpent, long secondsSpent, long minutesSpent) {
+        if (secondsSpent >= 150 /* 2:30 min */) {
+            new StickerManager(this).unlockArchievement("bee01", this.getString(R.string.sticker_1_stickername));
+        }
     }
 
 }

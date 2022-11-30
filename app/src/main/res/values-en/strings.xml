@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="settings.text">Here you can make some settings which change the app behavior\n\nThey will be saved automatically as soon as you select something.</string>
-    <string name="settings.difficulty.frage">Difficulty of content &amp; quizzes</string>
-    <string name="settings.difficulty.antwort_sidekick">Difficulty: easy\n\nThe texts are simply written. Questions in the quiz are easy.</string>
-    <string name="settings.difficulty.antwort_held">Difficulty: Medium-Hard\n\nThe texts contain technical words and are written in an academic way. Questions in the quiz are medium to difficult.</string>
 
     <string name="settings.sprache">Language</string>
     <string name="settings.sprache.summary">Current language: %s</string>
@@ -19,7 +16,7 @@
     <string name="startseite.settings">@string/actionbar_menu.action_settings</string>
 
     <string name="onboarding.intro.start">Start your journey</string>
-    <string name="onboarding.intro.skip">I know my way around</string>
+    <string name="onboarding.intro.skip">I know all</string>
     <string name="onboarding.intro.header">Thank you for using our app!</string>
     <string name="onboarding.intro.text">With this app, you will learn about the world of sustainability. If you have used this app before, then you are an Experienced User. If not, then we recommend you take the journey to get to know the app a bit.</string>
 
@@ -29,13 +26,41 @@
     <string name="onboarding.wissensprüfung.held">I already have some knowledge and know my way around!</string>
     <string name="onboarding.wissensprüfung.knopf">Done</string>
     <string name="ueberuns.jadehochschule">Jade University</string>
-    <string name="teamText">This is us:</string>
     <string name="actionbar_menu.faq">FAQ</string>
-    <string name="ueberuns"><b>Hello, nice to meet you.</b>\n\nWe are a small team of 3 students who have developed this app as part of our studies at the Jade University in Wilhelmshaven. It serves as an exam for the elective subject Mobile Applications.</string>
+    <string name="ueberuns">We are a small team of 3 students who have developed this app as part of our studies at the Jade University in Wilhelmshaven. It serves as an exam for the elective subject Mobile Applications.</string>
     <string name="settings.übertragung.generieren">Generate transfer code</string>
     <string name="settings.übertragung.code">Code…</string>
     <string name="datenübertragen.übertragen">Transfer</string>
     <string name="datenübertragen.abbrechen">Cancel</string>
     <string name="datenübertragen.title">Transfer data</string>
     <string name="settings.else">Other settings</string>
+    <string name="fehler.tts">An error occurred while reading aloud!</string>
+    <string name="ueberuns.header">Hello, nice to meet you</string>
+    <string name="ueberuns.teamText">This us us</string>
+    <string name="ueberuns.quellen">All sources</string>
+    <string name="ueberuns.quellen.bild">Icons and graphics</string>
+    <string name="ueberuns.quellen.sonstiges">Other</string>
+    <string name="zaehne.start">Start</string>
+    <string name="zaehne.start.text">@string/placeholder.text.50</string>
+    <string name="zaehne.vorbereitung.header">Preparations</string>
+    <string name="zaehne.vorbereitung.text1">@string/placeholder.text.20</string>
+    <string name="zaehne.vorbereitung.text2">@string/placeholder.header.long</string>
+    <string name="zaehne.vorbereitung.letsgo">Let\'s go</string>
+    <string name="zaehne.schritt.putzen">Begin Cleaning</string>
+    <string name="zaehne.schritt.stop">Stop</string>
+    <string name="zaehne.schritt.continue">Next</string>
+    <string name="zaehne.schritt.success.hurra">Hooray!!!</string>
+    <string name="zaehne.schritt.success.text">You have successfully brushed your teeth!</string>
+    <string name="zaehne.schritt.success.time">You only needed %1$s:%2$s!</string>
+    <string name="zaehne.schritt.success.back">Back</string>
+    <string name="zaehne.schritt.success.ratingtext">Our app dentist has evaluated your cleaning skills:</string>
+    <string name="zaehne.schritt1.header">Step 1: Molar teeth</string>
+    <string name="zaehne.schritt1.text">@string/placeholder.text.20</string>
+    <string name="taschengeld.text">@string/placeholder.text.50</string>
+    <string name="taschengeld.money">Your money:</string>
+    <string name="taschengeld.noinput">Please enter an amount.</string>
+
+    <string name="settings.difficulty.frage">Difficulty of the contents</string>
+    <string name="settings.difficulty.antwort_sidekick">Difficulty: Easy\n\nThe texts are written in a simple way. No to few technical words are used.</string>
+    <string name="settings.difficulty.antwort_held">Difficulty: medium-hard\n\nThe texts contain technical words and are written in an academic way.</string>
 </resources>

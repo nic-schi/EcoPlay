@@ -1,7 +1,18 @@
 <resources>
     <string name="quiz.text">Here you can challenge yourself. Are you ready to check how much you know about sustainability? Then choose a Quiz and get started!</string>
+    <string name="quiz.continue">Next</string>
 
-    <!-- Quiz 1: Bees -->
+    <string name="quiz.fertig">View results</string>
+    <string name="quiz.repeat">Repeat quiz</string>
+    <string name="quiz.goback">Play other quiz</string>
+    <string name="quiz.noanswer">Please provide an answer.</string>
+    <string name="quiz.feedback">%1$d of %2$d questions answered correctly!</string>
+    <string name="quiz.current">%1$d from %2$d</string>
+
     <string name="quiz.1.name">Bee Quiz</string>
-
+    <string name="quiz.1.frage.1.bezeichnung">How old can bees become?</string>
+    <string name="quiz.1.frage.2.bezeichnung">What to avoid when building a bee hotel?</string>
+    <string name="quiz.1.frage.3.bezeichnung">Question 3</string>
+    <string name="quiz.1.frage.4.bezeichnung">Question 4</string>
+    <string name="quiz.1.frage.5.bezeichnung">Question 5</string>
 </resources>

@@ -86,6 +86,10 @@ public class UeberUnsActivity extends EcoPlayActivity {
         this.goToURL("https://github.com/nic-schi/EcoPlay/files/9996537/Prototyp-final.pdf");
     }
 
+    public void toOSM(View view) {
+        this.goToURL("https://www.openstreetmap.org/");
+    }
+
     private void goToURL(String url) {
         Uri uri = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uri);

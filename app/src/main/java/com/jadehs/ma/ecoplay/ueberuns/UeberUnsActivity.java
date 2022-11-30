@@ -78,6 +78,14 @@ public class UeberUnsActivity extends EcoPlayActivity {
         this.goToURL("https://www.pexels.com/");
     }
 
+    public void toGithub(View view) {
+        this.goToURL("https://github.com/nic-schi/EcoPlay/");
+    }
+
+    public void toPrototyp(View view) {
+        this.goToURL("https://github.com/nic-schi/EcoPlay/files/9996537/Prototyp-final.pdf");
+    }
+
     private void goToURL(String url) {
         Uri uri = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uri);

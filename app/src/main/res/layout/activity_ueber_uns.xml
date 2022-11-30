@@ -214,14 +214,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/quellenHeader" />
 
             <TableLayout
-                android:id="@+id/tableLayout1"
+                android:id="@+id/tableLayout2"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="32dp"
                 android:stretchColumns="0,1"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/icons">
@@ -233,8 +231,9 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="wrap_content"
                         android:layout_column="0"
+                        android:minHeight="48dp"
                         android:onClick="toSVGRepo"
                         android:padding="8dp">
 
@@ -243,8 +242,8 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:scaleType="fitCenter"
-                            android:scaleX="4"
-                            android:scaleY="4"
+                            android:scaleX="3"
+                            android:scaleY="3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -268,8 +267,9 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="48dp"
+                        android:layout_height="wrap_content"
                         android:layout_column="0"
+                        android:minHeight="48dp"
                         android:onClick="toFlaticon"
                         android:padding="8dp">
 
@@ -278,8 +278,8 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:scaleType="fitCenter"
-                            android:scaleX="4"
-                            android:scaleY="4"
+                            android:scaleX="3"
+                            android:scaleY="3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -320,8 +320,8 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:scaleType="fitCenter"
-                            android:scaleX="4"
-                            android:scaleY="4"
+                            android:scaleX="3"
+                            android:scaleY="3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -355,8 +355,8 @@
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:scaleType="fitCenter"
-                            android:scaleX="4"
-                            android:scaleY="4"
+                            android:scaleX="3"
+                            android:scaleY="3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
@@ -376,6 +376,116 @@
                             app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toEndOf="@+id/imageView12"
                             app:layout_constraintTop_toTopOf="@+id/imageView12" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/sonstiges"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="left"
+                android:padding="8dp"
+                android:text="@string/ueberuns.quellen.sonstiges"
+                android:textAppearance="@style/TextAppearance.EcoPlay.Header"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+
+            <TableLayout
+                android:id="@+id/tableLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:stretchColumns="0,1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sonstiges">
+
+                <TableRow
+                    android:id="@+id/tableRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:minHeight="48dp"
+                        android:onClick="toGithub"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView13"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitCenter"
+                            android:scaleX="3"
+                            android:scaleY="3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/ueberuns.quellen.sonstiges.github"
+                            android:textAppearance="@style/TextAppearance.EcoPlay"
+                            android:textColor="@color/link_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/imageView13"
+                            app:layout_constraintTop_toTopOf="@+id/imageView13" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:minHeight="48dp"
+                        android:onClick="toPrototyp"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:id="@+id/imageView14"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitCenter"
+                            android:scaleX="3"
+                            android:scaleY="3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="8dp"
+                            android:text="@string/ueberuns.quellen.sonstiges.prototyp"
+                            android:textAppearance="@style/TextAppearance.EcoPlay"
+                            android:textColor="@color/link_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/imageView14"
+                            app:layout_constraintTop_toTopOf="@+id/imageView14" />
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </TableRow>

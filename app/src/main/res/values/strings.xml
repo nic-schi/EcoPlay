@@ -18,6 +18,9 @@
     <string name="ueberuns.quellen.bild.2">flaticon.com</string>
     <string name="ueberuns.quellen.bild.3">pixabay.com</string>
     <string name="ueberuns.quellen.bild.4">pexels.com</string>
+    <string name="ueberuns.quellen.sonstiges">Sonstiges</string>
+    <string name="ueberuns.quellen.sonstiges.github">Github</string>
+    <string name="ueberuns.quellen.sonstiges.prototyp">Prototyp in Balsamiq</string>
 
     <!-- Confirm dialog -->
     <string name="confirm.dialog.title">Bist du dir sicher?</string>

@@ -15,7 +15,7 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoPlay"
-        tools:targetApi="33">
+        tools:targetApi="tiramisu">
         <activity
             android:name=".quiz.bienen.BienenQuizActivity"
             android:exported="false">

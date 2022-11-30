@@ -13,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:elevation="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout="@layout/fragment_onboarding_logo" />
@@ -20,27 +21,27 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="181dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:elevation="10dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/onboarding_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoFragment" />
 
-    <TextView
-        android:id="@+id/onboardingHeader"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView12"
+        android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:lineSpacingExtra="-3sp"
-        android:text="@string/onboarding.intro.header"
-        android:textAppearance="@style/TextAppearance.EcoPlay.Header"
+        android:layout_marginTop="16dp"
+        app:headertext="@string/onboarding.intro.header"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:layout="@layout/fragment_header" />
 
     <TextView
         android:id="@+id/onboardingText"
@@ -49,20 +50,19 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:lineSpacingExtra="4sp"
         android:text="@string/onboarding.intro.text"
         android:textAppearance="@style/TextAppearance.EcoPlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/onboardingHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView12" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="32dp"
         android:elevation="0dp"
         android:orientation="horizontal"
@@ -70,7 +70,6 @@
         android:paddingBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/onboardingText"
         app:layout_constraintVertical_bias="1.0">

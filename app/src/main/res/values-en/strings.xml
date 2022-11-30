@@ -28,10 +28,10 @@
     <string name="onboarding.wissensprüfung.sidekick">I still have little knowledge and don\'t know it that well!</string>
     <string name="onboarding.wissensprüfung.held">I already have some knowledge and know my way around!</string>
     <string name="onboarding.wissensprüfung.knopf">Done</string>
-    <string name="jadehochschule">Jade University</string>
+    <string name="ueberuns.jadehochschule">Jade University</string>
     <string name="teamText">This is us:</string>
     <string name="actionbar_menu.faq">FAQ</string>
-    <string name="überuns"><b>Hello, nice to meet you.</b>\n\nWe are a small team of 3 students who have developed this app as part of our studies at the Jade University in Wilhelmshaven. It serves as an exam for the elective subject Mobile Applications.</string>
+    <string name="ueberuns"><b>Hello, nice to meet you.</b>\n\nWe are a small team of 3 students who have developed this app as part of our studies at the Jade University in Wilhelmshaven. It serves as an exam for the elective subject Mobile Applications.</string>
     <string name="settings.übertragung.generieren">Generate transfer code</string>
     <string name="settings.übertragung.code">Code…</string>
     <string name="datenübertragen.übertragen">Transfer</string>

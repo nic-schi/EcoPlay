@@ -5,12 +5,19 @@
     <string name="fehler.tts">Beim Vorlesen ist ein Fehler aufgetreten!</string>
 
     <!-- Über uns -->
-    <string name="überuns"><b>Hallo, schön dich kennenzulernen.</b>\n\nWir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
-    <string name="jadehochschule">Jade Hochschule</string>
-    <string name="teamText">Das sind wir:</string>
+    <string name="ueberuns.header">Hallo, schön dich kennenzulernen</string>
+    <string name="ueberuns">Wir sind ein kleines Team aus 3 Studenten die im Rahmen unseres Studiums an der Jade Hochschule in Wilhelmshaven diese App entwickelt haben. Sie dient als Prüfungsleistung für das Wahlpflichtfach Mobile Anwendungen.</string>
+    <string name="ueberuns.jadehochschule">Jade Hochschule</string>
+    <string name="ueberuns.teamText">Das sind wir</string>
     <string name="author.1" translatable="false">Nichlas Schipper</string>
     <string name="author.2" translatable="false">Marco Janssen</string>
     <string name="author.3" translatable="false">Simon Schadrin</string>
+    <string name="ueberuns.quellen">Alle Quellen</string>
+    <string name="ueberuns.quellen.bild">Icons und Grafiken</string>
+    <string name="ueberuns.quellen.bild.1">svgrepo.com</string>
+    <string name="ueberuns.quellen.bild.2">flaticon.com</string>
+    <string name="ueberuns.quellen.bild.3">pixabay.com</string>
+    <string name="ueberuns.quellen.bild.4">pexels.com</string>
 
     <!-- Confirm dialog -->
     <string name="confirm.dialog.title">Bist du dir sicher?</string>

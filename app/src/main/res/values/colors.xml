@@ -16,6 +16,7 @@
     <!-- Sonstiges -->
     <color name="text_color">#1E1E1E</color>
     <color name="text_color_bright">#DFDFDF</color>
+    <color name="link_color">#0E0E9F</color>
     <color name="background">@color/secondary</color>
     <color name="apptitel">@color/text_color_bright</color>
     <color name="success">#28A745</color>

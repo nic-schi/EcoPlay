@@ -44,9 +44,8 @@ public class DragStickerFragment extends Fragment {
         ImageView iconView = view.findViewById(R.id.stickericon);
         StickerActivity activity = (StickerActivity) requireActivity();
         StickerFragment frag = (StickerFragment) activity.getSupportFragmentManager().findFragmentByTag(this.stickertag);
-        assert frag != null;
 
-        if (frag.hatSticker()) {
+        if (frag != null && frag.hatSticker()) {
             iconView.setImageResource(frag.getIcon());
         } else {
             view.setVisibility(View.GONE);
@@ -60,7 +59,11 @@ public class DragStickerFragment extends Fragment {
 
         // add drag and drop
         iconView.setOnLongClickListener(v -> {
-            String clipText = frag.getTag();
+            String clipText = null;
+            if (frag != null) {
+                clipText = frag.getTag();
+            }
+
             ClipData.Item item = new ClipData.Item(clipText);
             ClipData data = new ClipData(clipText, new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN}, item);
 

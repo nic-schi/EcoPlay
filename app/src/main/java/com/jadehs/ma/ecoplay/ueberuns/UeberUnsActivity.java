@@ -3,7 +3,10 @@ package com.jadehs.ma.ecoplay.ueberuns;
 import static org.osmdroid.views.overlay.Marker.ANCHOR_CENTER;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.preference.PreferenceManager;
@@ -52,11 +55,33 @@ public class UeberUnsActivity extends EcoPlayActivity {
         m.setTextLabelBackgroundColor(getColor(R.color.akzent));
         m.setTextLabelForegroundColor(getColor(R.color.text_color));
         m.setTextLabelFontSize((int) getResources().getDimension(R.dimen.apptitel_text_size));
-        m.setTitle(getString(R.string.jadehochschule) + "\nWilhelmshaven");
+        m.setTitle(getString(R.string.ueberuns_jadehochschule) + "\nWilhelmshaven");
         m.showInfoWindow();
 
         m.setPosition(new GeoPoint(53.5479279, 8.0882846));
         map.getOverlays().add(m);
+    }
+
+    public void toSVGRepo(View view) {
+        this.goToURL("https://www.svgrepo.com/");
+    }
+
+    public void toFlaticon(View view) {
+        this.goToURL("https://www.flaticon.com/");
+    }
+
+    public void toPixabay(View view) {
+        this.goToURL("https://pixabay.com/");
+    }
+
+    public void toPexels(View view) {
+        this.goToURL("https://www.pexels.com/");
+    }
+
+    private void goToURL(String url) {
+        Uri uri = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(launchBrowser);
     }
 
     public void onResume() {

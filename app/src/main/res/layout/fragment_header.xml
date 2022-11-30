@@ -17,6 +17,7 @@
         android:text="@string/placeholder.header.short"
         android:textAppearance="@style/TextAppearance.EcoPlay.Header"
         android:textColor="@color/text_color_bright"
+        android:textSize="@dimen/header.textsize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

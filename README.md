@@ -15,4 +15,5 @@ The Full Prototype can be found [here](https://github.com/nic-schi/EcoPlay/files
 
 Homepage of Prototype      |  Homepage of finished App
 :-------------------------:|:-------------------------:
-![grafik](https://user-images.githubusercontent.com/43421445/201506737-d02c857f-690f-4191-a74c-6583ba1ed0ad.png)  | coming...
+![grafik](https://user-images.githubusercontent.com/43421445/201506737-d02c857f-690f-4191-a74c-6583ba1ed0ad.png)  | ![grafik](https://user-images.githubusercontent.com/43421445/204807409-7f4d20ff-9597-4106-bbc6-64ace68f5a78.png)
+

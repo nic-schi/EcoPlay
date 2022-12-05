@@ -54,4 +54,16 @@
         <item>C</item>
         <item>D</item>
     </string-array>
+
+    <!--- Quiz 2: Ozean -->
+    <string name="quiz.2.name">Ozeanquiz</string>
+
+    <!--- Quiz 3: Mülltrennung -->
+    <string name="quiz.3.name">Mülltrennungsquiz</string>
+
+    <!--- Quiz 4: Klimawandel -->
+    <string name="quiz.4.name">Klimawandelquiz</string>
+
+    <!--- Quiz 5: Klimawandel -->
+    <string name="quiz.5.name">Waldbrandquiz</string>
 </resources>

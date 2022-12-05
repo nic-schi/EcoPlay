@@ -1,4 +1,4 @@
-package com.jadehs.ma.ecoplay.quiz.fragen;
+package com.jadehs.ma.ecoplay.quiz.frage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

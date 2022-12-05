@@ -6,8 +6,8 @@ import androidx.annotation.Nullable;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.quiz.QuizActivity;
-import com.jadehs.ma.ecoplay.quiz.fragen.Frage;
-import com.jadehs.ma.ecoplay.quiz.fragen.FrageFragment;
+import com.jadehs.ma.ecoplay.quiz.frage.Frage;
+import com.jadehs.ma.ecoplay.quiz.frage.FrageFragment;
 import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 public class BienenQuizActivity extends QuizActivity {

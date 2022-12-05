@@ -50,6 +50,50 @@
                     app:thema="@string/inhalte.1.thema"
                     tools:layout="@layout/fragment_inhalte" />
 
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/quiz2"
+                    android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inhaltIcon="@drawable/turtle"
+                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltRedirect="quiz.quizzes.OzeanQuizActivity"
+                    app:thema="@string/inhalte.5.thema"
+                    tools:layout="@layout/fragment_inhalte" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/quiz3"
+                    android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inhaltIcon="@drawable/earth_globe"
+                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltRedirect="quiz.quizzes.KlimawandelQuizActivity"
+                    app:thema="@string/inhalte.3.thema"
+                    tools:layout="@layout/fragment_inhalte" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/quiz4"
+                    android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inhaltIcon="@drawable/recycle"
+                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltRedirect="quiz.quizzes.MuellQuizActivity"
+                    app:thema="@string/inhalte.4.thema"
+                    tools:layout="@layout/fragment_inhalte" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/quiz5"
+                    android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inhaltIcon="@drawable/fire"
+                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltRedirect="quiz.quizzes.WaldbrandQuizActivity"
+                    app:thema="@string/inhalte.2.thema"
+                    tools:layout="@layout/fragment_inhalte" />
+
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

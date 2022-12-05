@@ -1,4 +1,4 @@
-package com.jadehs.ma.ecoplay.quiz.fragen;
+package com.jadehs.ma.ecoplay.quiz.frage;
 
 public enum Frage {
     A,

@@ -24,6 +24,34 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".quiz.quizzes.OzeanQuizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".quiz.quizzes.WaldbrandQuizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".quiz.quizzes.KlimawandelQuizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".quiz.quizzes.MuellQuizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".inhalte.themen.InhaltBienenActivity"
             android:exported="false">
             <meta-data

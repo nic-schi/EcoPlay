@@ -26,6 +26,7 @@
     <string name="ueberuns.quellen.sonstiges.github" translatable="false">Github</string>
     <string name="ueberuns.quellen.sonstiges.prototyp" translatable="false">Prototyp in Balsamiq</string>
     <string name="ueberuns.quellen.sonstiges.osm" translatable="false">Openstreetmap</string>
+    <string name="app.version">Aktuelle Appversion: %1$s</string>
 
     <!-- Confirm dialog -->
     <string name="confirm.dialog.title">Bist du dir sicher?</string>

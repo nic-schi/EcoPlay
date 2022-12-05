@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.preference.PreferenceManager;
 
+import com.jadehs.ma.ecoplay.BuildConfig;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 
@@ -39,7 +41,8 @@ public class UeberUnsActivity extends EcoPlayActivity {
         Context ctx = getApplicationContext();
         Configuration.getInstance().load(ctx, PreferenceManager.getDefaultSharedPreferences(ctx));
 
-        map = (MapView) findViewById(R.id.map);
+        // Baue map
+        map = findViewById(R.id.map);
         map.setTileSource(TileSourceFactory.MAPNIK);
         map.getZoomController().setVisibility(CustomZoomButtonsController.Visibility.NEVER);
         map.setMultiTouchControls(true);
@@ -60,6 +63,10 @@ public class UeberUnsActivity extends EcoPlayActivity {
 
         m.setPosition(new GeoPoint(53.5479279, 8.0882846));
         map.getOverlays().add(m);
+
+        // Setze Version
+        TextView versionView = findViewById(R.id.version);
+        versionView.setText(String.format(getString(R.string.app_version), BuildConfig.VERSION_NAME));
     }
 
     public void toSVGRepo(View view) {

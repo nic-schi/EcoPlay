@@ -288,8 +288,9 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
                 DatenUebertragenDialogFragment daten = new DatenUebertragenDialogFragment();
                 daten.show(this.getSupportFragmentManager(), "datenuebertragen");
             }
-            // TODO: remove in production
-            if (item.getItemId() == R.id.action_debug_onboarding) {
+
+            // DEBUG: Onboarding
+            if (item.getItemId() == R.id.action_debug_onboarding && BuildConfig.DEBUG) {
                 intent.setClass(this, OnboardingActivity.class);
                 startActivity(intent);
             }
@@ -306,6 +307,10 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         // menü
         if (this.addMenu) {
             this.getMenuInflater().inflate(R.menu.actionbar_menu, menu);
+
+            // hide debug option
+            MenuItem item = menu.findItem(R.id.action_debug_onboarding);
+            item.setVisible(BuildConfig.DEBUG);
         }
         return super.onCreateOptionsMenu(menu);
     }

@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.jadehs.ma.ecoplay.BuildConfig;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 
@@ -107,8 +108,9 @@ public class StickerFragment extends Fragment {
 //        matrix.setSaturation(0.1f);
 //        iconView.setColorFilter(new ColorMatrixColorFilter(matrix));
 
-        // TODO: remove in production
-        iconView.setOnClickListener(v -> this.unlock());
+        if (BuildConfig.DEBUG) {
+            iconView.setOnClickListener(v -> this.unlock());
+        }
 
         return view;
     }
@@ -125,7 +127,6 @@ public class StickerFragment extends Fragment {
         return this.icon;
     }
 
-    // TODO: remove in production
     private void unlock() {
         new StickerManager(this.getContext()).unlockArchievement(this.getTag(), this.name);
     }

@@ -151,9 +151,11 @@ public abstract class InhaltActivity extends EcoPlayActivity {
 
         // setze texte
         if (!this.maintenance) {
-            View view = this.inhaltFragment.requireView();
-            this.textIndex = 0;
-            this.setTexte(view);
+            View view = this.inhaltFragment.getView();
+            if (view != null) {
+                this.textIndex = 0;
+                this.setTexte(view);
+            }
         }
     }
 

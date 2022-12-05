@@ -35,7 +35,7 @@
     <fragment
         android:id="@+id/zahnSchritt2"
         android:name="com.jadehs.ma.ecoplay.zaehneputzen.schritte.ZahnSchritt2"
-        android:label="ZahnSchritt2" >
+        android:label="ZahnSchritt2">
         <action
             android:id="@+id/action_zahnSchritt2_to_zahnSchritt3"
             app:destination="@id/zahnSchritt3" />
@@ -43,7 +43,7 @@
     <fragment
         android:id="@+id/zahnSchritt3"
         android:name="com.jadehs.ma.ecoplay.zaehneputzen.schritte.ZahnSchritt3"
-        android:label="ZahnSchritt3" >
+        android:label="ZahnSchritt3">
         <action
             android:id="@+id/action_zahnSchritt3_to_zahnSuccessFragment"
             app:destination="@id/zahnSuccessFragment" />

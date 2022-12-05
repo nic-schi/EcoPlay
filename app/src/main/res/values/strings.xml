@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">EcoPlay</string>
 
+    <!-- Wartung -->
+    <string name="maintenance.header">Hier wird gerade gebaut…</string>
+    <string name="maintenance.text">Aber keine Sorge, wir sind bald Fertig!</string>
+
     <!-- Fehlermeldungen -->
     <string name="fehler.tts">Beim Vorlesen ist ein Fehler aufgetreten!</string>
 

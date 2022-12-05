@@ -6,11 +6,10 @@ import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class ZahnputzassistentActivity extends EcoPlayActivity {
-    private double totalTime = 0;
     private final ArrayList<Double> accuracys = new ArrayList<>();
+    private double totalTime = 0;
 
     public ZahnputzassistentActivity() {
         super(true, R.string.startseite_zahnputzassistent, R.drawable.toothbrush, true);

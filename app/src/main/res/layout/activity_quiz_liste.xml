@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     app:inhaltIcon="@drawable/bee"
                     app:inhaltImage="@drawable/placeholder"
-                    app:inhaltRedirect="com.jadehs.ma.ecoplay.quiz.bienen.BienenQuizActivity"
+                    app:inhaltRedirect="quiz.quizzes.BienenQuizActivity"
                     app:thema="@string/inhalte.1.thema"
                     tools:layout="@layout/fragment_inhalte" />
 

@@ -49,7 +49,7 @@
                     android:layout_height="wrap_content"
                     app:inhaltIcon="@drawable/bee"
                     app:inhaltImage="@drawable/placeholder"
-                    app:inhaltRedirect="com.jadehs.ma.ecoplay.inhalte.bienen.InhaltBienenActivity"
+                    app:inhaltRedirect="inhalte.themen.InhaltBienenActivity"
                     app:thema="@string/inhalte.1.thema"
                     tools:layout="@layout/fragment_inhalte" />
             </LinearLayout>

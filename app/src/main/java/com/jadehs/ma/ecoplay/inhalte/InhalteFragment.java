@@ -67,7 +67,7 @@ public class InhalteFragment extends Fragment {
 
     private void onRedirect(View view) {
         try {
-            Class<?> c = Class.forName(this.redirect);
+            Class<?> c = Class.forName("com.jadehs.ma.ecoplay." + this.redirect);
             startActivity(new Intent(this.getContext(), c));
         } catch (ClassNotFoundException e) {
             // fehler

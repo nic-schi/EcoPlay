@@ -1,4 +1,4 @@
-package com.jadehs.ma.ecoplay.quiz.bienen;
+package com.jadehs.ma.ecoplay.quiz.quizzes;
 
 import android.os.Bundle;
 

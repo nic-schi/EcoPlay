@@ -17,14 +17,14 @@
         android:theme="@style/Theme.EcoPlay"
         tools:targetApi="tiramisu">
         <activity
-            android:name=".quiz.bienen.BienenQuizActivity"
+            android:name=".quiz.quizzes.BienenQuizActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".inhalte.bienen.InhaltBienenActivity"
+            android:name=".inhalte.themen.InhaltBienenActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

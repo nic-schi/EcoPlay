@@ -1,7 +1,6 @@
 package com.jadehs.ma.ecoplay.quiz;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -12,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.jadehs.ma.ecoplay.BuildConfig;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.quiz.fragen.Frage;
@@ -21,15 +21,25 @@ import java.util.ArrayList;
 
 public abstract class QuizActivity extends EcoPlayActivity {
     private final ArrayList<FrageFragment> fragen = new ArrayList<>();
+    private final boolean maintenance;
     private int currentFrage = -1;
     private int correctlyAnswered = 0;
 
-    public QuizActivity(int titleResource) {
-        super(true, titleResource, R.drawable.questionstripes, false);
+    public QuizActivity(int titleResource, int logoResource, boolean maintenance) {
+        super(true, titleResource, logoResource, false);
+        this.maintenance = maintenance;
     }
 
     public QuizActivity(int titleResource, int logoResource) {
-        super(true, titleResource, logoResource, false);
+        this(titleResource, logoResource, !BuildConfig.DEBUG);
+    }
+
+    public QuizActivity(int titleResource, boolean maintenance) {
+        this(titleResource, R.drawable.questionstripes, maintenance);
+    }
+
+    public QuizActivity(int titleResource) {
+        this(titleResource, !BuildConfig.DEBUG);
     }
 
     public void weiter(View view) {
@@ -77,7 +87,6 @@ public abstract class QuizActivity extends EcoPlayActivity {
     private void checkForCorrectAnswer() {
         FrageFragment aktuelleFrage = fragen.get(currentFrage);
         Frage frage = aktuelleFrage.getAnswer();
-        Log.v("eco -> selected", frage.name());
 
         if (aktuelleFrage.isSolution(frage)) {
             correctlyAnswered++;
@@ -144,7 +153,11 @@ public abstract class QuizActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
-        findViewById(R.id.weiterKnopf).setOnClickListener(this::weiter);
+        if (maintenance) {
+            setContentView(R.layout.fragment_maintenance);
+        } else {
+            findViewById(R.id.weiterKnopf).setOnClickListener(this::weiter);
+        }
     }
 
     protected abstract void onFinish(int correct, int count, double success);
@@ -153,7 +166,9 @@ public abstract class QuizActivity extends EcoPlayActivity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
 
-        findViewById(R.id.weiterKnopf).setClickable(!fragen.isEmpty());
-        this.weiter(findViewById(R.id.weiterKnopf));
+        if (!maintenance) {
+            findViewById(R.id.weiterKnopf).setClickable(!fragen.isEmpty());
+            this.weiter(findViewById(R.id.weiterKnopf));
+        }
     }
 }

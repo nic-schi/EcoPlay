@@ -2,7 +2,6 @@ package com.jadehs.ma.ecoplay.zaehneputzen;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,8 +17,6 @@ import androidx.navigation.Navigation;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.HeaderFragment;
-
-import org.w3c.dom.Text;
 
 public abstract class ZahnSchrittFragment extends Fragment {
 

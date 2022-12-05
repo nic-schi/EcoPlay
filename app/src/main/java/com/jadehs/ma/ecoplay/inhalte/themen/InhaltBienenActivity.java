@@ -1,4 +1,4 @@
-package com.jadehs.ma.ecoplay.inhalte.bienen;
+package com.jadehs.ma.ecoplay.inhalte.themen;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.inhalte.InhaltActivity;

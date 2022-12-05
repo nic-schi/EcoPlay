@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.jadehs.ma.ecoplay.BuildConfig;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
@@ -19,9 +20,9 @@ import com.jadehs.ma.ecoplay.utils.Difficulty;
 import java.util.Locale;
 
 public abstract class InhaltActivity extends EcoPlayActivity {
-    private final Fragment inhaltFragment;
-
+    private final boolean maintenance;
     private final int[] easyTexte;
+    private Fragment inhaltFragment;
     private int[] alleTexte;
     private int[] hardTexte = null;
 
@@ -30,11 +31,20 @@ public abstract class InhaltActivity extends EcoPlayActivity {
 
     private long startTime;
 
-    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte) {
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte, boolean maintenance) {
         super(true, actionBarTitelResourceID, logo, true, true);
         this.inhaltFragment = inhaltFragment;
         this.easyTexte = easyTexte;
         this.alleTexte = easyTexte;
+        this.maintenance = maintenance;
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, int inhaltFragmentLayout, int[] easyTexte, boolean maintenance) {
+        this(actionBarTitelResourceID, logo, new Fragment(inhaltFragmentLayout), easyTexte, maintenance);
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte) {
+        this(actionBarTitelResourceID, logo, inhaltFragment, easyTexte, !BuildConfig.DEBUG);
     }
 
     public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, int inhaltFragmentLayout, int[] easyTexte) {
@@ -42,12 +52,20 @@ public abstract class InhaltActivity extends EcoPlayActivity {
     }
 
     public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte, int[] hardTexte) {
-        this(actionBarTitelResourceID, logo, inhaltFragment, easyTexte);
+        this(actionBarTitelResourceID, logo, inhaltFragment, easyTexte, hardTexte, !BuildConfig.DEBUG);
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte, int[] hardTexte, boolean maintenance) {
+        this(actionBarTitelResourceID, logo, inhaltFragment, easyTexte, maintenance);
         this.hardTexte = hardTexte;
     }
 
     public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, int inhaltFragmentLayout, int[] easyTexte, int[] hardTexte) {
-        this(actionBarTitelResourceID, logo, new Fragment(inhaltFragmentLayout), easyTexte, hardTexte);
+        this(actionBarTitelResourceID, logo, inhaltFragmentLayout, easyTexte, hardTexte, !BuildConfig.DEBUG);
+    }
+
+    public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, int inhaltFragmentLayout, int[] easyTexte, int[] hardTexte, boolean maintenance) {
+        this(actionBarTitelResourceID, logo, new Fragment(inhaltFragmentLayout), easyTexte, hardTexte, maintenance);
     }
 
     protected abstract void onHasRead(long millisecondsSpent, long secondsSpent, long minutesSpent);
@@ -57,13 +75,17 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inhalt);
 
-        this.startTime = System.currentTimeMillis();
-        this.determineDifficulty();
+        if (maintenance) {
+            setContentView(R.layout.fragment_maintenance);
+        } else {
+            this.startTime = System.currentTimeMillis();
+            this.determineDifficulty();
 
-        // Füge inhalt hinzu
-        FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
-        trans.add(R.id.inhaltContainer, this.inhaltFragment, getString(this.getActionbarTitelRessourceID()).toLowerCase() + "-fragment");
-        trans.commit();
+            // Füge inhalt hinzu oder maintenance
+            FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
+            trans.add(R.id.inhaltContainer, this.inhaltFragment, getString(this.getActionbarTitelRessourceID()).toLowerCase() + "-fragment");
+            trans.commit();
+        }
 
         // Baue TTS
         this.tts = new TextToSpeech(this, status -> {
@@ -128,9 +150,11 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         this.determineDifficulty();
 
         // setze texte
-        View view = this.inhaltFragment.requireView();
-        this.textIndex = 0;
-        this.setTexte(view);
+        if (!this.maintenance) {
+            View view = this.inhaltFragment.requireView();
+            this.textIndex = 0;
+            this.setTexte(view);
+        }
     }
 
     /**

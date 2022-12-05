@@ -20,7 +20,7 @@ public class InhaltWaldbraendeActivity extends InhaltActivity {
 
     @Override
     protected void onHasRead(long millisecondsSpent, long secondsSpent, long minutesSpent) {
-        
+
     }
 
 }

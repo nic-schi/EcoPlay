@@ -4,7 +4,6 @@ import androidx.fragment.app.Fragment;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.inhalte.InhaltActivity;
-import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 
 public class InhaltKlimawandelActivity extends InhaltActivity {

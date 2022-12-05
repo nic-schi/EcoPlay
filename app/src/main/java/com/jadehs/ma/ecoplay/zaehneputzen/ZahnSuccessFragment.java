@@ -1,6 +1,7 @@
 package com.jadehs.ma.ecoplay.zaehneputzen;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,8 +16,6 @@ import androidx.fragment.app.Fragment;
 import com.jadehs.ma.ecoplay.R;
 
 public class ZahnSuccessFragment extends Fragment {
-    public static final double bestMin = 120;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -33,10 +32,12 @@ public class ZahnSuccessFragment extends Fragment {
         String minS = (min < 10) ? ("0" + min) : Integer.toString(min);
         String secS = (sec < 10) ? ("0" + sec) : Integer.toString(sec);
 
-        output.setText(String.format(getString(R.string.zaehne_schritt_success_time), minS, secS));
+        String text = String.format(getString(R.string.zaehne_schritt_success_time), minS, secS);
+
+        output.setText(text);
 
         // Setze rating
-        double rating = (5.0 * ((totalTime / ZahnSuccessFragment.bestMin) * 100)) / 100;
+        double rating = (5.0 * activity.getAccuracy()) / 100;
         RatingBar ratingBar = view.findViewById(R.id.rating);
         ratingBar.setRating((float) rating);
 

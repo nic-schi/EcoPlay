@@ -2,6 +2,7 @@ package com.jadehs.ma.ecoplay.zaehneputzen;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,20 +14,29 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.Navigation;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.HeaderFragment;
 
+import org.w3c.dom.Text;
+
 public abstract class ZahnSchrittFragment extends Fragment {
 
     private final Handler handler = new Handler();
+    private final long secondsToBrush;
+    private final int action;
     private final int title;
     private final int schrittLayout;
+
+    private double timer = 0;
     private SchrittTimer runnable = new SchrittTimer();
 
-    public ZahnSchrittFragment(int title, int schrittLayout) {
+    public ZahnSchrittFragment(int title, int schrittLayout, int action, long secondsToBrush) {
         this.title = title;
         this.schrittLayout = schrittLayout;
+        this.action = action;
+        this.secondsToBrush = secondsToBrush;
     }
 
     @Nullable
@@ -48,7 +58,10 @@ public abstract class ZahnSchrittFragment extends Fragment {
         btn.setOnClickListener(this::onPutzen);
 
         Button btn2 = view.findViewById(R.id.zahnweiterKnopf);
-        btn2.setOnClickListener(this::onWeiterTemp);
+        btn2.setOnClickListener(this::onWeiter);
+
+        // Setze Timer
+        this.setTimer(this.secondsToBrush, view.findViewById(R.id.timer));
 
         return view;
     }
@@ -58,8 +71,7 @@ public abstract class ZahnSchrittFragment extends Fragment {
         btn.setOnClickListener(this::onTimerStop);
         btn.setText(R.string.zaehne_schritt_stop);
 
-        TextView timerView = requireView().findViewById(R.id.timer);
-        timerView.setText(R.string.zaehne_schritt_time_default);
+        this.setTimer(this.secondsToBrush);
 
         this.runnable = new SchrittTimer();
         handler.postDelayed(this.runnable, 1000);
@@ -85,28 +97,50 @@ public abstract class ZahnSchrittFragment extends Fragment {
         handler.removeCallbacks(this.runnable);
     }
 
-    private void onWeiterTemp(View view) {
+    private void onWeiter(View view) {
         handler.removeCallbacks(this.runnable);
-        this.onWeiter();
+
+        ZahnputzassistentActivity activity = (ZahnputzassistentActivity) this.requireActivity();
+        double accuracy = (this.timer / this.secondsToBrush) * 100;
+        activity.addAccuracy(accuracy);
+
+        Navigation.findNavController(this.requireActivity(), R.id.container).navigate(this.action);
     }
 
-    public abstract void onWeiter();
+    private void setTimer(double timer, TextView view) {
+        double timerAbs = Math.abs(timer);
+
+        int min = (int) Math.floor((timerAbs % 3600) / 60);
+        int sec = (int) Math.floor(timerAbs % 60);
+
+        int minAbs = Math.abs(min);
+        int secAbs = Math.abs(sec);
+
+        // baue output
+        String minS = (minAbs < 10) ? ("0" + minAbs) : Integer.toString(minAbs);
+        String secS = (secAbs < 10) ? ("0" + secAbs) : Integer.toString(secAbs);
+        String text = String.format(getString(R.string.zaehne_schritt_time), minS, secS);
+
+        if (timer < 0) {
+            text = "-" + text;
+        }
+
+        view.setText(text);
+    }
+
+    private void setTimer(double timer) {
+        TextView timerView = this.requireView().findViewById(R.id.timer);
+        this.setTimer(timer, timerView);
+    }
 
     private class SchrittTimer implements Runnable {
-        private double timer = 0;
 
         @Override
         public void run() {
-            this.timer++;
-            TextView timerView = ZahnSchrittFragment.this.requireView().findViewById(R.id.timer);
+            ZahnSchrittFragment.this.timer++;
 
-            int min = (int) Math.floor((timer % 3600) / 60);
-            int sec = (int) Math.floor(timer % 60);
+            ZahnSchrittFragment.this.setTimer(ZahnSchrittFragment.this.secondsToBrush - ZahnSchrittFragment.this.timer);
 
-            String minS = (min < 10) ? ("0" + min) : Integer.toString(min);
-            String secS = (sec < 10) ? ("0" + sec) : Integer.toString(sec);
-
-            timerView.setText(String.format(getString(R.string.zaehne_schritt_time), minS, secS));
             ZahnputzassistentActivity activity = (ZahnputzassistentActivity) ZahnSchrittFragment.this.requireActivity();
             activity.countUp();
 

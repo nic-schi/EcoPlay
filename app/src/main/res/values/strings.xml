@@ -99,8 +99,11 @@
     <string name="zaehne.schritt.success.back">Zurück</string>
     <string name="zaehne.schritt.success.ratingtext">Unser Appzahnarzt hat deine Putzkunst bewertet:</string>
 
-    <string name="zaehne.schritt1.header">Schritt 1: Backenzähne</string>
-    <string name="zaehne.schritt1.text">@string/placeholder.text.20</string>
+    <string name="zaehne.schritt.1.header">Schritt 1: Kauflächen</string>
+    <string name="zaehne.schritt.1.text">@string/placeholder.text.20</string>
+
+    <string name="zaehne.schritt.2.header">Schritt 2: Außenflächen</string>
+    <string name="zaehne.schritt.3.header">Schritt 3: Innenflächen</string>
 
     <!-- Taschengeldmanager -->
     <string name="taschengeld.text">@string/placeholder.text.50</string>

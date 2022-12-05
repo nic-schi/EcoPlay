@@ -54,8 +54,8 @@
     <string name="zaehne.schritt.success.time">You only needed %1$s:%2$s!</string>
     <string name="zaehne.schritt.success.back">Back</string>
     <string name="zaehne.schritt.success.ratingtext">Our app dentist has evaluated your cleaning skills:</string>
-    <string name="zaehne.schritt1.header">Step 1: Molar teeth</string>
-    <string name="zaehne.schritt1.text">@string/placeholder.text.20</string>
+    <string name="zaehne.schritt.1.header">Step 1: Molar teeth</string>
+    <string name="zaehne.schritt.1.text">@string/placeholder.text.20</string>
     <string name="taschengeld.text">@string/placeholder.text.50</string>
     <string name="taschengeld.money">Your money:</string>
     <string name="taschengeld.noinput">Please enter an amount.</string>

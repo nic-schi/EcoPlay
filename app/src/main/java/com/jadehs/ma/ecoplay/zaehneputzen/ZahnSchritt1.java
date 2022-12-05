@@ -1,4 +1,4 @@
-package com.jadehs.ma.ecoplay.utils.zaehneputzen;
+package com.jadehs.ma.ecoplay.zaehneputzen;
 
 import androidx.navigation.Navigation;
 

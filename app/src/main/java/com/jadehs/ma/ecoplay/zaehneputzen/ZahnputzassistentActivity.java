@@ -1,4 +1,4 @@
-package com.jadehs.ma.ecoplay.utils.zaehneputzen;
+package com.jadehs.ma.ecoplay.zaehneputzen;
 
 import android.os.Bundle;
 

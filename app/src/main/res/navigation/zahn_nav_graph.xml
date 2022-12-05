@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/zahnStartFragment"
-        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnStartFragment"
+        android:name="com.jadehs.ma.ecoplay.zaehneputzen.ZahnStartFragment"
         android:label="ZahnStartFragment">
         <action
             android:id="@+id/action_zahnStartFragment_to_zahnVorbereitungFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/zahnVorbereitungFragment"
-        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnVorbereitungFragment"
+        android:name="com.jadehs.ma.ecoplay.zaehneputzen.ZahnVorbereitungFragment"
         android:label="ZahnVorbereitungFragment">
         <action
             android:id="@+id/action_zahnVorbereitungFragment_to_zahnSchritt1"
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/zahnSchritt1"
-        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnSchritt1"
+        android:name="com.jadehs.ma.ecoplay.zaehneputzen.ZahnSchritt1"
         android:label="ZahnSchritt1">
         <action
             android:id="@+id/action_zahnSchritt1_to_zahnSuccessFragment"
@@ -30,6 +30,6 @@
     </fragment>
     <fragment
         android:id="@+id/zahnSuccessFragment"
-        android:name="com.jadehs.ma.ecoplay.utils.zaehneputzen.ZahnSuccessFragment"
+        android:name="com.jadehs.ma.ecoplay.zaehneputzen.ZahnSuccessFragment"
         android:label="ZahnSuccessFragment" />
 </navigation>

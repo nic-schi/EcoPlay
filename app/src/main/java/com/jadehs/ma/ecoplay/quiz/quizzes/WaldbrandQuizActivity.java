@@ -6,6 +6,7 @@ import androidx.annotation.Nullable;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.quiz.QuizActivity;
+import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 public class WaldbrandQuizActivity extends QuizActivity {
 
@@ -20,7 +21,9 @@ public class WaldbrandQuizActivity extends QuizActivity {
 
     @Override
     protected void onFinish(int correct, int count, double success) {
-
+        if (correct >= 5 && correct == count) {
+            new StickerManager(this).unlockArchievement("quiz.fire.1", this.getString(R.string.sticker_3_stickername));
+        }
     }
 
 }

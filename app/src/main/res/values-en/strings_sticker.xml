@@ -2,10 +2,6 @@
     <string name="sticker.pinnwand.size">Sticker size on pinboard</string>
     <string name="sticker.pinnwand.size.summary">Current size: %s</string>
     <string name="sticker.text">Here you can view all your collected stickers. Stickers are challenges you can complete by using the app.\n\nHave fun collecting them!</string>
-    <string name="sticker.1.stickername">Hum, hum, hum!</string>
-    <string name="sticker.1.description">Read the text about the bees</string>
-    <string name="sticker.2.stickername">I love bees!</string>
-    <string name="sticker.2.description">Successfully complete a quiz on the topic of bees</string>
     <string name="sticker.3.stickername">Watch out hot!</string>
     <string name="sticker.3.description">Successfully complete a quiz on the theme of forest fires</string>
     <string name="sticker.4.stickername">To a new era!</string>

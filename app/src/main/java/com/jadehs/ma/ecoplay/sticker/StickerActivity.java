@@ -50,20 +50,21 @@ public class StickerActivity extends EcoPlayActivity {
                 }
             }
 
-            assert found != null;
-            start.removeView(found);
+            if (found != null) {
+                start.removeView(found);
 
-            found.setX(item.x);
-            found.setY(item.y);
+                found.setX(item.x);
+                found.setY(item.y);
 
-            int size = this.getStickerPinnwandIconSize();
-            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) found.getLayoutParams();
-            layoutParams.width = size;
-            layoutParams.height = size;
-            found.setLayoutParams(layoutParams);
+                int size = this.getStickerPinnwandIconSize();
+                ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) found.getLayoutParams();
+                layoutParams.width = size;
+                layoutParams.height = size;
+                found.setLayoutParams(layoutParams);
 
-            ConstraintLayout ziel = this.findViewById(R.id.drop_ziel);
-            ziel.addView(found);
+                ConstraintLayout ziel = this.findViewById(R.id.drop_ziel);
+                ziel.addView(found);
+            }
         }
 
         // Zurücksetzen

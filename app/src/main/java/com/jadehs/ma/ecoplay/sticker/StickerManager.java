@@ -27,30 +27,6 @@ public class StickerManager extends Manager<Sticker[]> {
 
     private Sticker[] getDefault() {
         return new Sticker[]{
-                new Sticker(
-                        getContext().getString(R.string.sticker_4_stickername),
-                        getContext().getString(R.string.sticker_4_description),
-                        R.drawable.logo,
-                        "onboarding"
-                ),
-                new Sticker(
-                        getContext().getString(R.string.sticker_1_stickername),
-                        getContext().getString(R.string.sticker_1_description),
-                        R.drawable.bees01,
-                        "bee01"
-                ),
-                new Sticker(
-                        getContext().getString(R.string.sticker_2_stickername),
-                        getContext().getString(R.string.sticker_2_description),
-                        R.drawable.bees02,
-                        "bee02"
-                ),
-                new Sticker(
-                        getContext().getString(R.string.sticker_3_stickername),
-                        getContext().getString(R.string.sticker_3_description),
-                        R.drawable.fireplace,
-                        "fireplace"
-                )
         };
     }
 

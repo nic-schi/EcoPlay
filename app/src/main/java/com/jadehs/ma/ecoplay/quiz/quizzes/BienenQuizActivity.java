@@ -53,8 +53,14 @@ public class BienenQuizActivity extends QuizActivity {
 
     @Override
     protected void onFinish(int correct, int count, double success) {
-        if (correct >= (count - 1)) {
-            new StickerManager(this).unlockArchievement("bee02", this.getString(R.string.sticker_2_stickername));
+        if (correct >= 5 && correct == count) {
+            new StickerManager(this).unlockArchievement("quiz.bee.3", this.getString(R.string.sticker_6_stickername));
+        }
+        if (correct >= 3) {
+            new StickerManager(this).unlockArchievement("quiz.bee.2", this.getString(R.string.sticker_5_stickername));
+        }
+        if (correct >= 1) {
+            new StickerManager(this).unlockArchievement("quiz.bee.1", this.getString(R.string.sticker_2_stickername));
         }
     }
 

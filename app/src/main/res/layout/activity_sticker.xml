@@ -90,7 +90,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
-                        android:gravity="left"
+                        android:gravity="start"
                         android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -99,23 +99,12 @@
                         app:layout_constraintTop_toTopOf="parent">
 
                         <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:tag="pw-bee01"
-                            app:stickertag="bee01"
-                            tools:layout="@layout/fragment_drag_sticker" />
-
-                        <androidx.fragment.app.FragmentContainerView
                             android:id="@+id/dragsticker1"
                             android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:tag="pw-bee02"
-                            app:stickertag="bee02"
+                            android:tag="pw-quiz.bee.1"
+                            app:stickertag="quiz.bee.1"
                             tools:layout="@layout/fragment_drag_sticker" />
 
                         <androidx.fragment.app.FragmentContainerView
@@ -123,9 +112,8 @@
                             android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:tag="pw-fireplace"
-                            app:stickertag="fireplace"
+                            android:tag="pw-quiz.bee.2"
+                            app:stickertag="quiz.bee.2"
                             tools:layout="@layout/fragment_drag_sticker" />
 
                         <androidx.fragment.app.FragmentContainerView
@@ -133,7 +121,33 @@
                             android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
+                            android:tag="pw-quiz.bee.3"
+                            app:stickertag="quiz.bee.3"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker4"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-text.bee.1"
+                            app:stickertag="text.bee.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker5"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-quiz.fire.1"
+                            app:stickertag="quiz.fire.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker6"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:tag="pw-onboarding"
                             app:stickertag="onboarding"
                             tools:layout="@layout/fragment_drag_sticker" />
@@ -220,20 +234,9 @@
                     android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:tag="bee01"
-                    app:description="@string/sticker.1.description"
-                    app:stickericon="@drawable/bees01"
-                    app:stickername="@string/sticker.1.stickername"
-                    tools:layout="@layout/fragment_sticker" />
-
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/sticker2"
-                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="bee02"
+                    android:tag="quiz.bee.1"
                     app:description="@string/sticker.2.description"
-                    app:stickericon="@drawable/bees02"
+                    app:stickericon="@drawable/bee_love"
                     app:stickername="@string/sticker.2.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
@@ -242,14 +245,47 @@
                     android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:tag="fireplace"
+                    android:tag="quiz.bee.3"
+                    app:description="@string/sticker.6.description"
+                    app:stickericon="@drawable/hotel_luxusetage"
+                    app:stickername="@string/sticker.6.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker2"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="quiz.bee.2"
+                    app:description="@string/sticker.5.description"
+                    app:stickericon="@drawable/hotel_1etage"
+                    app:stickername="@string/sticker.5.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker4"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="text.bee.1"
+                    app:description="@string/sticker.1.description"
+                    app:stickericon="@drawable/hotel_rezeption"
+                    app:stickername="@string/sticker.1.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker5"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="quiz.fire.1"
                     app:description="@string/sticker.3.description"
                     app:stickericon="@drawable/fireplace"
                     app:stickername="@string/sticker.3.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
                 <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/sticker4"
+                    android:id="@+id/sticker6"
                     android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

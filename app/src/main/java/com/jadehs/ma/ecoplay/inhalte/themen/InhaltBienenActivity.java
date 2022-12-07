@@ -26,7 +26,7 @@ public class InhaltBienenActivity extends InhaltActivity {
     @Override
     protected void onHasRead(long millisecondsSpent, long secondsSpent, long minutesSpent) {
         if (secondsSpent >= 150 /* 2:30 min */) {
-            new StickerManager(this).unlockArchievement("bee01", this.getString(R.string.sticker_1_stickername));
+            new StickerManager(this).unlockArchievement("text.bee.1", this.getString(R.string.sticker_1_stickername));
         }
     }
 

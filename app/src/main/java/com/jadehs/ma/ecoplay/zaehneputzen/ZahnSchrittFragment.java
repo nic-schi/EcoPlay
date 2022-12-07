@@ -99,7 +99,7 @@ public abstract class ZahnSchrittFragment extends Fragment {
 
         ZahnputzassistentActivity activity = (ZahnputzassistentActivity) this.requireActivity();
         double accuracy = (this.timer / this.secondsToBrush) * 100;
-        activity.addAccuracy(accuracy);
+        activity.addAccuracy(Math.min(100.0, accuracy));
 
         Navigation.findNavController(this.requireActivity(), R.id.container).navigate(this.action);
     }

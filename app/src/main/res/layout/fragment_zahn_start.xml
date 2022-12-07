@@ -22,13 +22,13 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="0dp"
-        android:layout_height="270dp"
+        android:layout_height="360dp"
         android:layout_marginTop="16dp"
         android:scaleType="centerCrop"
+        android:src="@drawable/toothbrushing_dog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zahntext"
-        app:srcCompat="@drawable/placeholder" />
+        app:layout_constraintTop_toBottomOf="@+id/zahntext" />
 
     <Button
         android:id="@+id/starten"

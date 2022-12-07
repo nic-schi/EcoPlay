@@ -48,7 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:inhaltIcon="@drawable/bee"
-                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltImage="@drawable/imker"
                     app:inhaltRedirect="inhalte.themen.InhaltBienenActivity"
                     app:thema="@string/inhalte.1.thema"
                     tools:layout="@layout/fragment_inhalte" />
@@ -59,20 +59,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:inhaltIcon="@drawable/earth_globe"
-                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltImage="@drawable/atomkraftwerk"
                     app:inhaltRedirect="inhalte.themen.InhaltKlimawandelActivity"
                     app:thema="@string/inhalte.3.thema"
-                    tools:layout="@layout/fragment_inhalte" />
-
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/inhalt2"
-                    android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:inhaltIcon="@drawable/fire"
-                    app:inhaltImage="@drawable/placeholder"
-                    app:inhaltRedirect="inhalte.themen.InhaltWaldbraendeActivity"
-                    app:thema="@string/inhalte.2.thema"
                     tools:layout="@layout/fragment_inhalte" />
 
                 <androidx.fragment.app.FragmentContainerView
@@ -81,7 +70,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:inhaltIcon="@drawable/turtle"
-                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltImage="@drawable/dolphin"
                     app:inhaltRedirect="inhalte.themen.InhaltOzeanActivity"
                     app:thema="@string/inhalte.5.thema"
                     tools:layout="@layout/fragment_inhalte" />
@@ -92,9 +81,20 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:inhaltIcon="@drawable/recycle"
-                    app:inhaltImage="@drawable/placeholder"
+                    app:inhaltImage="@drawable/garbage"
                     app:inhaltRedirect="inhalte.themen.InhaltMuelltrennungActivity"
                     app:thema="@string/inhalte.4.thema"
+                    tools:layout="@layout/fragment_inhalte" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/inhalt2"
+                    android:name="com.jadehs.ma.ecoplay.inhalte.InhalteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:inhaltIcon="@drawable/fire"
+                    app:inhaltImage="@drawable/forest_fire"
+                    app:inhaltRedirect="inhalte.themen.InhaltWaldbraendeActivity"
+                    app:thema="@string/inhalte.2.thema"
                     tools:layout="@layout/fragment_inhalte" />
 
             </LinearLayout>

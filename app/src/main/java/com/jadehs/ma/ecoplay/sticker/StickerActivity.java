@@ -1,6 +1,7 @@
 package com.jadehs.ma.ecoplay.sticker;
 
 import android.content.ClipDescription;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.LinearLayout;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.jadehs.ma.ecoplay.BuildConfig;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.Utils;
@@ -80,6 +82,17 @@ public class StickerActivity extends EcoPlayActivity {
             );
             alert.show();
         });
+
+        // Debug: Alle löschen
+        Button deleteAll = this.findViewById(R.id.deleteSticker);
+        if (BuildConfig.DEBUG) {
+            deleteAll.setOnClickListener(v -> {
+                this.resetStickerpinnwand();
+                this.resetSticker();
+                Utils.instantRefreshActivity(this);
+            });
+        }
+        deleteAll.setVisibility(BuildConfig.DEBUG ? View.VISIBLE : View.GONE);
 
         // Drag listener
         View.OnDragListener draglistener = (view, e) -> {

@@ -190,6 +190,15 @@ public abstract class EcoPlayActivity extends AppCompatActivity {
         this.prefEdit.apply();
     }
 
+    /**
+     * Löscht alle Stickerfortschritte
+     */
+    public void resetSticker() {
+        HashSet<String> sticker = new HashSet<>();
+        this.prefEdit.putStringSet("sticker", sticker);
+        this.prefEdit.apply();
+    }
+
     public boolean getOnboarding() {
         return this.pref.getBoolean("onboarding", true);
     }

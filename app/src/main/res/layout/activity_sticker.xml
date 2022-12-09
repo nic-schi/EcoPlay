@@ -68,191 +68,197 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView6" />
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/drop_start"
+                <HorizontalScrollView
+                    android:id="@+id/scrollView5"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:background="@drawable/dotted_border"
-                    android:minHeight="64dp"
-                    android:tag="drop_start"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/stickerText2">
 
-                    <LinearLayout
-                        android:id="@+id/layout"
-                        android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/drop_start"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="start"
-                        android:orientation="horizontal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:minHeight="64dp"
+                        android:tag="drop_start">
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker6"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                        <LinearLayout
+                            android:id="@+id/layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:tag="pw-onboarding"
-                            app:stickertag="onboarding"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:gravity="start"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker1"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.bee.1"
-                            app:stickertag="quiz.bee.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker6"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-onboarding"
+                                app:stickertag="onboarding"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker2"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.bee.2"
-                            app:stickertag="quiz.bee.2"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker1"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.bee.1"
+                                app:stickertag="quiz.bee.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker3"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.bee.3"
-                            app:stickertag="quiz.bee.3"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker2"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.bee.2"
+                                app:stickertag="quiz.bee.2"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker17"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-secret.bee.1"
-                            app:stickertag="secret.bee.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker3"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.bee.3"
+                                app:stickertag="quiz.bee.3"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker4"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-text.bee.1"
-                            app:stickertag="text.bee.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker17"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-secret.bee.1"
+                                app:stickertag="secret.bee.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker5"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.fire.1"
-                            app:stickertag="quiz.fire.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker4"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-text.bee.1"
+                                app:stickertag="text.bee.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker7"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-text.ozean.1"
-                            app:stickertag="text.ozean.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker5"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.fire.1"
+                                app:stickertag="quiz.fire.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker8"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.ozean.1"
-                            app:stickertag="quiz.ozean.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker7"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-text.ozean.1"
+                                app:stickertag="text.ozean.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker9"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.ozean.2"
-                            app:stickertag="quiz.ozean.2"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker8"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.ozean.1"
+                                app:stickertag="quiz.ozean.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker10"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-secret.ozean.1"
-                            app:stickertag="secret.ozean.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker9"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.ozean.2"
+                                app:stickertag="quiz.ozean.2"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker11"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-text.klima.1"
-                            app:stickertag="text.klima.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker10"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-secret.ozean.1"
+                                app:stickertag="secret.ozean.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker12"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.klima.1"
-                            app:stickertag="quiz.klima.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker11"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-text.klima.1"
+                                app:stickertag="text.klima.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker13"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-quiz.klima.2"
-                            app:stickertag="quiz.klima.2"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker12"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.klima.1"
+                                app:stickertag="quiz.klima.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker14"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-secret.klima.1"
-                            app:stickertag="secret.klima.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker13"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-quiz.klima.2"
+                                app:stickertag="quiz.klima.2"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker15"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-tooth.1"
-                            app:stickertag="tooth.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker14"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-secret.klima.1"
+                                app:stickertag="secret.klima.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                        <androidx.fragment.app.FragmentContainerView
-                            android:id="@+id/dragsticker16"
-                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:tag="pw-money.1"
-                            app:stickertag="money.1"
-                            tools:layout="@layout/fragment_drag_sticker" />
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker15"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-tooth.1"
+                                app:stickertag="tooth.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
 
-                    </LinearLayout>
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                            <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker16"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-money.1"
+                                app:stickertag="money.1"
+                                tools:layout="@layout/fragment_drag_sticker" />
+
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
 
                 <FrameLayout
                     android:id="@+id/frameLayout8"
@@ -264,7 +270,7 @@
                     android:elevation="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/drop_start">
+                    app:layout_constraintTop_toBottomOf="@+id/scrollView5">
 
                     <ImageView
                         android:id="@+id/pinnwand"
@@ -317,6 +323,19 @@
                 app:layout_constraintTop_toBottomOf="@+id/resetKnopf"
                 tools:layout="@layout/fragment_header" />
 
+            <Button
+                android:id="@+id/deleteSticker"
+                style="@style/Button.EcoPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Fortschritt löschen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView9" />
+
             <LinearLayout
                 android:id="@+id/allesticker"
                 android:layout_width="0dp"
@@ -326,7 +345,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView9">
+                app:layout_constraintTop_toBottomOf="@+id/deleteSticker">
 
                 <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/sticker6"

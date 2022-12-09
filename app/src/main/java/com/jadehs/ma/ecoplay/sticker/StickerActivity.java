@@ -1,7 +1,6 @@
 package com.jadehs.ma.ecoplay.sticker;
 
 import android.content.ClipDescription;
-import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.View;

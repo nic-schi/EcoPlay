@@ -188,6 +188,42 @@
                             app:stickertag="secret.ozean.1"
                             tools:layout="@layout/fragment_drag_sticker" />
 
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker11"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-text.klima.1"
+                            app:stickertag="text.klima.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker12"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-quiz.klima.1"
+                            app:stickertag="quiz.klima.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker13"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-quiz.klima.2"
+                            app:stickertag="quiz.klima.2"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker14"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-secret.klima.1"
+                            app:stickertag="secret.klima.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -373,6 +409,50 @@
                     app:description="@string/sticker.10.description"
                     app:stickericon="@drawable/underwater_secret"
                     app:stickername="@string/sticker.10.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker11"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="text.klima.1"
+                    app:description="@string/sticker.11.description"
+                    app:stickericon="@drawable/desert_footprint"
+                    app:stickername="@string/sticker.11.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker12"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="quiz.klima.1"
+                    app:description="@string/sticker.12.description"
+                    app:stickericon="@drawable/desert_cactus"
+                    app:stickername="@string/sticker.12.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker13"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="quiz.klima.2"
+                    app:description="@string/sticker.13.description"
+                    app:stickericon="@drawable/desert_sphinx"
+                    app:stickername="@string/sticker.13.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker14"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="secret.klima.1"
+                    app:description="@string/sticker.14.description"
+                    app:stickericon="@drawable/desert_secret"
+                    app:stickername="@string/sticker.14.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
             </LinearLayout>

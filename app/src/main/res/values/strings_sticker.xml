@@ -30,11 +30,21 @@
     <string name="sticker.10.stickername">Am Boden der Tatsachen!</string>
     <string name="sticker.10.description">\???</string>
 
+    <!-- Klimawandel -->
+    <string name="sticker.11.stickername">Der erste Schritt!</string>
+    <string name="sticker.11.description">Lese den Text zu dem Klimawandel</string>
+    <string name="sticker.12.stickername">Zäh wie ein Kaktus!</string>
+    <string name="sticker.12.description">Erreiche mindestends 3 richtige Fragen im Klimawandelquiz</string>
+    <string name="sticker.13.stickername">Die Weisheit der Sphinx!</string>
+    <string name="sticker.13.description">Erreiche mindestends 5 richtige Fragen im Klimawandelquiz</string>
+    <string name="sticker.14.stickername">Die Zeit tickt!</string>
+    <string name="sticker.14.description">\???</string>
+
     <!-- Waldbrände -->
     <string name="sticker.3.stickername">Vorsicht heiß!</string>
     <string name="sticker.3.description">Schließe erfolgreich ein Quiz zum Thema Waldbrände ab</string>
 
     <!-- Sonstiges -->
     <string name="sticker.4.stickername">Auf eine neue Ära!</string>
-    <string name="sticker.4.description">Überlebe die Einführung in die App</string>
+    <string name="sticker.4.description">Vielen Dank das du dabei bist!</string>
 </resources>

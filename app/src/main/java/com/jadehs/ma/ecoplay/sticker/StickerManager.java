@@ -30,6 +30,10 @@ public class StickerManager extends Manager<Sticker[]> {
         };
     }
 
+    public void unlockArchievement(String tag, int nameRessourceID) {
+        this.unlockArchievement(tag, this.getContext().getString(nameRessourceID));
+    }
+
     public void unlockArchievement(String tag, String name) {
         SharedPreferences pref = getContext().getSharedPreferences("ECOPLAY", Context.MODE_PRIVATE);
         Set<String> sticker = new HashSet<>(pref.getStringSet("sticker", new HashSet<>()));

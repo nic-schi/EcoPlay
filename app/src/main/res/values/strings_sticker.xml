@@ -40,6 +40,10 @@
     <string name="sticker.14.stickername">Die Zeit tickt!</string>
     <string name="sticker.14.description">\???</string>
 
+    <!-- Zahnputzassistent -->
+    <string name="sticker.15.stickername">Guter Putzer!</string>
+    <string name="sticker.15.description">Erreiche mindestends eine Putzbewertung von 4,5 Sternen beim Zähneputzen</string>
+
     <!-- Waldbrände -->
     <string name="sticker.3.stickername">Vorsicht heiß!</string>
     <string name="sticker.3.description">Schließe erfolgreich ein Quiz zum Thema Waldbrände ab</string>

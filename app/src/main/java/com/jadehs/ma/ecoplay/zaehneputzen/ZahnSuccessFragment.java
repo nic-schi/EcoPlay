@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.jadehs.ma.ecoplay.R;
+import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 public class ZahnSuccessFragment extends Fragment {
     @Nullable
@@ -39,6 +40,11 @@ public class ZahnSuccessFragment extends Fragment {
         double rating = (5.0 * activity.getAccuracy()) / 100;
         RatingBar ratingBar = view.findViewById(R.id.rating);
         ratingBar.setRating((float) rating);
+
+        // Sticker geben
+        if (rating > 4.5f) {
+            new StickerManager(this.getContext()).unlockArchievement("tooth.1", R.string.sticker_15_stickername);
+        }
 
         // Setze listener
         Button btn = view.findViewById(R.id.backButton);

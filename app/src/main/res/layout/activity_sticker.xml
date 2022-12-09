@@ -224,6 +224,15 @@
                             app:stickertag="secret.klima.1"
                             tools:layout="@layout/fragment_drag_sticker" />
 
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker15"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-tooth.1"
+                            app:stickertag="tooth.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -453,6 +462,17 @@
                     app:description="@string/sticker.14.description"
                     app:stickericon="@drawable/desert_secret"
                     app:stickername="@string/sticker.14.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker15"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="tooth.1"
+                    app:description="@string/sticker.15.description"
+                    app:stickericon="@drawable/sticker_toothbrush"
+                    app:stickername="@string/sticker.15.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
             </LinearLayout>

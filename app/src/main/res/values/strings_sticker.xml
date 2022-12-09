@@ -10,19 +10,31 @@
     <string name="sticker.pinnwand.size.summary">Aktuelle Größe: %s</string>
     <string name="sticker.confirm.dialog.msg">Alle Sticker auf deiner Pinnwand werden wieder entfernt.</string>
 
+    <!-- Bienen -->
     <string name="sticker.1.stickername">Einchecken bitte!</string>
     <string name="sticker.1.description">Lese den Text zu den Bienen</string>
-
     <string name="sticker.2.stickername">Bienenliebhaber!</string>
-    <string name="sticker.2.description">Erreiche mindestends 1 richtige Frage im Bienenquiz.</string>
+    <string name="sticker.2.description">Erreiche mindestends 1 richtige Frage im Bienenquiz</string>
     <string name="sticker.5.stickername">1. Hoteletage</string>
-    <string name="sticker.5.description">Erreiche mindestends 3 richtige Fragen im Bienenquiz.</string>
+    <string name="sticker.5.description">Erreiche mindestends 3 richtige Fragen im Bienenquiz</string>
     <string name="sticker.6.stickername">Luxussuite</string>
-    <string name="sticker.6.description">Erreiche mindestends 5 richtige Fragen im Bienenquiz.</string>
+    <string name="sticker.6.description">Erreiche mindestends 5 richtige Fragen im Bienenquiz</string>
 
+    <!-- Ozean -->
+    <string name="sticker.7.stickername">Am Haken!</string>
+    <string name="sticker.7.description">Lese den Text zu dem Ozean</string>
+    <string name="sticker.8.stickername">Hier is noch was fischig!</string>
+    <string name="sticker.8.description">Erreiche mindestends 3 richtige Fragen im Ozeanquiz</string>
+    <string name="sticker.9.stickername">Hartknäckig!</string>
+    <string name="sticker.9.description">Erreiche mindestends 5 richtige Fragen im Ozeanquiz</string>
+    <string name="sticker.10.stickername">Am Boden der Tatsachen!</string>
+    <string name="sticker.10.description">\???</string>
+
+    <!-- Waldbrände -->
     <string name="sticker.3.stickername">Vorsicht heiß!</string>
     <string name="sticker.3.description">Schließe erfolgreich ein Quiz zum Thema Waldbrände ab</string>
 
+    <!-- Sonstiges -->
     <string name="sticker.4.stickername">Auf eine neue Ära!</string>
     <string name="sticker.4.description">Überlebe die Einführung in die App</string>
 </resources>

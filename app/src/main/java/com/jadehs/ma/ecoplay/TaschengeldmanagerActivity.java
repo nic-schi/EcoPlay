@@ -1,6 +1,5 @@
 package com.jadehs.ma.ecoplay;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -8,6 +7,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.jadehs.ma.ecoplay.sticker.StickerManager;
 
 import java.text.DecimalFormat;
 
@@ -44,6 +44,7 @@ public class TaschengeldmanagerActivity extends EcoPlayActivity {
                 Float value = TaschengeldmanagerActivity.this.extractValue(R.id.aktuellerbetrag, true);
                 if (value != null) {
                     TaschengeldmanagerActivity.this.setMoney(value);
+                    TaschengeldmanagerActivity.this.grantSticker();
                 }
             }
         });
@@ -64,16 +65,20 @@ public class TaschengeldmanagerActivity extends EcoPlayActivity {
         return null;
     }
 
+    private void grantSticker() {
+        new StickerManager(this).unlockArchievement("money.1", R.string.sticker_16_stickername);
+    }
+
     private void onMoney(int type) {
         Float value = extractValue(R.id.betragToAdd, false);
 
         if (value != null) {
             float betrag = getMoney();
             this.refreshBetrag((type == R.id.positiv) ? (betrag + value) : (betrag - value));
+            this.grantSticker();
         }
     }
 
-    @SuppressLint("SetTextI18n")
     private void refreshBetrag(float neu) {
         EditText edit = this.findViewById(R.id.aktuellerbetrag);
         DecimalFormat df = new DecimalFormat("#.##");

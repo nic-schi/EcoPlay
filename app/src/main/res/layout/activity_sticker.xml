@@ -135,6 +135,15 @@
                             tools:layout="@layout/fragment_drag_sticker" />
 
                         <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker17"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-secret.bee.1"
+                            app:stickertag="secret.bee.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
                             android:id="@+id/dragsticker4"
                             android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
                             android:layout_width="wrap_content"
@@ -231,6 +240,15 @@
                             android:layout_height="wrap_content"
                             android:tag="pw-tooth.1"
                             app:stickertag="tooth.1"
+                            tools:layout="@layout/fragment_drag_sticker" />
+
+                        <androidx.fragment.app.FragmentContainerView
+                            android:id="@+id/dragsticker16"
+                            android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tag="pw-money.1"
+                            app:stickertag="money.1"
                             tools:layout="@layout/fragment_drag_sticker" />
 
                     </LinearLayout>
@@ -355,6 +373,17 @@
                     tools:layout="@layout/fragment_sticker" />
 
                 <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker17"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="secret.bee.1"
+                    app:description="@string/sticker.17.description"
+                    app:stickericon="@drawable/hotel_secret"
+                    app:stickername="@string/sticker.17.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
                     android:id="@+id/sticker4"
                     android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
                     android:layout_width="match_parent"
@@ -473,6 +502,17 @@
                     app:description="@string/sticker.15.description"
                     app:stickericon="@drawable/sticker_toothbrush"
                     app:stickername="@string/sticker.15.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker16"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="money.1"
+                    app:description="@string/sticker.16.description"
+                    app:stickericon="@drawable/sparschwein"
+                    app:stickername="@string/sticker.16.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
             </LinearLayout>

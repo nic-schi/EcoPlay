@@ -13,6 +13,8 @@
     <!-- Bienen -->
     <string name="sticker.1.stickername">Einchecken bitte!</string>
     <string name="sticker.1.description">Lese den Text zu den Bienen</string>
+    <string name="sticker.17.stickername">Geheime Etage!</string>
+    <string name="sticker.17.description">\???</string>
     <string name="sticker.2.stickername">Bienenliebhaber!</string>
     <string name="sticker.2.description">Erreiche mindestends 1 richtige Frage im Bienenquiz</string>
     <string name="sticker.5.stickername">1. Hoteletage</string>
@@ -43,6 +45,10 @@
     <!-- Zahnputzassistent -->
     <string name="sticker.15.stickername">Guter Putzer!</string>
     <string name="sticker.15.description">Erreiche mindestends eine Putzbewertung von 4,5 Sternen beim Zähneputzen</string>
+
+    <!-- Taschengeld -->
+    <string name="sticker.16.stickername">Du Sparschwein!</string>
+    <string name="sticker.16.description">Benutze den Taschengeldmanager!</string>
 
     <!-- Waldbrände -->
     <string name="sticker.3.stickername">Vorsicht heiß!</string>

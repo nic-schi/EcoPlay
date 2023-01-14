@@ -17,7 +17,11 @@
     <string name="author.1" translatable="false">Nichlas Schipper</string>
     <string name="author.2" translatable="false">Marco Janssen</string>
     <string name="author.3" translatable="false">Simon Schadrin</string>
-    <string name="ueberuns.quellen">Alle Quellen</string>
+    <string name="ueberuns.textquellen">Textquellen</string>
+    <string name="ueberuns.quellen.text.bienen">Bienen</string>
+    <string name="ueberuns.quellen.text.bienen.1">DAV Hamburg</string>
+    <string name="ueberuns.quellen.text.bienen.2">RND.de</string>
+    <string name="ueberuns.quellen">Sonstige Quellen</string>
     <string name="ueberuns.quellen.bild">Icons und Grafiken</string>
     <string name="ueberuns.quellen.bild.1" translatable="false">svgrepo.com</string>
     <string name="ueberuns.quellen.bild.2" translatable="false">flaticon.com</string>

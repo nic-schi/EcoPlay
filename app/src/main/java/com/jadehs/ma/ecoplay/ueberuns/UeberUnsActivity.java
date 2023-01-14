@@ -97,6 +97,14 @@ public class UeberUnsActivity extends EcoPlayActivity {
         this.goToURL("https://www.openstreetmap.org/");
     }
 
+    public void toDAV(View view) {
+        this.goToURL("https://www.dav-hamburg.de/natur/UmgangundVerhalten");
+    }
+
+    public void toRND(View view) {
+        this.goToURL("https://www.rnd.de/wissen/weltbienentag-2021-warum-sind-bienen-wichtig-fuer-die-umwelt-UUW7Y4T66KU5LIRNWKDGKHF2IA.html");
+    }
+
     private void goToURL(String url) {
         Uri uri = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uri);

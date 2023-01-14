@@ -17,18 +17,18 @@ import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
 
+import org.w3c.dom.Text;
+
 import java.util.Locale;
 
 public abstract class InhaltActivity extends EcoPlayActivity {
     private final boolean maintenance;
     private final int[] easyTexte;
-    private Fragment inhaltFragment;
+    private final Fragment inhaltFragment;
     private int[] alleTexte;
     private int[] hardTexte = null;
 
     private TextToSpeech tts;
-    private int textIndex = 0;
-
     private long startTime;
 
     public InhaltActivity(Integer actionBarTitelResourceID, Integer logo, Fragment inhaltFragment, int[] easyTexte, boolean maintenance) {
@@ -153,35 +153,36 @@ public abstract class InhaltActivity extends EcoPlayActivity {
         if (!this.maintenance) {
             View view = this.inhaltFragment.getView();
             if (view != null) {
-                this.textIndex = 0;
                 this.setTexte(view);
             }
         }
     }
 
     /**
-     * Findet die Textviews mit einem rekursiven call um alle Viewgroups abzugehen
+     * Setzt die Texte des Inhalts auf die TextViews in der ersten Iteraktion.
+     * So können Header und Inhalt seperat gesetzt werden.
+     * Alle TextViews die daher unmittelbar dem Inhaltfragment untergeordnet sind, werden ersetzt.
      *
-     * @param view Die Rootview
+     * @param view Das InhaltFragment
      */
     private void setTexte(View view) {
         if (view instanceof ViewGroup) {
             ViewGroup viewGroup = (ViewGroup) view;
 
+            int j = 0;
             for (int i = 0; i < viewGroup.getChildCount(); i++) {
-                this.setTexte(viewGroup.getChildAt(i));
+                View textView = viewGroup.getChildAt(i);
+                if (textView instanceof TextView) {
+                    ((TextView) textView).setText(this.alleTexte[j]);
+                    j++;
+                }
             }
-        } else if (view instanceof TextView) {
-            TextView textView = (TextView) view;
-            textView.setText(this.alleTexte[textIndex]);
-            this.textIndex++;
         }
     }
 
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        this.textIndex = 0;
     }
 
     @Override

@@ -14,11 +14,13 @@ public class InhaltBienenActivity extends InhaltActivity {
                 R.layout.inhalt_bienen,
                 new int[]{
                         R.string.inhalt_1_text_easy_1,
-                        R.string.inhalt_1_text_easy_2
+                        R.string.inhalt_1_text_easy_2,
+                        R.string.inhalt_1_text_easy_3
                 },
                 new int[]{
                         R.string.inhalt_1_text_hard_1,
-                        R.string.inhalt_1_text_hard_2
+                        R.string.inhalt_1_text_hard_2,
+                        R.string.inhalt_1_text_hard_3
                 }
         );
     }

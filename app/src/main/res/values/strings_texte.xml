@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--- Bienen -->
+    <!-- Header -->
+    <string name="inhalt.1.header.1">Warum ist die Biene so wichtig für die Umwelt?</string>
+    <string name="inhalt.1.header.2">Angst vor Bienen?</string>
+
     <!-- Easy -->
-    <string name="inhalt.1.text.easy.1">Die Bienen sind toll.</string>
-    <string name="inhalt.1.text.easy.2">Die Bienen sind grandios.</string>
+    <string name="inhalt.1.text.easy.1">Bienen bestäuben Pflanzen und sorgen damit dafür, dass Tiere und wir Menschen essen können. Wenn es keine Bienen mehr gäbe es keinen Honig. Ohne Sie gebe es auch weniger Obst, Gemüse, Fruchtsäfte, Fruchtgummis, Öle, Brotaufstriche oder Baumwolle. Etwa jedes dritte Stück unserer Nahrung hängt von der Bestäubung durch Bienen ab.</string>
+    <string name="inhalt.1.text.easy.2">Vielleicht hast du aber Angst vor Bienen, obwohl diese ziemlich hilfreich sind. Das brauchst du aber eigentlich nicht sie stechen nur, wenn sie sich angegriffen fühlen. Wenn du eine Biene draußen siehst, ist diese nur dort um Nektar und Pollen zu sammeln und nicht um dich anzugreifen.</string>
+    <string name="inhalt.1.text.easy.3">Wenn aber eine Biene in deine Nähe kommt solltest du ruhig bleiben. Beobachte dann die Biene. Wenn sie langsam fliegt ist sie glücklich und wenn sie schnell fliegt, dann ist diese angespannt. Wenn eine Biene auf dir landen sollte möchte diese dich meist auch nicht angreifen. Bleib ruhig und warte bis sie wieder von dir wegfliegt. Wenn eine Biene dich durch das Fenster besuchen kommt versuche sie nicht einzufangen und frag am besten deine Eltern, ob sie die Biene aus dem Zimmer tragen können.</string>
 
     <!-- Hard -->
-    <string name="inhalt.1.text.hard.1">Die Bienen sind absolut toll.</string>
-    <string name="inhalt.1.text.hard.2">Die Bienen sind absolut grandios.</string>
+    <string name="inhalt.1.text.hard.1">Bienen tragen dazu bei, dass Pflanzen bestäubt werden. Dabei schaffen sie zeitgleich eine Nahrungsgrundlage für andere Tiere wie zum Beispiel Vögel. Die Honigbiene ist in Deutschland nach Schwein und Rind das drittwichtigste Nutztier. Vom Bienensterben wären neben Honig auch Obst, Gemüse, Fruchtsäfte, Fruchtgummis, Öle, Brotaufstriche oder zum Beispiel Kleidung aus Baumwolle betroffen. Bienen bestäuben die Pflanzen, wenn sie von Blüte zu Blüte fliegen. Experten schätzen, dass etwa ein bis zwei Drittel unserer Nahrung von der Bestäubung durch Bienen abhängt.</string>
+    <string name="inhalt.1.text.hard.2">Vielleicht hast du aber trotzdem schon mal Angst vor einem dieser kleinen Tierchen gehabt als du draußen Unterwegs warst.\n\nJedoch musst du dich wirklich nicht vor Bienen fürchten. Sie stechen nur, wenn sie sich oder ihren Wohnort angegriffen fühlen. Wenn eine Biene sich beispielsweise in deinem Garten befindet ist diese meist nur dort um Nektar und Pollen zu sammeln und hierbei keinesfalls aggressiv.</string>
+    <string name="inhalt.1.text.hard.3">Wenn du dir jedoch noch unsicher bist, ob die Biene vielleicht doch aggressiv ist, kannst du diese genauer beobachten. Ein ruhiges Summen und ein langsames Fliegen zeigt, dass die Biene sozusagen gute Laune hat und dir nichts Böses will. bei der Biene, ein hochfrequentes, „schrilles“ Summen sowie nervöses Zickzackfliegen zeigt eine misstrauische und verteidigungsbereite Biene. Selbst eine Biene auf der Nase entdeckt nur ihre Umgebung und beabsichtigt meist nichts Böses. Eine einzelne Biene welche sich in deinem Zimmer befindet könntest du zum Beispiel auch mit bloßer Hand aus dem Haus tragen, wenn du dich ruhig verhältst. Oder frage ruhig deine Eltern, ob sie dir damit helfen.</string>
 </resources>

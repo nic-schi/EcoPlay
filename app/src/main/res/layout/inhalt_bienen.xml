@@ -6,20 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".inhalte.themen.InhaltBienenActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bienenheader1"
+        android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_header"
+        app:headertext="@string/inhalt.1.header.1" /> />
+
     <TextView
-        android:id="@+id/text1"
+        android:id="@+id/bienentext1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:text="@string/placeholder.text.50"
         android:textAppearance="@style/TextAppearance.EcoPlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/bienenheader1" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bienenheader2"
+        android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienentext1"
+        tools:layout="@layout/fragment_header"
+        app:headertext="@string/inhalt.1.header.2" />
 
     <TextView
-        android:id="@+id/text3"
+        android:id="@+id/bienentext2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -28,6 +52,33 @@
         android:text="@string/placeholder.text.20"
         android:textAppearance="@style/TextAppearance.EcoPlay"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text1" />
+        app:layout_constraintTop_toBottomOf="@+id/bienenheader2" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="matrix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bienentext2"
+        app:srcCompat="@drawable/happy_bee" />
+
+    <TextView
+        android:id="@+id/bienentext3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/placeholder.text.20"
+        android:textAppearance="@style/TextAppearance.EcoPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,8 +17,6 @@ import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.utils.Difficulty;
 
-import org.w3c.dom.Text;
-
 import java.util.Locale;
 
 public abstract class InhaltActivity extends EcoPlayActivity {

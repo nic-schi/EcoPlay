@@ -11,11 +11,12 @@
         android:name="com.jadehs.ma.ecoplay.utils.HeaderFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:headertext="@string/inhalt.1.header.1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout="@layout/fragment_header"
-        app:headertext="@string/inhalt.1.header.1" /> />
+        tools:layout="@layout/fragment_header" />
+    />
 
     <TextView
         android:id="@+id/bienentext1"
@@ -36,11 +37,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        app:headertext="@string/inhalt.1.header.2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bienentext1"
-        tools:layout="@layout/fragment_header"
-        app:headertext="@string/inhalt.1.header.2" />
+        tools:layout="@layout/fragment_header" />
 
     <TextView
         android:id="@+id/bienentext2"

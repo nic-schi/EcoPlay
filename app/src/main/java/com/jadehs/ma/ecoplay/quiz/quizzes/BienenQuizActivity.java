@@ -13,7 +13,7 @@ import com.jadehs.ma.ecoplay.sticker.StickerManager;
 public class BienenQuizActivity extends QuizActivity {
 
     public BienenQuizActivity() {
-        super(R.string.quiz_1_name, R.drawable.bee);
+        super(R.string.quiz_1_name, R.drawable.bee, false);
     }
 
     @Override

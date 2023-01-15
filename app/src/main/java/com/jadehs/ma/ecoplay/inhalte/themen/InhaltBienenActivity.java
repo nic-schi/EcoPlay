@@ -21,7 +21,8 @@ public class InhaltBienenActivity extends InhaltActivity {
                         R.string.inhalt_1_text_hard_1,
                         R.string.inhalt_1_text_hard_2,
                         R.string.inhalt_1_text_hard_3
-                }
+                },
+                false
         );
     }
 

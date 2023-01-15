@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.jadehs.ma.ecoplay.BuildConfig;
 import com.jadehs.ma.ecoplay.EcoPlayActivity;
 import com.jadehs.ma.ecoplay.R;
-import com.jadehs.ma.ecoplay.quiz.frage.Frage;
 import com.jadehs.ma.ecoplay.quiz.frage.FrageFragment;
 
 import java.util.ArrayList;

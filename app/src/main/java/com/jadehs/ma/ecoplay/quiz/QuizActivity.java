@@ -18,6 +18,7 @@ import com.jadehs.ma.ecoplay.quiz.frage.Frage;
 import com.jadehs.ma.ecoplay.quiz.frage.FrageFragment;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public abstract class QuizActivity extends EcoPlayActivity {
     private final ArrayList<FrageFragment> fragen = new ArrayList<>();
@@ -165,6 +166,9 @@ public abstract class QuizActivity extends EcoPlayActivity {
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
+
+        // randomize Fragen
+        Collections.shuffle(fragen);
 
         if (!maintenance) {
             findViewById(R.id.weiterKnopf).setClickable(!fragen.isEmpty());

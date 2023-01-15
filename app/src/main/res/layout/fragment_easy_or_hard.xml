@@ -39,21 +39,23 @@
 
         <ImageButton
             android:id="@+id/sidekick"
+            style="@style/ImageButton.EcoPlay"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:backgroundTint="@color/onboarding_wissenspruefung_btn_bg"
             android:scaleType="fitXY"
             android:src="@drawable/eco_ungebildet" />
 
         <ImageButton
             android:id="@+id/held"
+            style="@style/ImageButton.EcoPlay"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:backgroundTint="@color/onboarding_wissenspruefung_btn_bg"
             android:scaleType="fitXY"
             android:src="@drawable/eco_bibliothekar" />
 

@@ -64,11 +64,13 @@
     <style name="Button.EcoPlay" parent="@style/Widget.AppCompat.Button.Colored">
         <item name="android:paddingStart">20dp</item>
         <item name="android:paddingEnd">20dp</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+
+        <item name="android:backgroundTint">@color/akzent</item>
+        <item name="backgroundTint">@color/akzent</item>
 
         <item name="fontFamily">@font/roboto_medium</item>
-        <item name="android:background">@drawable/button_bg</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textSize">17sp</item>
         <item name="elevation">10dp</item>
@@ -81,7 +83,9 @@
         <item name="android:paddingEnd">10dp</item>
         <item name="android:paddingBottom">10dp</item>
         <item name="android:paddingTop">10dp</item>
-        <item name="android:background">@drawable/button_bg</item>
+
+        <item name="android:backgroundTint">@color/akzent</item>
+        <item name="backgroundTint">@color/akzent</item>
 
         <item name="elevation">10dp</item>
         <item name="android:elevation">10dp</item>

@@ -45,13 +45,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2"
-        tools:layout="@layout/fragment_sidekick_or_hero" />
+        tools:layout="@layout/fragment_easy_or_hard" />
 
     <Button
         android:id="@+id/knopf"
         style="@style/Button.EcoPlay"
         android:layout_width="145dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_weight="1"

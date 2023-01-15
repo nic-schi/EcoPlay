@@ -11,7 +11,9 @@
 
     <color name="akzent">#F0DC71</color>
     <color name="akzent_heller">#f4e594</color>
-    <color name="akzent_dunkler">#eed65b</color>
+    <color name="akzent_dunkler">#66F0DC71</color>
+
+    <color name="bg_alpha">#20000000</color>
 
     <!-- Sonstiges -->
     <color name="text_color">#1E1E1E</color>

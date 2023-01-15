@@ -79,7 +79,7 @@
             android:id="@+id/start"
             style="@style/Button.EcoPlay"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
             android:fontFamily="@font/roboto_medium"
             android:onClick="beginOnboarding"

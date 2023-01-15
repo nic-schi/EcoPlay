@@ -22,31 +22,31 @@ public class BienenQuizActivity extends QuizActivity {
 
         // Frage 1
         FrageFragment frage1 = new FrageFragment(getString(R.string.quiz_1_frage_1_bezeichnung));
-        frage1.addAntworten(getResources().getStringArray(R.array.quiz_1_frage_1_antworten));
+        frage1.setAntworten(getResources().getStringArray(R.array.quiz_1_frage_1_antworten));
         frage1.setSolution(Frage.A);
         this.addFrage(frage1);
 
         // Frage 2
         FrageFragment frage2 = new FrageFragment(getString(R.string.quiz_1_frage_2_bezeichnung));
-        frage2.addAntworten(getResources().getStringArray(R.array.quiz_1_frage_2_antworten));
+        frage2.setAntworten(getResources().getStringArray(R.array.quiz_1_frage_2_antworten));
         frage2.setSolution(Frage.C);
         this.addFrage(frage2);
 
         // Frage 3
         FrageFragment frage3 = new FrageFragment(getString(R.string.quiz_1_frage_3_bezeichnung));
-        frage3.addAntworten(getResources().getStringArray(R.array.quiz_1_frage_3_antworten));
+        frage3.setAntworten(getResources().getStringArray(R.array.quiz_1_frage_3_antworten));
         frage3.setSolution(Frage.D);
         this.addFrage(frage3);
 
         // Frage 4
         FrageFragment frage4 = new FrageFragment(getString(R.string.quiz_1_frage_4_bezeichnung));
-        frage4.addAntworten(getResources().getStringArray(R.array.quiz_1_frage_4_antworten));
+        frage4.setAntworten(getResources().getStringArray(R.array.quiz_1_frage_4_antworten));
         frage4.setSolution(Frage.B);
         this.addFrage(frage4);
 
         // Frage 5
         FrageFragment frage5 = new FrageFragment(getString(R.string.quiz_1_frage_5_bezeichnung));
-        frage5.addAntworten(getResources().getStringArray(R.array.quiz_1_frage_5_antworten));
+        frage5.setAntworten(getResources().getStringArray(R.array.quiz_1_frage_5_antworten));
         frage5.setSolution(Frage.A);
         this.addFrage(frage5);
     }

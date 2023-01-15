@@ -1,6 +1,7 @@
 package com.jadehs.ma.ecoplay.quiz.frage;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,22 +13,37 @@ import androidx.fragment.app.Fragment;
 
 import com.jadehs.ma.ecoplay.R;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 
 public class FrageFragment extends Fragment {
     private final String frageRessourceID;
-    protected Map<Frage, String> answers = new HashMap<>();
+    private final boolean randomize;
+
+    protected Map<Frage, String> answers;
+    protected Map<Frage, String> randomizedAnswers;
     private Frage solution;
 
     public FrageFragment(String frageRessourceID) {
-        this.frageRessourceID = frageRessourceID;
+        this(frageRessourceID, new LinkedHashMap<>(), true);
+    }
+
+    public FrageFragment(String frageRessourceID, boolean randomize) {
+        this(frageRessourceID, new LinkedHashMap<>(), randomize);
     }
 
     public FrageFragment(String frageRessourceID, Map<Frage, String> answers) {
+        this(frageRessourceID, answers, true);
+    }
+
+    public FrageFragment(String frageRessourceID, Map<Frage, String> answers, boolean randomize) {
         this.frageRessourceID = frageRessourceID;
         this.answers = answers;
+        this.randomize = randomize;
     }
 
     @Override
@@ -38,8 +54,11 @@ public class FrageFragment extends Fragment {
         // füge frage hinzu
         ((TextView) view.findViewById(R.id.quizfrageTitel)).setText(this.frageRessourceID);
 
+        // randomize antworten
+        if (randomize) this.randomizeAntworten();
+
         // füge antworten hinzu
-        this.answers.forEach((f, r) -> {
+        this.randomizedAnswers.forEach((f, r) -> {
             RadioButton btn = null;
             switch (f.name()) {
                 case "A":
@@ -59,8 +78,22 @@ public class FrageFragment extends Fragment {
                 btn.setText(r);
             }
         });
+        Log.v("eco", randomizedAnswers.toString());
 
         return view;
+    }
+
+    private void randomizeAntworten() {
+        ArrayList<Frage> preset = new ArrayList<>(Arrays.asList(Frage.values()));
+        Collections.shuffle(preset);
+        Map<Frage, String> newAnswers = new LinkedHashMap<>();
+
+        int i = 0;
+        for (Frage frage : preset) {
+            newAnswers.put(frage, new ArrayList<>(answers.values()).get(i));
+            i++;
+        }
+        this.randomizedAnswers = newAnswers;
     }
 
     public boolean isAnswered() {
@@ -68,24 +101,27 @@ public class FrageFragment extends Fragment {
         return group.getCheckedRadioButtonId() != -1;
     }
 
-    public Frage getAnswer() {
+    public Frage getChoosenAnswer() {
         RadioGroup group = this.requireView().findViewById(R.id.alleAntworten);
         RadioButton btn = this.requireView().findViewById(group.getCheckedRadioButtonId());
-        int index = group.indexOfChild(btn);
-        return Frage.values()[index];
+        Frage frage = Frage.values()[group.indexOfChild(btn)];
+        frage = Frage.values()[new ArrayList<>(randomizedAnswers.keySet()).indexOf(frage)];
+
+        return frage;
     }
 
-    public void addAntworten(String[] antworten) {
+    public boolean isCorrect() {
+        return this.isSolution(this.getChoosenAnswer());
+    }
+
+    public void setAntworten(String[] antworten) {
         Frage[] fragen = Frage.values();
         if (antworten.length == 4 && fragen.length == 4) {
             for (int i = 0; i < 4; i++) {
                 this.answers.put(fragen[i], antworten[i]);
             }
         }
-    }
-
-    public void addAntwort(Frage frage, String antwortRessourceID) {
-        this.answers.put(frage, antwortRessourceID);
+        this.randomizedAnswers = answers;
     }
 
     public boolean isSolution(Frage frage) {

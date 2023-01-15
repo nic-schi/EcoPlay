@@ -87,9 +87,7 @@ public abstract class QuizActivity extends EcoPlayActivity {
 
     private void checkForCorrectAnswer() {
         FrageFragment aktuelleFrage = fragen.get(currentFrage);
-        Frage frage = aktuelleFrage.getAnswer();
-
-        if (aktuelleFrage.isSolution(frage)) {
+        if (aktuelleFrage.isCorrect()) {
             correctlyAnswered++;
         }
     }

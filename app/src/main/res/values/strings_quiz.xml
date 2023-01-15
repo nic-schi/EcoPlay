@@ -11,48 +11,48 @@
     <!--- Quiz 1: Bienen -->
     <string name="quiz.1.name">Bienenquiz</string>
     <!-- Frage 1 -->
-    <string name="quiz.1.frage.1.bezeichnung">Wie alt können Bienen werden?</string>
+    <string name="quiz.1.frage.1.bezeichnung">Was solltest du machen, wenn eine Biene auf dir landet?</string>
     <string-array name="quiz.1.frage.1.antworten">
-        <item>31 Tage</item>
-        <item>35 Tage</item>
-        <item>62 Tage</item>
-        <item>28 Tage</item>
+        <item>Ruhig verhalten und warten bis sie wegfliegt</item>
+        <item>Sie zerdrücken</item>
+        <item>Wegrennen und fliehen</item>
+        <item>Schreien, sodass sie vor Angst wegfliegt</item>
     </string-array>
 
     <!-- Frage 2 -->
-    <string name="quiz.1.frage.2.bezeichnung">Was soll man beim Bauen eines Bienenhotels vermeiden?</string>
+    <string name="quiz.1.frage.2.bezeichnung">Wenn eine Biene langsam fliegt wie fühlt diese sich dann?</string>
     <string-array name="quiz.1.frage.2.antworten">
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
-        <item>D</item>
+        <item>Traurig</item>
+        <item>Wütend</item>
+        <item>Glücklich</item>
+        <item>Ängstlich</item>
     </string-array>
 
     <!-- Frage 3 -->
-    <string name="quiz.1.frage.3.bezeichnung">Frage 3</string>
+    <string name="quiz.1.frage.3.bezeichnung">Was macht eine Biene nicht, wenn sie sich bei Blumen befindet?</string>
     <string-array name="quiz.1.frage.3.antworten">
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
-        <item>D</item>
+        <item>Nektar sammeln</item>
+        <item>Pollen sammeln</item>
+        <item>Blume bestäuben</item>
+        <item>Blume bewässern</item>
     </string-array>
 
     <!-- Frage 4 -->
-    <string name="quiz.1.frage.4.bezeichnung">Frage 4</string>
+    <string name="quiz.1.frage.4.bezeichnung">Welches Nahrungsmittel gäbe es ohne Bienen nicht?</string>
     <string-array name="quiz.1.frage.4.antworten">
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
-        <item>D</item>
+        <item>Wurst</item>
+        <item>Honig</item>
+        <item>Banane</item>
+        <item>Gurke</item>
     </string-array>
 
     <!-- Frage 5 -->
-    <string name="quiz.1.frage.5.bezeichnung">Frage 5</string>
+    <string name="quiz.1.frage.5.bezeichnung">Was machst du, wenn eine Biene in dein Zimmer fliegt?</string>
     <string-array name="quiz.1.frage.5.antworten">
-        <item>A</item>
-        <item>B</item>
-        <item>C</item>
-        <item>D</item>
+        <item>Deine Eltern nach Hilfe fragen</item>
+        <item>Die Biene verscheuchen</item>
+        <item>Versuchen die Biene einzusperren</item>
+        <item>Laut schreien</item>
     </string-array>
 
     <!--- Quiz 2: Ozean -->

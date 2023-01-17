@@ -10,6 +10,12 @@
     <string name="sticker.pinnwand.size.summary">Aktuelle Größe: %s</string>
     <string name="sticker.confirm.dialog.msg">Alle Sticker auf deiner Pinnwand werden wieder entfernt.</string>
 
+    <!-- Geheimcode -->
+    <string name="sticker.geheimcode">Geheimcode eingeben</string>
+    <string name="geheimcode.text">Innerhalb der Texte kannst du geheime Sticker finden!\nViel Spaß bei der Suche!</string>
+    <string name="geheimcode.feedback">Das war falsch!</string>
+    <string name="geheimcode.try">Ausprobieren</string>
+
     <!-- Bienen -->
     <string name="sticker.1.stickername">Einchecken bitte!</string>
     <string name="sticker.1.description">Lese den Text zu den Bienen</string>
@@ -48,7 +54,7 @@
 
     <!-- Taschengeld -->
     <string name="sticker.16.stickername">Du Sparschwein!</string>
-    <string name="sticker.16.description">Benutze den Taschengeldmanager!</string>
+    <string name="sticker.16.description">Benutze den Taschengeldmanager</string>
 
     <!-- Waldbrände -->
     <string name="sticker.3.stickername">Vorsicht heiß!</string>
@@ -56,5 +62,7 @@
 
     <!-- Sonstiges -->
     <string name="sticker.4.stickername">Auf eine neue Ära!</string>
-    <string name="sticker.4.description">Vielen Dank das du dabei bist!</string>
+    <string name="sticker.4.description">Vielen Dank das du dabei bist</string>
+    <string name="sticker.18.stickername">Fährtenleser!</string>
+    <string name="sticker.18.description">Du bist der ultimative Detektiv</string>
 </resources>

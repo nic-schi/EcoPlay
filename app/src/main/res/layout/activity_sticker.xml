@@ -113,6 +113,15 @@
                                 tools:layout="@layout/fragment_drag_sticker" />
 
                             <androidx.fragment.app.FragmentContainerView
+                                android:id="@+id/dragsticker18"
+                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tag="pw-ultimatesticker"
+                                app:stickertag="ultimatesticker"
+                                tools:layout="@layout/fragment_drag_sticker" />
+
+                            <androidx.fragment.app.FragmentContainerView
                                 android:id="@+id/dragsticker2"
                                 android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
                                 android:layout_width="wrap_content"
@@ -321,6 +330,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
                 android:text="Fortschritt löschen"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -331,9 +341,7 @@
                 android:id="@+id/allesticker"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/deleteSticker">
@@ -347,6 +355,17 @@
                     app:description="@string/sticker.4.description"
                     app:stickericon="@drawable/eco_era"
                     app:stickername="@string/sticker.4.stickername"
+                    tools:layout="@layout/fragment_sticker" />
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/sticker18"
+                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="ultimatesticker"
+                    app:description="@string/sticker.18.description"
+                    app:stickericon="@drawable/dog"
+                    app:stickername="@string/sticker.18.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
                 <androidx.fragment.app.FragmentContainerView
@@ -515,6 +534,35 @@
                     tools:layout="@layout/fragment_sticker" />
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/geheimcode.text"
+                android:textAppearance="@style/TextAppearance.EcoPlay"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/allesticker" />
+
+            <Button
+                android:id="@+id/geheimcode"
+                style="@style/Button.EcoPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/sticker.geheimcode"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

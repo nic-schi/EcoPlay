@@ -93,6 +93,13 @@ public class StickerActivity extends EcoPlayActivity {
         }
         deleteAll.setVisibility(BuildConfig.DEBUG ? View.VISIBLE : View.GONE);
 
+        // Geheimcode
+        Button geheimcode = this.findViewById(R.id.geheimcode);
+        geheimcode.setOnClickListener(v -> {
+            GeheimcodeDialogFragment dialog = new GeheimcodeDialogFragment();
+            dialog.show(this.getSupportFragmentManager(), "geheimcodeeingeben");
+        });
+
         // Drag listener
         View.OnDragListener draglistener = (view, e) -> {
             switch (e.getAction()) {

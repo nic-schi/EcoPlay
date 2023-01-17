@@ -1,12 +1,7 @@
 package com.jadehs.ma.ecoplay.inhalte.themen;
 
-import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-
-import androidx.annotation.Nullable;
 
 import com.jadehs.ma.ecoplay.R;
 import com.jadehs.ma.ecoplay.inhalte.InhaltActivity;

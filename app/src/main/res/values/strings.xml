@@ -20,8 +20,8 @@
     <string name="author.3" translatable="false">Simon Schadrin</string>
     <string name="ueberuns.textquellen">Textquellen</string>
     <string name="ueberuns.quellen.text.bienen">Bienen</string>
-    <string name="ueberuns.quellen.text.bienen.1">DAV Hamburg</string>
-    <string name="ueberuns.quellen.text.bienen.2">RND.de</string>
+    <string name="ueberuns.quellen.text.bienen.1" translatable="false">DAV Hamburg</string>
+    <string name="ueberuns.quellen.text.bienen.2" translatable="false">RND.de</string>
     <string name="ueberuns.quellen">Sonstige Quellen</string>
     <string name="ueberuns.quellen.bild">Icons und Grafiken</string>
     <string name="ueberuns.quellen.bild.1" translatable="false">svgrepo.com</string>
@@ -93,10 +93,10 @@
 
     <!-- Zahnputzassistent -->
     <string name="zaehne.start">Starten</string>
-    <string name="zaehne.start.text">@string/placeholder.text.50</string>
+    <string name="zaehne.start.text">In diesem Teil der App lernst du wie man nachhaltig die Zähne putzt. Folge einfach den Schritten und du schaffst das schon!\n\nKlicke auf den Knopf „Start“ um mit der Vorbereitung zu beginnen.</string>
     <string name="zaehne.vorbereitung.header">Vorbereitungen</string>
-    <string name="zaehne.vorbereitung.text1">@string/placeholder.text.20</string>
-    <string name="zaehne.vorbereitung.text2">@string/placeholder.header.long</string>
+    <string name="zaehne.vorbereitung.text1">Wenn du deine Zahnbürste befeuchtest solltest du das Wasser so kurz wie möglich anlassen, um Wasser zu sparen.</string>
+    <string name="zaehne.vorbereitung.text2">Trage nach dem Bewässern dann die Zahnpasta auf. Versuch hierbei nicht zu viel Zahnpasta zu benutzen, da ab einem gewissen Punkt unnötig diese nur verschwendet wird. Die Menge auf dem nächsten Bild ist schon zu viel.</string>
     <string name="zaehne.vorbereitung.letsgo">Los gehts</string>
 
     <string name="zaehne.schritt.putzen">Jetzt Putzen</string>
@@ -111,13 +111,16 @@
     <string name="zaehne.schritt.success.ratingtext">Unser Appzahnarzt hat deine Putzkunst bewertet:</string>
 
     <string name="zaehne.schritt.1.header">Schritt 1: Kauflächen</string>
-    <string name="zaehne.schritt.1.text">@string/placeholder.text.20</string>
+    <string name="zaehne.schritt.1.text">Nun ist es Zeit zu putzen!\n\nZuerst fangen wir mit den Kauflächen an. Falls du nicht weißt was diese sind siehst du auf dem nächsten Bild wo du deine Zahnbürste anlegen musst. Putze solange die Kauflächen bis die Zeit ausgelaufen ist. Danach kannst du mit dem nächsten Schritt weitermachen.</string>
 
     <string name="zaehne.schritt.2.header">Schritt 2: Außenflächen</string>
+    <string name="zaehne.schritt.2.text">Nun folgt der zweite Schritt!\n\nZuerst putzen wir die Außenflächen der Zähne, welche dein tolles Lächeln ausmachen. Falls du nicht weißt was diese sind siehst du auf dem nächsten Bild wo du deine Zahnbürste anlegen musst.</string>
+
     <string name="zaehne.schritt.3.header">Schritt 3: Innenflächen</string>
+    <string name="zaehne.schritt.3.text">Nun folgt auch schon der letzte Schritt!\n\nDazu müssen wir nun noch die Innenflächen putzen. Wenn du nicht weißt was diese sind siehst du auf dem nächsten Bild wo du deine Zahnbürste anlegen musst.</string>
 
     <!-- Taschengeldmanager -->
-    <string name="taschengeld.text">@string/placeholder.text.50</string>
+    <string name="taschengeld.text">In diesem Teil der App kannst du lernen dein Taschengeld zu verwalten und nachhaltiger mit diesem umzugehen. Trage hierfür zuerst ein wie viel Taschengeld du hast. (Wir verraten es auch keinem)\n\nDanach kannst du wenn du neues Taschengeld bekommst oder dieses ausgibst mit Hilfe der Plus und Minus Tasten eintragen wie viel Geld du bekommen oder ausgegeben hast.</string>
     <string name="taschengeld.money">Dein Geld:</string>
     <string name="taschengeld.placeholder" translatable="false">0.00</string>
     <string name="taschengeld.noinput">Bitte gebe einen Betrag ein.</string>

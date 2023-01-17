@@ -3,6 +3,7 @@ package com.jadehs.ma.ecoplay.inhalte;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -166,13 +167,16 @@ public abstract class InhaltActivity extends EcoPlayActivity {
     private void setTexte(View view) {
         if (view instanceof ViewGroup) {
             ViewGroup viewGroup = (ViewGroup) view;
+            String noReplace = getResources().getString(R.string.replace_tag);
 
             int j = 0;
             for (int i = 0; i < viewGroup.getChildCount(); i++) {
                 View textView = viewGroup.getChildAt(i);
                 if (textView instanceof TextView) {
-                    ((TextView) textView).setText(this.alleTexte[j]);
-                    j++;
+                    if (textView.getTag() == null || textView.getTag().equals(noReplace)) {
+                        ((TextView) textView).setText(this.alleTexte[j]);
+                        j++;
+                    }
                 }
             }
         }

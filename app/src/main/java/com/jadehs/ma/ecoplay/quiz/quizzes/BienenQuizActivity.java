@@ -59,9 +59,9 @@ public class BienenQuizActivity extends QuizActivity {
         if (correct >= 3) {
             new StickerManager(this).unlockArchievement("quiz.bee.2", this.getString(R.string.sticker_5_stickername));
         }
-        if (correct >= 1) {
-            new StickerManager(this).unlockArchievement("quiz.bee.1", this.getString(R.string.sticker_2_stickername));
-        }
+//        if (correct >= 1) {
+//            new StickerManager(this).unlockArchievement("quiz.bee.1", this.getString(R.string.sticker_2_stickername));
+//        }
     }
 
 }

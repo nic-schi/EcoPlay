@@ -113,15 +113,6 @@
                                 tools:layout="@layout/fragment_drag_sticker" />
 
                             <androidx.fragment.app.FragmentContainerView
-                                android:id="@+id/dragsticker1"
-                                android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:tag="pw-quiz.bee.1"
-                                app:stickertag="quiz.bee.1"
-                                tools:layout="@layout/fragment_drag_sticker" />
-
-                            <androidx.fragment.app.FragmentContainerView
                                 android:id="@+id/dragsticker2"
                                 android:name="com.jadehs.ma.ecoplay.sticker.DragStickerFragment"
                                 android:layout_width="wrap_content"
@@ -356,17 +347,6 @@
                     app:description="@string/sticker.4.description"
                     app:stickericon="@drawable/eco_era"
                     app:stickername="@string/sticker.4.stickername"
-                    tools:layout="@layout/fragment_sticker" />
-
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/sticker1"
-                    android:name="com.jadehs.ma.ecoplay.sticker.StickerFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:tag="quiz.bee.1"
-                    app:description="@string/sticker.2.description"
-                    app:stickericon="@drawable/bee_love"
-                    app:stickername="@string/sticker.2.stickername"
                     tools:layout="@layout/fragment_sticker" />
 
                 <androidx.fragment.app.FragmentContainerView

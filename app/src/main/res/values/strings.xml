@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">EcoPlay</string>
     <string name="empty" translatable="false" />
+    <string name="replace_tag" translatable="false">NO_REPLACE</string>
 
     <!-- Wartung -->
     <string name="maintenance.header">Hier wird gerade gebaut…</string>

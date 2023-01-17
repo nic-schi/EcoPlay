@@ -35,7 +35,7 @@ public abstract class QuizActivity extends EcoPlayActivity {
     }
 
     public QuizActivity(int titleResource, boolean maintenance) {
-        this(titleResource, R.drawable.questionstripes, maintenance);
+        this(titleResource, R.drawable.question, maintenance);
     }
 
     public QuizActivity(int titleResource) {

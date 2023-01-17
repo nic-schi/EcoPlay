@@ -47,6 +47,6 @@
     <color name="sticker.questionmark.color.akzent">@color/akzent_heller</color>
 
     <!-- Inhalte -->
-    <color name="inhalte.overlay.bg">#B3000000</color>
+    <color name="inhalte.overlay.bg">#8C000000</color>
     <color name="inhalte.overlay.text.color">@color/text_color_bright</color>
 </resources>

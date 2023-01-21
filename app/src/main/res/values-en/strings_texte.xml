@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="inhalt.1.text.easy.1">The bees are great.</string>
-    <string name="inhalt.1.text.easy.2">The bees are terrific.</string>
-    <string name="inhalt.1.text.hard.1">The bees are absolutely great.</string>
-    <string name="inhalt.1.text.hard.2">The bees are absolutely terrific.</string>
+    <!--- Bienen -->
+    <!-- Sonstiges -->
+    <string name="inhalt.1.secret.text">Now you don\'t have to be afraid of bees anymore!</string>
+    <!-- Header -->
+    <string name="inhalt.1.header.1">Why is the bee so important for the environment?</string>
+    <string name="inhalt.1.header.2">Afraid of bees?</string>
+    <string name="inhalt.1.header.3">How to help bees out?</string>
+
+    <!-- Easy -->
+    <string name="inhalt.1.text.easy.1">Bees pollinate plants and thus ensure that animals and we humans can eat. If there were no more bees, there would be no honey. Without them, there would also be less fruit, vegetables, fruit juices, fruit gums, oils, spreads or cotton. About every third piece of our food depends on pollination by bees.</string>
+    <string name="inhalt.1.text.easy.2">But maybe you are afraid of bees, although they are quite helpful. You don\'t really need to be, they only sting when they feel attacked. If you see a bee outside, it is only there to collect nectar and pollen and not to attack you.</string>
+    <string name="inhalt.1.text.easy.3">But if a bee comes near you, you should stay calm. Then observe the bee. If it flies slowly, it is happy and if it flies fast, it is tense. If a bee lands on you, it usually does not want to attack you. Stay calm and wait until it flies away from you. If a bee comes to visit you through the window, try not to catch it and ask your parents if they can carry it out of the room.</string>
+
+    <!-- Hard -->
+    <string name="inhalt.1.text.hard.1">Bees help to pollinate plants. At the same time, they create a food basis for other animals such as birds. In Germany, the honey bee is the third most important farm animal after pigs and cattle. Besides honey, fruit, vegetables, fruit juices, fruit gums, oils, spreads and cotton clothing, for example, would also be affected by bee mortality. Bees pollinate plants when they fly from flower to flower. Experts estimate that around one to two thirds of our food depends on pollination by bees.</string>
+    <string name="inhalt.1.text.hard.2">But maybe you have been afraid of one of these little animals when you were out and about.\n\nBut you really don\'t have to be afraid of bees. They only sting when they feel attacked or where they live. If a bee is in your garden, for example, it is usually only there to collect nectar and pollen and is not aggressive.</string>
+    <string name="inhalt.1.text.hard.3">However, if you are still unsure whether the bee is perhaps aggressive, you can observe it more closely. A quiet buzzing and slow flying shows that the bee is in a good mood, so to speak, and does not mean you any harm. at the bee, a high-frequency, "shrill" buzzing as well as nervous zigzag flying shows a distrustful and defensive bee. Even a bee on the nose is only discovering its surroundings and usually does not intend any harm. A single bee which is in your room you could for example carry out of the house with your bare hand, if you behave calmly. Or ask your parents if they can help you with it.</string>
+    <string name="inhalt.1.text.hard.4">You can now help bees by, for example, placing wild bee hotels on your balcony or in your garden.\n\nWild bee hotels can be bought in stores, for example, but they are usually not good for bees and are only meant to look good.  Therefore, we recommend to build one yourself. But this is not so easy, so be sure to ask your parents to help you!</string>
+
 </resources>

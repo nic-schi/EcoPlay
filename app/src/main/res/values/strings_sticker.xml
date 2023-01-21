@@ -22,19 +22,19 @@
     <string name="sticker.17.stickername">Geheime Etage!</string>
     <string name="sticker.17.description">\???</string>
     <string name="sticker.2.stickername">Bienenliebhaber!</string>
-    <string name="sticker.2.description">Erreiche mindestends 1 richtige Frage im Bienenquiz</string>
+    <string name="sticker.2.description">Erreiche mindestends 1 richtige Antwort im Bienenquiz</string>
     <string name="sticker.5.stickername">1. Hoteletage</string>
-    <string name="sticker.5.description">Erreiche mindestends 3 richtige Fragen im Bienenquiz</string>
+    <string name="sticker.5.description">Erreiche mindestends 3 richtige Antworten im Bienenquiz</string>
     <string name="sticker.6.stickername">Luxussuite</string>
-    <string name="sticker.6.description">Erreiche mindestends 5 richtige Fragen im Bienenquiz</string>
+    <string name="sticker.6.description">Erreiche mindestends 5 richtige Antworten im Bienenquiz</string>
 
     <!-- Ozean -->
     <string name="sticker.7.stickername">Am Haken!</string>
     <string name="sticker.7.description">Lese den Text zu dem Ozean</string>
-    <string name="sticker.8.stickername">Hier is noch was fischig!</string>
-    <string name="sticker.8.description">Erreiche mindestends 3 richtige Fragen im Ozeanquiz</string>
-    <string name="sticker.9.stickername">Hartknäckig!</string>
-    <string name="sticker.9.description">Erreiche mindestends 5 richtige Fragen im Ozeanquiz</string>
+    <string name="sticker.8.stickername">Hier ist noch was fischig!</string>
+    <string name="sticker.8.description">Erreiche mindestends 3 richtige Antworten im Ozeanquiz</string>
+    <string name="sticker.9.stickername">Hartnäckig!</string>
+    <string name="sticker.9.description">Erreiche mindestends 5 richtige Antworten im Ozeanquiz</string>
     <string name="sticker.10.stickername">Am Boden der Tatsachen!</string>
     <string name="sticker.10.description">\???</string>
 
@@ -42,9 +42,9 @@
     <string name="sticker.11.stickername">Der erste Schritt!</string>
     <string name="sticker.11.description">Lese den Text zu dem Klimawandel</string>
     <string name="sticker.12.stickername">Zäh wie ein Kaktus!</string>
-    <string name="sticker.12.description">Erreiche mindestends 3 richtige Fragen im Klimawandelquiz</string>
+    <string name="sticker.12.description">Erreiche mindestends 3 richtige Antworten im Klimawandelquiz</string>
     <string name="sticker.13.stickername">Die Weisheit der Sphinx!</string>
-    <string name="sticker.13.description">Erreiche mindestends 5 richtige Fragen im Klimawandelquiz</string>
+    <string name="sticker.13.description">Erreiche mindestends 5 richtige Antworten im Klimawandelquiz</string>
     <string name="sticker.14.stickername">Die Zeit tickt!</string>
     <string name="sticker.14.description">\???</string>
 

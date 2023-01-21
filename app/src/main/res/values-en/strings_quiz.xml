@@ -10,9 +10,63 @@
     <string name="quiz.current">%1$d from %2$d</string>
 
     <string name="quiz.1.name">Bee Quiz</string>
-    <string name="quiz.1.frage.1.bezeichnung">How old can bees become?</string>
-    <string name="quiz.1.frage.2.bezeichnung">What to avoid when building a bee hotel?</string>
-    <string name="quiz.1.frage.3.bezeichnung">Question 3</string>
-    <string name="quiz.1.frage.4.bezeichnung">Question 4</string>
-    <string name="quiz.1.frage.5.bezeichnung">Question 5</string>
+
+    <!-- Frage 1 -->
+    <string name="quiz.1.frage.1.bezeichnung">What should you do if a bee lands on you?</string>
+    <string-array name="quiz.1.frage.1.antworten">
+        <item>Keep calm and wait until she flies away</item>
+        <item>Crush it</item>
+        <item>Run away and escape</item>
+        <item>Scream so that she flies away in fear</item>
+    </string-array>
+
+    <!-- Frage 2 -->
+    <string name="quiz.1.frage.2.bezeichnung">When a bee flies slowly how does it feel?</string>
+    <string-array name="quiz.1.frage.2.antworten">
+        <item>Sad</item>
+        <item>Angry</item>
+        <item>Happy</item>
+        <item>Scared</item>
+    </string-array>
+
+    <!-- Frage 3 -->
+    <string name="quiz.1.frage.3.bezeichnung">What doesn\'t a bee do when it\'s around flowers?</string>
+    <string-array name="quiz.1.frage.3.antworten">
+        <item>Collect nectar</item>
+        <item>Collect pollen</item>
+        <item>Pollinate flowers</item>
+        <item>Watering flowers</item>
+    </string-array>
+
+    <!-- Frage 4 -->
+    <string name="quiz.1.frage.4.bezeichnung">What food would not exist without bees?</string>
+    <string-array name="quiz.1.frage.4.antworten">
+        <item>Sausage</item>
+        <item>Honey</item>
+        <item>Banana</item>
+        <item>Cucumber</item>
+    </string-array>
+
+    <!-- Frage 5 -->
+    <string name="quiz.1.frage.5.bezeichnung">What do you do when a bee flies into your room?</string>
+    <string-array name="quiz.1.frage.5.antworten">
+        <item>Ask your parents for help</item>
+        <item>Scare away the bee</item>
+        <item>Trying to confine the bee</item>
+        <item>Scream loudly</item>
+    </string-array>
+
+
+    <!--- Quiz 2: Ozean -->
+    <string name="quiz.2.name">Ocean Quiz</string>
+
+    <!--- Quiz 3: Mülltrennung -->
+    <string name="quiz.3.name">Waste Sorting Quiz</string>
+
+    <!--- Quiz 4: Klimawandel -->
+    <string name="quiz.4.name">Climate Change Quiz</string>
+
+    <!--- Quiz 5: Klimawandel -->
+    <string name="quiz.5.name">Forest Fire Quiz</string>
+
 </resources>

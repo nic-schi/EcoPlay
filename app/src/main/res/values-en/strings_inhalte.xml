@@ -4,6 +4,8 @@
 
     <string name="inhalte.1.thema">Bees</string>
     <string name="inhalte.2.thema">Forest Fires</string>
-    <string name="inhalte.3.thema">Landslides</string>
+    <string name="inhalte.3.thema">Climate change</string>
+    <string name="inhalte.4.thema">Waste sorting</string>
+    <string name="inhalte.5.thema">Ocean</string>
 
 </resources>

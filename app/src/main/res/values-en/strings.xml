@@ -40,6 +40,7 @@
     <string name="ueberuns.quellen">All sources</string>
     <string name="ueberuns.quellen.bild">Icons and graphics</string>
     <string name="ueberuns.quellen.sonstiges">Other</string>
+
     <string name="zaehne.start">Start</string>
     <string name="zaehne.start.text">@string/placeholder.text.50</string>
     <string name="zaehne.vorbereitung.header">Preparations</string>
@@ -56,6 +57,13 @@
     <string name="zaehne.schritt.success.ratingtext">Our app dentist has evaluated your cleaning skills:</string>
     <string name="zaehne.schritt.1.header">Step 1: Molar teeth</string>
     <string name="zaehne.schritt.1.text">@string/placeholder.text.20</string>
+    <string name="zaehne.schritt.2.header">Step 2: Outer surfaces</string>
+    <string name="zaehne.schritt.2.text">Now comes the second step!\n\First we brush the outer surfaces of the teeth, which make up your great smile. If you don\'t know what they are, you can see on the next picture where to put your toothbrush.</string>
+
+    <string name="zaehne.schritt.3.header">Step 3: Inner surfaces</string>
+    <string name="zaehne.schritt.3.text">Now comes the last step!\n\Now we have to clean the inner surfaces. If you don\'t know what they are, you can see on the next picture where to put your toothbrush.</string>
+
+
     <string name="taschengeld.text">@string/placeholder.text.50</string>
     <string name="taschengeld.money">Your money:</string>
     <string name="taschengeld.noinput">Please enter an amount.</string>

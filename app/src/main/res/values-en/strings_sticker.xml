@@ -2,10 +2,6 @@
     <string name="sticker.pinnwand.size">Sticker size on pinboard</string>
     <string name="sticker.pinnwand.size.summary">Current size: %s</string>
     <string name="sticker.text">Here you can view all your collected stickers. Stickers are challenges you can complete by using the app.\n\nHave fun collecting them!</string>
-    <string name="sticker.3.stickername">Watch out hot!</string>
-    <string name="sticker.3.description">Successfully complete a quiz on the theme of forest fires</string>
-    <string name="sticker.4.stickername">To a new era!</string>
-    <string name="sticker.4.description">Survive the app introduction</string>
     <string name="sticker.unlocked">Sticker \"%1$s\" unlocked!</string>
     <string name="confirm.dialog.title">Are you sure?</string>
     <string name="confirm.dialog.confirm">Yes</string>
@@ -15,4 +11,61 @@
     <string name="sticker.pinnwand.text">Here you can place your stickers as you like.</string>
     <string name="sticker.pinnwand.reset">Reset</string>
     <string name="sticker.confirm.dialog.msg">All stickers on your pinboard will be removed.</string>
+
+    <!-- Geheimcode -->
+    <string name="sticker.geheimcode">Enter secret code</string>
+    <string name="geheimcode.text">Inside the texts you can find secret stickers!\nHave fun searching!</string>
+    <string name="geheimcode.feedback">That was wrong!</string>
+    <string name="geheimcode.try">Try it</string>
+
+    <!-- Bienen -->
+    <string name="sticker.1.stickername">Check in please!</string>
+    <string name="sticker.1.description">Read the text about the bees</string>
+    <string name="sticker.17.stickername">Secret floor!</string>
+    <string name="sticker.17.description">\???</string>
+    <string name="sticker.2.stickername">Bee lover!</string>
+    <string name="sticker.2.description">Achieve at least 1 correct answers in the bee quiz</string>
+    <string name="sticker.5.stickername">1st hotel floor</string>
+    <string name="sticker.5.description">Achieve at least 3 correct answers in the bee quiz</string>
+    <string name="sticker.6.stickername">Luxury suite</string>
+    <string name="sticker.6.description">Achieve at least 5 correct answers in the bee quiz</string>
+
+    <!-- Ozean -->
+    <string name="sticker.7.stickername">Hooked!</string>
+    <string name="sticker.7.description">Read the text about the ocean</string>
+    <string name="sticker.8.stickername">Here is still something fishy!</string>
+    <string name="sticker.8.description">Achieve at least 3 correct answers in the ocean quiz</string>
+    <string name="sticker.9.stickername">Hardheaded!</string>
+    <string name="sticker.9.description">Achieve at least 5 correct answers in the ocean quiz</string>
+    <string name="sticker.10.stickername">At the bottom of the facts!</string>
+    <string name="sticker.10.description">\???</string>
+
+    <!-- Klimawandel -->
+    <string name="sticker.11.stickername">The first step!</string>
+    <string name="sticker.11.description">Read the text on climate change</string>
+    <string name="sticker.12.stickername">Tough like a cactus!</string>
+    <string name="sticker.12.description">Achieve at least 3 correct answers in the climate change quiz</string>
+    <string name="sticker.13.stickername">Wisdom of the Sphinx!</string>
+    <string name="sticker.13.description">Achieve at least 5 correct answers in the climate change quiz</string>
+    <string name="sticker.14.stickername">Time is ticking!</string>
+    <string name="sticker.14.description">\???</string>
+
+    <!-- Zahnputzassistent -->
+    <string name="sticker.15.stickername">Good cleaner!</string>
+    <string name="sticker.15.description">Achieve at least a brushing score of 4.5 stars when brushing teeth</string>
+
+    <!-- Taschengeld -->
+    <string name="sticker.16.stickername">You piggy bank!</string>
+    <string name="sticker.16.description">Use the pocket money manager</string>
+
+    <!-- Waldbrände -->
+    <string name="sticker.3.stickername">Watch out hot!</string>
+    <string name="sticker.3.description">Successfully complete a quiz on the topic of forest fires</string>
+
+    <!-- Sonstiges -->
+    <string name="sticker.4.stickername">Into a new era!</string>
+    <string name="sticker.4.description">Thank you for being part of it</string>
+    <string name="sticker.18.stickername">Tracker!</string>
+    <string name="sticker.18.description">You are the ultimate detective</string>
+
 </resources>

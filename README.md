@@ -22,4 +22,4 @@ Homepage of Prototype      |  Homepage of finished App
  ![prototyp](https://user-images.githubusercontent.com/43421445/204906461-6392bf2d-a378-45bc-964e-80d25cd4df03.png) | ![prototyp-real](https://user-images.githubusercontent.com/43421445/204906443-e75390cc-6f4c-4ccd-b6f7-5dc3a1ae1f65.png)
 
 # Poster (A1)
-![Plakat](https://user-images.githubusercontent.com/43421445/213868797-1c2b6039-7290-4725-9ae4-0b04bb2446e7.jpg)
+![Plakat](https://user-images.githubusercontent.com/43421445/213872468-fdaacbea-d73b-4e7e-92b4-8047397595d0.jpg)

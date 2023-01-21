@@ -7,6 +7,10 @@ An Android app where kids can playfully learn about sustainability. This app was
 | Android SDK     | min. API level 24 (Nougat 7.0)      |
 | Android Studio  | 2021.3.1 Patch 1                    |
 
+# Authors
+- @nic-schi
+- @ma1160
+- @Si-Scha
 
 # Prototype
 As part of the development, a prototype of the app was created. This represents the app in its basic form.

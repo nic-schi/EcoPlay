@@ -8,9 +8,9 @@ An Android app where kids can playfully learn about sustainability. This app was
 | Android Studio  | 2021.3.1 Patch 1                    |
 
 # Authors
-- @nic-schi
-- @ma1160
-- @Si-Scha
+- [@nic-schi](https://github.com/nic-schi)
+- [@ma1160](https://github.com/ma1160)
+- [@Si-Scha](https://github.com/Si-Scha)
 
 # Prototype
 As part of the development, a prototype of the app was created. This represents the app in its basic form.
